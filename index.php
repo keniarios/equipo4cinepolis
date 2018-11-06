@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="css/vistasCliente/master.css" rel='stylesheet' type='text/css' />
+	<link href="../css/vistasCliente/master.css" rel='stylesheet' type='text/css' />
 	<link href="../css/vistasCliente/master2.css" rel='stylesheet' type='text/css' />
 	<link href="../css/vistasCliente/master3.css" rel='stylesheet' type='text/css' />
 	<link href="../css/vistasCliente/master4.css" rel='stylesheet' type='text/css' />
