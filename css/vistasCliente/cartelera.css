@@ -1,0 +1,394 @@
+.groupFiltro h3 {
+    border: solid 1px #e1e3e6;
+    padding: 8px 5px;
+    font-size: 1.1em;
+    margin: 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -ms-border-radius: 3px 3px 0 0;
+    -o-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+}
+
+.groupFiltro {
+    margin-bottom: 20px;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'cinepolis-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.groupFiltro > div {
+    margin-top: 2px;
+    padding: 8px;
+    background: #f5f5f5;
+    border: solid 1px #e1e3e6;
+}
+ .groupFiltro > div .selectBlanco {
+    position: relative;
+    margin: 5px 0;
+}
+
+#opcionesComplejo .chosen-container {
+    width: 100% !important;
+}
+
+.chosen-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.chosen-container-multi .chosen-choices li.search-field {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    clear: both;
+    position: relative;
+    width: 100% !important;
+}
+
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+    width: 100% !important;
+    margin: 0;
+    height: 35px;
+}
+
+.chosen-container-multi .chosen-choices li.search-field .default {
+    color: #999;
+}
+
+.groupFiltro > div .ui-widget-content {
+    border: 1px solid #e1e3e6;
+    background: #e1e3e6;
+    color: #d9d9d9;
+}
+
+.groupFiltro > div .ui-slider-horizontal.ui-slider-pips .ui-slider-pip {
+    width: 2em;
+    height: 1em;
+    line-height: 1em;
+    position: absolute;
+    font-size: .8em;
+    color: #999;
+    overflow: visible;
+    text-align: center;
+    top: 15px;
+    margin-left: -1em;
+    cursor: pointer;
+}
+
+ .groupFiltro > div .ui-state-default, .groupFiltro > div .ui-widget-content .ui-state-default, .groupFiltro > div .ui-widget-header .ui-state-default {
+    border: 1px solid #d6a639;
+    background: #feca30;
+    font-weight: bold;
+    color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.groupFiltro > div .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    background-position: 0 0;
+}
+
+.groupFiltro > div .txtInstruccion {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.groupFiltro > div .ui-slider-horizontal.ui-slider-pips .ui-slider-line {
+    background: #999;
+    width: 1px;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+}
+
+.groupFiltro > div .ui-slider-horizontal.ui-slider-pips .ui-slider-label {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -1em;
+    width: 2em;
+}
+
+.groupFiltro > div .rangoTiempo {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+.divComplejo {
+    margin-bottom: 40px;
+}
+
+a.btnInfoComplejo {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    display: block;
+}
+
+.divComplejo h2 {
+    margin: 0;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.2em;
+    padding: 8px;
+    background: #0b5ba1;
+    color: #fff;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -ms-border-radius: 3px 3px 0 0;
+    -o-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+}
+
+h2 i {
+    font-size: 20px;
+    margin-right: 5px;
+    line-height: .75em;
+    vertical-align: -15%;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'cinepolis-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.divComplejo article:nth-child(even) {
+    background: #fff;
+}
+
+.divComplejo article .col4 {
+    width: 16%;
+    min-width: 60px;
+    max-width: 140px;
+}
+
+.tituloPelicula figure>a {
+    display: block;
+    cursor: pointer;
+}
+
+.divComplejo article .col4 .corner {
+    width: 75%;
+}
+
+.corner {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.divComplejo article .col8 {
+    width: 80%;
+    /*margin-bottom: 40px;*/
+}
+
+.divComplejo article .descripcion header {
+    width: 100%;
+    background: none;
+    border-bottom: solid 1px #e1e3e6;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    margin-top: 25px;
+}
+
+.divComplejo article .descripcion header h3 {
+    color: #222;
+    margin: 0 0 .4em 0;
+    font-size: 1.5em;
+}
+
+.float-right {
+    float: right;
+}
+
+.divComplejo article .descripcion header .clasificacion {
+    background: #a6afbe;
+    padding: 2px 6px;
+    margin-left: 3px;
+    color: #fff;
+    display: inline-block;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    cursor: default;
+    position: relative;
+}
+
+.divComplejo article .descripcion header .duracion {
+    background: #222;
+    padding: 2px 6px;
+    margin-left: 3px;
+    color: #fff;
+    display: inline-block;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.divComplejo article .descripcion header .btnTrailer {
+    background: #0b5ba1;
+    padding: 2px 8px;
+    height: auto;
+    margin-left: 3px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.divComplejo article .descripcion .horarioExp {
+    width: 102%;
+    display: table;
+    margin-bottom: 10px;
+}
+
+.divComplejo article .descripcion .horarioExp > div:first-child {
+    /*width: 95px;*/
+    text-align: left;
+}
+
+.divComplejo article .descripcion .horarioExp .col3 {
+    width: 28%;
+}
+
+.divComplejo article .descripcion .horarioExp .col3 p {
+    float: right;
+    padding-top: 2px;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.divComplejo article .descripcion .horarioExp .col3 p span {
+    display: block;
+    float: left;
+    width: 106%;
+}
+
+.divComplejo article .descripcion .horarioExp span {
+    color: #0b5ba1;
+}
+
+.divComplejo article .descripcion .horarioExp .col9 {
+    width: 68.5%;
+}
+
+.divComplejo article .descripcion .horarioExp time {
+    background: #ececec;
+    border: solid 1px #d8d8d8;
+    color: #575757;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.59);
+    margin-bottom: 8px;
+    margin-right: 4px;
+    padding: 3px 5px;
+    height: auto;
+    font-size: 12px;
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.027), inset 0 1px 0 rgba(255,255,255,0.69), inset 0 -1px 0 rgba(0,0,0,0.019), inset 0 15px 14px rgba(255,255,255,0.3);
+    -moz-box-shadow: 0 2px 2px rgba(0,0,0,0.027),inset 0 1px 0 rgba(255,255,255,0.69),inset 0 -1px 0 rgba(0,0,0,0.019),inset 0 15px 14px rgba(255,255,255,0.3);
+    -ms-box-shadow: 0 2px 2px rgba(0,0,0,0.027),inset 0 1px 0 rgba(255,255,255,0.69),inset 0 -1px 0 rgba(0,0,0,0.019),inset 0 15px 14px rgba(255,255,255,0.3);
+    -o-box-shadow: 0 2px 2px rgba(0,0,0,0.027),inset 0 1px 0 rgba(255,255,255,0.69),inset 0 -1px 0 rgba(0,0,0,0.019),inset 0 15px 14px rgba(255,255,255,0.3);
+    box-shadow: 0 2px 2px rgba(0,0,0,0.027), inset 0 1px 0 rgba(255,255,255,0.69), inset 0 -1px 0 rgba(0,0,0,0.019), inset 0 15px 14px rgba(255,255,255,0.3);
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.divComplejo .btnTop {
+    background: #000;
+    text-align: center;
+    max-width: 100%;
+    padding: 8px;
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    -ms-border-radius: 0 0 3px 3px;
+    -o-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+}
+
+.listaCarteleraHorario h2 .nueva-ap
+{
+    background-color:#fff;-webkit-border-radius:0 1em 1em 0;-moz-border-radius:0 1em 1em 0;-ms-border-radius:0 1em 1em 0;-o-border-radius:0 1em 1em 0;border-radius:0 1em 1em 0;color:#0b5ba1;display:block;font-size:.7em;font-weight:700;height:22px;margin-top:-10px;padding:0 2%;position:absolute;right:10px;top:50%;
+}
+.listaCarteleraHorario h2 .nueva-ap:before
+{
+    background:url("https://static.cinepolis.com/img/sombra-icon-apertura.png");content:"";height:43px;left:-11px;position:absolute;top:-7px;-webkit-transform:rotate(11deg);-moz-transform:rotate(11deg);-ms-transform:rotate(11deg);-o-transform:rotate(11deg);transform:rotate(11deg);width:18px;z-index:10
+}
+.listaCarteleraHorario h2 .nueva-ap:after
+{
+    border-bottom:22px solid #fff;border-left:10px solid transparent;content:"";left:-10px;position:absolute;top:0
+}
+.region-andina .listaCarteleraHorario h2 .nueva-ap
+{
+    right:40px
+}
+
+
+.listaCarteleraHorario article .descripcion header .clasificacion
+{
+    background:#a6afbe;padding:2px 6px;margin-left:3px;color:#fff;display:inline-block;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;border-radius:2px;cursor:default;position:relative;
+}
+.listaCarteleraHorario article .descripcion header .clasificacion:hover:after
+{
+    min-width:210px;top:30px;content:attr(data-description);left:-40%;position:absolute;z-index:9999;background:#222;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border-radius:3px;color:#fff;font-size:.95em;line-height:1.25em;padding:5px 5px;text-align:left;font-weight:300;width:auto
+}
+.listaCarteleraHorario article .descripcion header .clasificacion:hover:before
+{
+    top:25px;content:"";left:25%;position:absolute;z-index:9999;border:solid;border-color:#222 transparent;border-width:0 6px 6px 6px
+}
+
+.listaCarteleraHorario article .descripcion .horarioExp time
+{
+    background:#ececec;border:solid 1px #d8d8d8;color:#575757;text-shadow:0 1px 0 rgba(255,255,255,0.59);margin-bottom:8px;margin-right:4px;padding:3px 5px;height:auto;font-size:12px;-webkit-box-shadow:0 2px 2px rgba(0,0,0,0.027),inset 0 1px 0 rgba(255,255,255,0.69),inset 0 -1px 0 rgba(0,0,0,0.019),inset 0 15px 14px rgba(255,255,255,0.3);-moz-box-shadow:0 2px 2px rgba(0,0,0,0.027),inset 0 1px 0 rgba(255,255,255,0.69),inset 0 -1px 0 rgba(0,0,0,0.019),inset 0 15px 14px rgba(255,255,255,0.3);-ms-box-shadow:0 2px 2px rgba(0,0,0,0.027),inset 0 1px 0 rgba(255,255,255,0.69),inset 0 -1px 0 rgba(0,0,0,0.019),inset 0 15px 14px rgba(255,255,255,0.3);-o-box-shadow:0 2px 2px rgba(0,0,0,0.027),inset 0 1px 0 rgba(255,255,255,0.69),inset 0 -1px 0 rgba(0,0,0,0.019),inset 0 15px 14px rgba(255,255,255,0.3);box-shadow:0 2px 2px rgba(0,0,0,0.027),inset 0 1px 0 rgba(255,255,255,0.69),inset 0 -1px 0 rgba(0,0,0,0.019),inset 0 15px 14px rgba(255,255,255,0.3);-webkit-transition:all .2s linear;-moz-transition:all .2s linear;-ms-transition:all .2s linear;-o-transition:all .2s linear;transition:all .2s linear;
+}
+.listaCarteleraHorario article .descripcion .horarioExp time:hover
+{
+    background:#d8ecfd;border:solid 1px #1096d4;text-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;-ms-box-shadow:none;-o-box-shadow:none;box-shadow:none
+}
+.listaCarteleraHorario article .descripcion .horarioExp time:active
+{
+    background:#d8ecfd;border:solid 1px #1096d4;text-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;-ms-box-shadow:none;-o-box-shadow:none;box-shadow:none
+}

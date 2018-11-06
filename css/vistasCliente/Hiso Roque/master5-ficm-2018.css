@@ -1,0 +1,265 @@
+/*!
+FICM 2018  - 1.0.0
+Copyright © 2016 - 2018 IA Interactive Team
+Desarrollado en IA Interactive
+http://ia.com.mx/
+*/
+.skin-wrapper
+{
+	display:none
+}
+@media screen and (min-width:1280px)
+{
+	.has-skin .contentWrapper--home
+	{
+	background:#fff
+	}
+	.has-skin .cartelera,.has-skin #publiboard,.has-skin .notificacion
+	{
+		position:relative;z-index:10
+	}
+	.has-skin .cartelera > header h2 a.btn-h2-df-norte
+	{
+		background-color:#323d41;padding-left:2.1em;position:relative;overflow:hidden;
+	}
+	.has-skin .cartelera > header h2 a.btn-h2-df-norte i
+	{
+		background-color:#867d41
+	}
+	.has-skin .cartelera > header h2 a.btn-h2-df-norte:hover
+	{
+		background-color:#867d41;
+	}
+	.has-skin .cartelera > header h2 a.btn-h2-df-norte:hover i
+	{
+		background-color:#323d41
+	}
+	.has-skin .cartelera > header h2 a.btn-h2-df-norte:before
+	{
+		content:'';position:absolute;top:-10px;left:3px;width:1.8em;height:1.8em;background:url("//static.cinepolis.com/cortinillas/1/skin-ficm-2018/imagenes/img-ficm-icon-sheet.png") no-repeat center/100%;pointer-events:none
+	}
+	.has-skin .selectGris h3
+	{
+		color:#323d41
+	}
+	.has-skin .listCartelera li figure .cintillo
+	{
+		background-color:#6b787d;
+	}
+	.has-skin .listCartelera li figure .cintillo:before
+	{
+		border-bottom:12px solid #6b787d
+	}
+	.has-skin .listCartelera li figure .cintillo:after
+	{
+		content:'';position:absolute;bottom:0;right:10px;width:1.5em;height:1.5em;background:url("//static.cinepolis.com/cortinillas/1/skin-ficm-2018/imagenes/img-ficm-icon-flower.png") no-repeat center/100%;pointer-events:none
+	}
+	.has-skin .skin-toggle
+	{
+		background:url("//static.cinepolis.com/cortinillas/1/skin-ficm-2018/imagenes/img-ficm-toggle.jpg") no-repeat center/cover;box-shadow:3px 3px 10px rgba(0,0,0,0.3)
+	}
+	.has-skin .skin-bg
+	{
+		position:absolute;top:0;left:0;right:0;z-index:2;
+	}
+	.has-skin .skin-bg-back
+	{
+		animation:10s movebg linear both;width:200%;height:100%;margin:auto;background:url("//static.cinepolis.com/cortinillas/1/skin-ficm-2018/imagenes/img-ficm-bg.jpg") no-repeat center/cover
+	}
+	.has-skin .skin-bg-cent
+	{
+		width:76em;height:100%;margin:0 auto;background:rgba(255,255,255,0.8);z-index:2
+	}
+	.has-skin .skin-wrapper
+	{
+		display:flex;flex-direction:row;justify-content:space-between;position:absolute;bottom:2%;left:0;right:0;width:94%;margin:0 auto;z-index:2;
+	}
+	.has-skin .skin-wrapper figure
+	{
+		max-width:8em
+	}
+	.skin-toggle
+	{
+		position:absolute;top:0;height:100%;width:100%;cursor:pointer;background:url("//static.cinepolis.com/cortinillas/1/skin-ficm-2018/imagenes/img-ficm-2018-toggle.jpg") no-repeat center/cover;box-shadow:3px 3px 10px rgba(0,0,0,0.3)
+	}
+	#publiboard .col3 a
+	{
+		opacity:0
+	}
+}
+
+@-moz-keyframes movebg
+{
+	0%
+	{
+		opacity:0;margin-left:-100%
+	}
+	10%
+	{
+		opacity:1;margin-left:-100%
+	}
+	30%
+	{
+		opacity:1;margin-left:-100%
+	}
+	32%
+	{
+		opacity:0;margin-left:-100%
+	}
+	33%
+	{
+		opacity:0;margin-left:0
+	}
+	40%
+	{
+		opacity:1;margin-left:0
+	}
+	60%
+	{
+		opacity:1;margin-left:0
+	}
+	62%
+	{
+		opacity:0;margin-left:0
+	}
+	70%
+	{
+		opacity:0;margin-left:-50%
+	}
+	100%
+	{
+		opacity:1;margin-left:-50%
+	}
+}
+
+@-webkit-keyframes movebg
+{
+	0%
+	{
+		opacity:0;margin-left:-100%
+	}
+	10%
+	{
+		opacity:1;margin-left:-100%
+	}
+	30%
+	{
+		opacity:1;margin-left:-100%
+	}
+	32%
+	{
+		opacity:0;margin-left:-100%
+	}
+	33%
+	{
+		opacity:0;margin-left:0
+	}
+	40%
+	{
+		opacity:1;margin-left:0
+	}
+	60%
+	{
+		opacity:1;margin-left:0
+	}
+	62%
+	{
+		opacity:0;margin-left:0
+	}
+	70%
+	{
+		opacity:0;margin-left:-50%
+	}
+	100%
+	{
+		opacity:1;margin-left:-50%
+	}
+}
+
+@-o-keyframes movebg
+{
+	0%
+	{
+		opacity:0;margin-left:-100%
+	}
+	10%
+	{
+		opacity:1;margin-left:-100%
+	}
+	30%
+	{
+		opacity:1;margin-left:-100%
+	}
+	32%
+	{
+		opacity:0;margin-left:-100%
+	}
+	33%
+	{
+		opacity:0;margin-left:0
+	}
+	40%
+	{
+		opacity:1;margin-left:0
+	}
+	60%
+	{
+		opacity:1;margin-left:0
+	}
+	62%
+	{
+		opacity:0;margin-left:0
+	}
+	70%
+	{
+		opacity:0;margin-left:-50%
+	}
+	100%
+	{
+		opacity:1;margin-left:-50%
+	}
+}
+
+@keyframes movebg
+{
+	0%
+	{
+		opacity:0;margin-left:-100%
+	}
+	10%
+	{
+		opacity:1;margin-left:-100%
+	}
+	30%
+	{
+		opacity:1;margin-left:-100%
+	}
+	32%
+	{
+		opacity:0;margin-left:-100%
+	}
+	33%
+	{
+		opacity:0;margin-left:0
+	}
+	40%
+	{
+		opacity:1;margin-left:0
+	}
+	60%
+	{
+		opacity:1;margin-left:0
+	}
+	62%
+	{
+		opacity:0;margin-left:0
+	}
+	70%
+	{
+		opacity:0;margin-left:-50%
+	}
+	100%
+	{
+		opacity:1;margin-left:-50%
+	}
+}

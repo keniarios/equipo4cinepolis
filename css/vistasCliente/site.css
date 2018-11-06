@@ -1,0 +1,36 @@
+﻿#conectado #perfil .data-usr--img img, #mis-amigos #amigos > ul > li .amigo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+#conectado #perfil .data-usr--img {
+    overflow: hidden;
+    position: relative;
+}
+
+#conectado #perfil .data-usr--img img {
+    position: absolute;
+}
+
+#conectado #perfil .data-usr--img:before {
+    -webkit-border-radius: 10em;
+    border-radius: 10em;
+    -webkit-box-shadow: 0 0 4px 4px rgba(0,0,0,0.2) inset;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,0.2) inset;
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.recomendaciones {
+    padding: 2em 0;
+    position: relative;
+    max-height: 205px !important;
+}
+
+.loading {
+    min-height: 203px !important;
+}

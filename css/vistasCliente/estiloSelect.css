@@ -1,0 +1,97 @@
+div.selectorr, div.checker, div.button, div.radio, div.uploader {
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+div.selectorr:focus, div.checker:focus, div.button:focus, div.radio:focus, div.uploader:focus {
+    outline: 0
+}
+
+div.selectorr, div.selectorr *, div.radio, div.radio *, div.checker, div.checker *, div.uploader, div.uploader *, div.button, div.button * {
+    margin: 0;
+    padding: 0
+}
+.selectBlanco div.selectorr {
+    background: #fff;
+    border: solid 1px #e1e3e6;
+}
+
+
+.selectGris {
+    margin: .83em 0;
+}
+
+.selectGris div.selectorr {
+    background: #f5f5f5;
+    border: solid 1px #e1e3e6;
+}
+
+.selectGris h3 {
+    margin: 5px 0
+}
+
+div.selectorr {
+    background: url('../img/vistaCliente/icon-select-form-gris.png?embed') no-repeat 100% 0;
+    line-height: 35px;
+    height: 35px;
+    width: 100% !important;
+    padding: 0 0 0 10px;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    zoom: 0;
+    behavior: url("PIE.htc");
+}
+
+div.selectorr span {
+    background: url('../img/vistaCliente/icon-select-form-gris.png?embed') no-repeat 100% 0;
+    background: #fff;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    background-position: right 0;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 30px;
+    cursor: pointer;
+    width: 99.9% !important;
+    display: block;
+}
+
+div.selectorr select {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    border: none;
+    background: #fff;
+    position: absolute;
+    height: 30px;
+    top: 2px;
+    left: 0;
+    width: 100%
+}
+
+div.selectorr.active {
+    background: #fff
+}
+
+
+
+div.selectorr.fixedWidth {
+    width: 190px;
+}
+
+div.selectorr.fixedWidth span {
+    width: 155px;
+}

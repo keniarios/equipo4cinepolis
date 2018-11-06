@@ -1,0 +1,354 @@
+@media handheld, only screen and (max-width: 800px) {
+    section .pasosCompra > ul li {
+        height: 68px;
+    }
+
+    .confirmarEnviar, .formPago {
+        width: 80%;
+    }
+
+    .checkFormaPago li label {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    section.g960 {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+        section.g960 .resumen div div:first-child {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        section.g960 .resumen div.col4 {
+            margin-left: 0;
+        }
+
+        section.g960 .resumen div.col4, section.g960 .resumen div.col3 {
+            width: 49%;
+        }
+
+    .checkFormaPago li {
+        height: 114px;
+    }
+
+    section.g960 .pasosCompra table {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    section .pasosCompra fieldset .btnProcesoCompra, section .pasosCompra fieldset .btnPrevCompra, section .pasosCompra fieldset .btnSubmit {
+        padding: 8px 8px;
+    }
+
+    .checkFormaPago li label {
+        font-size: 11px;
+        padding: 8px 0 0 0;
+    }
+
+    section .pasosCompra fieldset table {
+        width: 100%;
+    }
+
+    section .pasosCompra table .spinner button {
+        width: 30px;
+        height: 30px;
+    }
+
+    section .pasosCompra table .numBoletos {
+        width: 30px;
+    }
+
+    section .pasosCompra fieldset .confirmarEnviar, section .pasosCompra fieldset .formPago, section .pasosCompra fieldset .datosConfirmacion {
+        width: 100%;
+    }
+
+    section .pasosCompra fieldset .tipoBoletoComprar {
+        width: 100%;
+    }
+
+    .desc1 {
+        display: none;
+    }
+
+    .desc2 {
+        display: block !important;
+        text-align: left !important;
+        float: initial !important;
+    }
+
+    .PaymentDetailsRow td input[type='text'], .PaymentDetailsRow td input[type='email'], .PaymentDetailsRow td input[type='url'], .PaymentDetailsRow td input[type='tel'], .PaymentDetailsRow td input[type='password'], .PaymentDetailsRow td textarea {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section.g960 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+        section.g960 header h2 {
+            font-size: .95em;
+        }
+
+        section.g960 .paseAnual > div {
+            text-align: left;
+        }
+
+            section.g960 .paseAnual > div label {
+                float: none;
+                text-align: left;
+                margin: 0;
+                width: 240px;
+            }
+
+            section.g960 .paseAnual > div p {
+                text-align: left;
+            }
+
+            section.g960 .paseAnual > div .tooltip {
+                top: -25px !important;
+            }
+
+            section.g960 .paseAnual > div .tooltip2 {
+                top: 80px !important;
+            }
+    /*CambiosCSG*/
+    body.paseAnual > div {
+        text-align: left;
+    }
+
+        body.paseAnual > div label {
+            float: none;
+            text-align: left;
+            margin: 0;
+            width: 240px;
+        }
+
+        body.paseAnual > div p {
+            text-align: left;
+        }
+
+        body.paseAnual > div .tooltip {
+            top: -25px !important;
+        }
+
+        body.paseAnual > div .tooltip2 {
+            top: 80px !important;
+        }
+
+    section.g960 .pasosCompra fieldset {
+        padding: 10px 8px;
+    }
+
+        section.g960 .pasosCompra fieldset table {
+            width: 100%;
+            font-size: 13px;
+        }
+
+            section.g960 .pasosCompra fieldset table td:first-child {
+                padding: 0;
+            }
+
+            section.g960 .pasosCompra fieldset table p.txtBoleto {
+                display: block;
+                text-indent: 0;
+            }
+
+            section.g960 .pasosCompra fieldset table span.txtBoleto {
+                display: none;
+                text-indent: -99999px;
+            }
+
+    .checkFormaPago li {
+        height: 100px;
+        width: 100px;
+    }
+
+    section.g960 .pasosCompra fieldset .confirmarEnviar, section.g960 .pasosCompra fieldset .formPago, section.g960 .pasosCompra fieldset .datosConfirmacion {
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    .confirmarEnviar label, .formPago label, .datosConfirmacion label {
+        float: none;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    section.g960 .pasosCompra fieldset .confirmarEnviar .acumularPuntos .checker, section.g960 .pasosCompra fieldset .formPago .acumularPuntos .checker, section.g960 .pasosCompra fieldset .datosConfirmacion .acumularPuntos .checker {
+        float: left;
+        margin: 0 10px 20px 0;
+    }
+
+    section.g960 .pasosCompra fieldset .datosConfirmacion div.col6 {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+
+    section.g960 .pasosCompra fieldset .tipoBoletoComprar {
+        background: #ededed;
+        padding: 10px;
+    }
+
+    .tipoBoletoComprar label {
+        font-size: 12px;
+    }
+
+    section.g960 .pasosCompra > ul li {
+        font-size: 12px;
+    }
+
+        section.g960 .pasosCompra > ul li i {
+            display: none;
+        }
+
+    section.g960 .pasosCompra .btnPrevCompra, section.g960 .pasosCompra .btnPrevBoletos {
+        background: #969ea9;
+        margin-right: 0%;
+    }
+
+    section.g960 .pasosCompra .opcionDulceria {
+        text-align: center;
+    }
+
+        section.g960 .pasosCompra .opcionDulceria div {
+            width: 100% !important;
+            float: none !important;
+            margin: 0 !important;
+            text-align: center;
+        }
+
+            section.g960 .pasosCompra .opcionDulceria div:first-child {
+                text-align: left;
+            }
+
+    section.g960 .pasosCompra .dulceriaCompra table .btnEliminarCombo span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section.g960 .resumen div div {
+        width: 100% !important;
+        margin-left: 0;
+        float: none;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    section.g960 header h2 i.icon-ticket {
+        display: none;
+    }
+
+    section.g960 .pasosCompra > ul li {
+        font-size: 10px;
+    }
+
+        section.g960 .pasosCompra > ul li i {
+            display: none;
+        }
+
+    section.g960 .pasosCompra fieldset table {
+        font-size: 12px;
+    }
+
+        section.g960 .pasosCompra fieldset table .numBoletos {
+            width: 30px;
+            font-size: 14px;
+        }
+
+    section.g960 .pasosCompra .dulceriaCompra table th:first-child, section.g960 .pasosCompra .dulceriaCompra table td:first-child {
+        display: none;
+    }
+
+    section.g960 .pasosCompra .opcionDulceria .btnComprarDulceria {
+        font-size: .95em;
+    }
+
+    section.g960 table {
+        margin: 0 0 5px 0;
+    }
+
+    .captchaValidar, #ajax-fc-content {
+        width: 100%;
+    }
+
+        #ajax-fc-content #ajax-fc-right {
+            width: 76px;
+            height: 76px;
+        }
+
+    p#ajax-fc-circle {
+        margin: 0;
+    }
+
+    #ajax-fc-content #ajax-fc-left {
+        width: 184px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    section.g960 {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+        section.g960 .resumen div div {
+            width: 100% !important;
+            margin-left: 0;
+            float: none;
+        }
+
+        section.g960 .pasosCompra > ul li {
+            font-size: 10px;
+            padding: 15px 2px;
+        }
+
+            section.g960 .pasosCompra > ul li i {
+                display: none;
+            }
+
+    .checkFormaPago li {
+        width: 100px;
+        height: 100px;
+    }
+
+    section.g960 .pasosCompra fieldset table {
+        font-size: 12px;
+    }
+
+    table .numBoletos {
+        width: 25px;
+        font-size: 13px;
+    }
+
+    table .spinner button {
+        width: 25px;
+        height: 25px;
+    }
+
+    section.g960 .pasosCompra .dulceriaCompra table th:first-child, section.g960 .pasosCompra .dulceriaCompra table td:first-child {
+        display: none;
+    }
+
+    section.g960 table {
+        margin: 0 0 5px 0;
+    }
+}
+@media screen and (max-width: 425px){
+    .col2 {
+        width:100%;
+        left: 30%;
+        bottom:20px;
+    }
+}
+
+#tblContenido { table-layout: fixed; }

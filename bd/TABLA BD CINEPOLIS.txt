@@ -1,0 +1,100 @@
+SELECT * FROM registropersonal 
+	 
+CREATE TABLE registropersonal
+(
+    id_registropersonal serial,
+    numeroempleado text COLLATE pg_catalog."default",
+    nombre text COLLATE pg_catalog."default",
+    appaterno text COLLATE pg_catalog."default",
+    apmaterno text COLLATE pg_catalog."default",
+    correo text COLLATE pg_catalog."default",
+    contrasena text COLLATE pg_catalog."default",
+    telefono text COLLATE pg_catalog."default",
+    puesto text COLLATE pg_catalog."default",
+    CONSTRAINT registropersonal_pkey PRIMARY KEY (id_registropersonal)
+)
+
+*******************************************************************************
+
+CREATE TABLE peliculas
+(
+    id_pelicula serial,
+    imagen text,
+    titulo text ,
+    paisorigen text,
+    anoestreno text,
+    clasificacion text,
+    duracion text,
+    genero text,
+    linktrailer text,
+    sinopsis text,
+    actores text,
+    directores text,
+    idiomaespanol integer,
+    idiomaingles integer,
+    subtituloespanol integer,
+    subtituloingles integer,
+    pelicula3d integer,
+    idiomaespanol3d integer,
+    idiomaingles3d integer,
+    subtituloespanol3d integer,
+    subtituloingles3d integer,
+    estadoorigen text,
+    estatus integer,
+    CONSTRAINT peliculas_pkey PRIMARY KEY (id_pelicula)
+)
+
+******************************************************************************
+
+CREATE TABLE slider
+(
+    id_slider serial,
+    rutaimagenbanner text,
+    rutaimagenmovil text,
+    rutaimagenmini text,
+    posicion integer,
+    PRIMARY KEY (id_slider)
+)
+
+
+******************************************************************************
+
+
+CREATE TABLE registrocinepolisid
+(
+    id_cinepolisid serial,
+    nombre text,
+    apellidopaterno text,
+    apellidomaterno text,
+    correo text,
+    contrasena text,
+    tarjetaclub text,
+    preguntaseguridad text,
+    respuestapreguntaseguridad text,
+    dianacimiento text,
+    mesnacimiento text,
+    anonacimiento text,
+    lada text,
+    telefono text,
+    PRIMARY KEY (id_cinepolisid)
+)
+
+******************************************************************************
+
+CREATE TABLE altasucursal
+(
+    id_sucursal serial,
+    nombre text,
+    ciudad text,
+    estatus integer,
+    PRIMARY KEY (id_sucursal)
+)
+
+
+
+******************************************************************************
+
+** COMANDOS PHP.INI(XAMPP)**
+
+extension=php_pgsql.dll
+extension=php_pdo_pgsql.dll
