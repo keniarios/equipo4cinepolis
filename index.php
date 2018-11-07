@@ -145,6 +145,8 @@
 
 </head>
 <body>
+	<h1>HOLA</h1>
+
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M66T72" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>dataLayer = [];
@@ -202,7 +204,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<?php include('header/encabezado.php'); ?>
 
 		<!-- SLIDE -->
-		<?php include('slide/slide.php'); ?>
+		<?php include('slide/slide.php'); ?><h1>HOLA</h1>
 
 		<div class="contentWrapper contentWrapper--home">
 			<div class="cont-busqueda-mov row"></div>
