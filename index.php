@@ -144,8 +144,7 @@
 <link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-29/html/container.html">
 
 </head>
-<body>
-	<h1>HOLA</h1>
+<body> 
 
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M66T72" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -204,7 +203,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<?php include('header/encabezado.php'); ?>
 
 		<!-- SLIDE -->
-		<?php include('slide/slide.php'); ?><h1>HOLA</h1>
+		<?php include('slide/slide.php'); ?>
 
 		<div class="contentWrapper contentWrapper--home">
 			<div class="cont-busqueda-mov row"></div>
