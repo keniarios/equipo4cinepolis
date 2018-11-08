@@ -139,7 +139,7 @@
 	<title>Cinépolis</title>
 
 	
-<script type="text/javascript" async="" src="http://dgy6rx5roq02d.cloudfront.net/triggit-analytics.min.js"></script>
+<!--<script type="text/javascript" async="" src="http://dgy6rx5roq02d.cloudfront.net/triggit-analytics.min.js"></script>-->
 <link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-29/html/container.html">
 
 </head>
