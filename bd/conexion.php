@@ -8,7 +8,7 @@ function conectarBD()
 	$user = "user=kenia";
 	$password = "password=123";
 
-	$bd = pg_connect("$host $port $dbname $user $password");
+	$bd = pg_connect("$host $port $dbname");
 	if (!$bd ) {
 		echo "Error: " .pg_last_error();
 	}else{
