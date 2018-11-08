@@ -6,8 +6,7 @@
 	<link href="../css/vistasCliente/master2.css" rel='stylesheet' type='text/css' />
 	<link href="../css/vistasCliente/master3.css" rel='stylesheet' type='text/css' />
 	<link href="../css/vistasCliente/master4.css" rel='stylesheet' type='text/css' />
-	<link href="../css/vistasCliente/Master5-1339141376.css" rel='stylesheet' type='text/css' />
-	<link href="../css/vistasCliente/Master6-2006319605.css" rel='stylesheet' type='text/css' />
+	
 	<link href="../css/vistasCliente/estiloSelect.css" rel='stylesheet' type='text/css' />
 
 	<!--EMPEZAR-->
