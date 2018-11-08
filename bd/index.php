@@ -1,9 +1,5 @@
 <?php 
-session_start();
-if(!isset($_SESSION['id_registropersonal'])) 
-{
-  header('Location: frm_admin_login.php');
-}
+
 
 require_once ('../bd/conexion.php'); $conexion = conectarBD(); 
 
