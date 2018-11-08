@@ -30,7 +30,7 @@ if($row = pg_fetch_array($result))
         $_SESSION['lada'] = $row["lada"];
         $_SESSION['telefono'] = $row["telefono"];
 
-        header("Location: ../../cinepolisID/index.php");
+        header("Location: cinepolisID/index.php");
       }
       else
       {
