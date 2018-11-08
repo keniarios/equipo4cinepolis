@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
 	
-	<link href="../css/vistasCliente/master.css" rel='stylesheet' type='text/css' />
-	<link href="../css/vistasCliente/master2.css" rel='stylesheet' type='text/css' />
-	<link href="../css/vistasCliente/master3.css" rel='stylesheet' type='text/css' />
+	<link href="../../css/vistasCliente/master.css" rel='stylesheet' type='text/css' />
+	<link href="../../css/vistasCliente/master2.css" rel='stylesheet' type='text/css' />
+	<link href="../../css/vistasCliente/master3.css" rel='stylesheet' type='text/css' />
 
 </head>
 <body>
@@ -29,7 +29,7 @@
 			</h1>
 			
 			<!--CIUDADES Y SUCURSALES INCLUIDAS-->
-		<?php include ('../mostrarCiudadyTiendas/mostrarCiudadyTiendas.php');?>
+		<?php include ('mostrarCiudadyTiendas/mostrarCiudadyTiendas.php');?>
 
 
 			<div class="md-modal md-effect-12" id="videoTrailers">
@@ -40,7 +40,7 @@
 					</button>
 				</div>
 			</div>
-			<script src="../scripts/video/video.js" async="async"></script>
+			<script src="../../scripts/video/video.js" async="async"></script>
 			<div class="col1">
 				<div id="ctl14_pnlCinepolisIDMexico">
 					<div id="ctl14_pnlAnonymousTemplate">
