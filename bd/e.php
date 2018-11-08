@@ -1,7 +1,7 @@
 <?php 
 
 function conectarBD() {
-	$server = '23.96.84.115';
+	$server = '127.0.0.1';
 	$user = 'kenia';
 	$pass = 'Kenia123';
 	$bd = 'bd_clientes';
