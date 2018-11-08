@@ -2,11 +2,11 @@
 <?php
 	//include ('../bd/conexion.php'); $conexion = conectarBD();
 	include ('conexion.php'); $conexion = conectarBDslide();
-	$result = mysql_query("SELECT id_slider, titulo, rutaimagenbanner, rutaimagenmovil, rutaimagenmini, posicion FROM slider ORDER BY posicion");
-	$resultminislide = mysql_query("SELECT titulo, rutaimagenmini, posicion FROM slider ORDER BY posicion");
+	$result = pg_query("SELECT id_slider, titulo, rutaimagenbanner, rutaimagenmovil, rutaimagenmini, posicion FROM slider ORDER BY posicion");
+	$resultminislide = pg_query("SELECT titulo, rutaimagenmini, posicion FROM slider ORDER BY posicion");
 	
-	$totalRegistros = mysql_num_rows($result);
-	mysql_close($conexion);
+	$totalRegistros = pg_numrows($result);
+	pg_close($conexion);
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
 				<ul id='ContentPlaceHolder1_sliderFront' class='slides' style='width: 1015%; position: relative; transition-duration: 0s; transform: translate3d(-8094px, 0px, 0px);'>";
 					
 					$bandera=0;
-					while ($datos=mysql_fetch_array($result)) {
+					while ($datos=pg_fetch_array($result)) {
 					$bandera++;
 					$ID = $datos['id_slider'];
 					$titulo = $datos['titulo'];
@@ -68,7 +68,7 @@
 		$bandera=0;
 		$x=0;
 
-		while ($datosslide=mysql_fetch_array($resultminislide))
+		while ($datosslide=pg_fetch_array($resultminislide))
 		{
 			$bandera++;
 

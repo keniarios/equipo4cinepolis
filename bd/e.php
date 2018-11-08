@@ -1,15 +1,12 @@
 <?php 
 
 function conectarBD() {
-	
-	$serverName = "equipo4cinepolis.database.windows.net";
-	$connectionOptions = array(
-	    "Database" => "cinepolis",
-	    "Uid" => "keniarios",
-	    "PWD" => "Equipo4cinepolis"
-	);
-	//Establishes the connection
-	$conn = sqlsrv_connect($serverName, $connectionOptions);
+	$server = '23.96.84.115';
+	$user = 'kenia';
+	$pass = 'Kenia123';
+	$bd = 'bd_cliente';
+	$connec = pg_connect("host=".$server." dbname=".$bd." user=".$user." password=".$pass." ") or die ("Error de conexion servidor ".$server." BD ".$bd."");
+    return $connec;
 }
 
  ?>
