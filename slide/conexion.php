@@ -3,8 +3,8 @@
 function conectarBDslide()
 {
 	$host = "host=23.96.84.115";
-	$port = "port=22";
-	$dbname = "dbname=bd_cliente";
+	$port = "port=5432";
+	$dbname = "dbname=bd_clientes";
 	$user = "user=kenia";
 	$password = "password=Kenia123";
 
