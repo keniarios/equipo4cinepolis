@@ -1,0 +1,210 @@
+﻿$(function(){
+    var wAncho = $(window).width();
+    /* Numéro de boletos */
+    $('.numBoletos').spinner();
+
+    /* Selección de asientos */
+    var $contentAsientos= $('.pasosCompra').width()-40;
+    $('.ticketsSelect').css("width", $contentAsientos);
+    $('.ticketsSelect').kinetic();
+
+    // Fee $5.00
+    $('.ver-desglose').click(function(e){
+      $('.desc-donativo').slideToggle();
+      $('.ver-desglose span').toggleClass('icon-minus-sign');
+      e.preventDefault();
+    });
+    $('.descripcion-fee').click(function(e){
+      $('.info-txt').fadeIn('fast', function(){
+        $('.info-txt a').click(function(e){
+          $('.info-txt').fadeOut('fast');
+          e.preventDefault();
+        });
+      });
+      e.preventDefault();
+    });
+
+    /* Función para el proceso de compra */
+    var current_fs, next_fs, previous_fs; 
+    var left, opacity, scale; 
+    var animating; 
+
+    $(".btnProcesoCompra").click(function(e){
+      if(animating) return false;
+      animating = true;
+      
+      current_fs = $(this).parents("fieldset");
+      next_fs = $(this).parents("fieldset").next();
+
+      $(".pasosCompra li").eq($("fieldset").index($(this).parents("fieldset"))).addClass("active");
+
+      current_fs.animate({opacity: 0}, {
+        duration: 400, 
+        complete: function(){
+          current_fs.hide();
+          next_fs.animate({opacity: 1}).show(); 
+          animating = false;
+        }
+      });
+      e.preventDefault();
+    });
+
+    $(".btnPrevCompra").click(function(e){
+      if(animating) return false;
+      animating = true;
+      
+      current_fs = $(this).parents("fieldset");
+      previous_fs = $(this).parents("fieldset").prev();
+      
+      $(".pasosCompra li").eq($("fieldset").index(previous_fs)).removeClass("active");
+
+      current_fs.animate({opacity: 0},{
+        duration: 400, 
+        complete: function(){
+          current_fs.hide();
+          previous_fs.animate({opacity: 1}).show();
+          animating = false;
+        }
+      });
+      e.preventDefault();
+    });
+
+    $(".btnSubmit").click(function(e){
+      e.preventDefault();
+    })
+
+    /* Selección de forma de pago */
+    $(".checkFormaPago input:checked").parent().addClass("selected");
+  
+    $(".checkFormaPago li").click(function(e) {
+        var $input = $(this);
+        var $classInput= $input.find(":checkbox").attr("id");
+        e.preventDefault();
+        if($(this).hasClass('selected')){
+          $(this).removeClass("selected");
+          $(this).find(":checkbox").removeAttr("checked");
+          $("."+$classInput).slideUp(300);
+        } else{
+          $(".checkFormaPago li").removeClass("selected");
+          $(".formPago").slideUp(300);
+          $(".checkFormaPago li").find(":checkbox").removeAttr("checked");
+          $(this).addClass("selected");
+          $(this).find(":checkbox").attr("checked","checked");
+          $("."+$classInput).slideDown(300);
+        }
+        
+    });
+
+    $(".checkFormaPago input").click(function(e) {
+      var $input = $(this);
+      var $classInput= $input.attr("id");
+      $("."+$classInput).toggle();
+      e.preventDefault();
+    });
+
+     /* Pase anual */
+    $(".paseAnual a").click(function(e) {
+      $(this).find("i").toggleClass('icon-caret-down icon-caret-up');
+      $(".paseAnual > div").slideToggle();
+      e.preventDefault();
+    });
+    $(".paseCinepass > a").click(function(e) {
+        $(this).find("i").toggleClass('icon-caret-down icon-caret-up');
+        $(".paseCinepass > div").slideToggle();
+        e.preventDefault();
+    });
+    $("#tooltip").mouseover(function(){
+      $(this).next().fadeIn("fast").css({
+        right: "10px",
+        top: "10px"
+      });
+    }).mouseout(function(){
+      $(this).next().fadeOut("fast");
+    }); 
+
+    $("#tooltip2").mouseover(function(){
+      $(this).next().fadeIn("fast").css({
+        right: "10px",
+        top: "10px"
+      });
+    }).mouseout(function(){
+      $(this).next().fadeOut("fast");
+    });   
+
+
+    /* Dulcería Compra */
+    $(".btnComprarDulceria").click(function(e) {
+      $(".asientosSala").fadeOut(200);
+      $(".dulceriaCompra").fadeIn(200, function() {
+        activarSlider();
+      });
+      e.preventDefault();
+    });
+
+    $(".btnPrevBoletos").click(function(e) {
+      $(".asientosSala").fadeIn(200);
+      $(".dulceriaCompra").fadeOut(200);
+      e.preventDefault();
+    });
+    $('ul.dulceriaOpciones').each(function(){
+      var $active, $content, $links = $(this).find('a');
+      $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+      $active.parent().addClass('active');
+      $content = $($active.attr('href'));
+      $links.not($active).each(function () {
+        $($(this).attr('href')).hide();
+      });
+
+      $(this).find("a").click(function(e){
+        $('.active ul').trigger("destroy", true);
+        $active.parent().removeClass('active');
+        $content.hide().removeClass('active');
+        $active = $(this);
+        $content = $($(this).attr('href'));
+        $active.parent().addClass('active');
+        $content.show().addClass('active');
+        activarSlider();
+        e.preventDefault();
+      });
+    });
+
+	$('#ProcAnimation').append($('<div class="loader"><div class="spinner"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div><p>Procesando...</p></div>').hide().fadeIn('fast'));
+  });
+  
+  // Abrir cerrar ? Folios
+  $('.ingreso-folio .mas').bind('click', function(e){
+    $('.mas-info-folios').fadeIn('fast', function(){
+      $('.cerrar-mas-info').click(function(e){
+        $(this).parent().fadeOut();
+		e.preventDefault();
+      });
+    });
+    e.preventDefault();
+  });
+ 
+  function activarSlider(){
+    $('.active ul').carouFredSel({
+        circular: false,
+        infinite: false,
+        auto  : false,
+        swipe: {
+          onTouch: true,
+          onMouse: true
+        },
+        prev  : { 
+          button  : ".btnPrev",
+          key   : "left"
+        },
+        next  : { 
+          button  : ".btnSig",
+          key   : "right"
+        },
+        width: '100%',
+        scroll: 1
+
+    });
+  }
+  $(window).resize(function() {
+    var $contentAsientos= $('.pasosCompra').width()-40;
+    $('.ticketsSelect').css("width", $contentAsientos);
+  });

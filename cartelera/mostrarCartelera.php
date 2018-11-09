@@ -1,7 +1,7 @@
 <!--codigo-->
 <?php
 	include ('bd/conexion.php'); $conexion = conectarBD();
-	$result = pg_query("SELECT id_pelicula, imagen, titulo, pelicula3d, estatus FROM peliculas ORDER BY estatus, anoestreno DESC");
+	$result = pg_query("SELECT id_pelicula, imagen, titulo, pelicula3d, estatus, ciudad FROM peliculas ORDER BY estatus, anoestreno DESC");
 
 	$totalRegistros = pg_numrows($result);
 
@@ -22,13 +22,14 @@
 							$banderamacroxe=true;$banderajunior=true;
 							$banderamacroxe2=true;$banderajunior2=true;
 							while ($datos=pg_fetch_array($result)) {
-							$bandera++;
-							$ID = $datos['id_pelicula'];
-							$fotoPeliculas = $datos['imagen'];
-							$fotoPeliculas = "../".$fotoPeliculas;
-							$tituloPeliculas = $datos['titulo'];
-							$iconotresDPeliculas = $datos['pelicula3d'];
-							$estatus = $datos['estatus'];
+								$bandera++;
+								$ID = $datos['id_pelicula'];
+								$fotoPeliculas = $datos['imagen'];
+								$fotoPeliculas = "../".$fotoPeliculas;
+								$tituloPeliculas = $datos['titulo'];
+								$iconotresDPeliculas = $datos['pelicula3d'];
+								$estatus = $datos['estatus'];
+								$ciudad = $datos['ciudad'];
 							echo"
 							<li id='ContentPlaceHolder1_rpCarteleaFront_li_carteles_$bandera' class='item' style='position: absolute; left: 0px; top: 0px;'>
 								<figure class='overlay'>
@@ -81,8 +82,8 @@
 												echo "
 										</nav>
 										<nav class='btn-call'>
-											<a href='cartelera.php' onclick='LinkCartelera(this); return false;' class='lnkCartelera' style='display:block; text-decoration: none;'>Ver Cartelera</a>";
-											echo "<a href='sinopsisPelicula.php?id_pelicula=$ID' onclick='LinkSinopsis(this); return false;' style='text-decoration: none;'>Ver Sinopsis</a>";
+											<a href='cartelera.php?ciudad=$ciudad' onclick='LinkCartelera(this); return false;' class='lnkCartelera' style='display:block; text-decoration: none;'>Ver Cartelera</a>";
+											echo "<a href='sinopsisPelicula.php?id_pelicula=$ID&ciudad=$ciudad' onclick='LinkSinopsis(this); return false;' style='text-decoration: none;'>Ver Sinopsis</a>";
 											echo "
 										</nav>
 									</div>
@@ -123,8 +124,8 @@
 									echo "</nav>
 
 									<nav>
-										<a href='#' class='lnkCartelera' onclick='LinkCartelera(this); return false;' style='display:block'>Ver Cartelera</a>
-										<a href='sinopsisPelicula.php?id_pelicula=$ID' onclick='LinkSinopsis(this); return false;'>Ver Sinopsis</a>
+										<a href='verCartelera.php?ciudad=$ciudad' class='lnkCartelera' onclick='LinkCartelera(this); return false;' style='display:block'>Ver Cartelera</a>
+										<a href='sinopsisPelicula.php?id_pelicula=$ID&ciudad=$ciudad' onclick='LinkSinopsis(this); return false;'>Ver Sinopsis</a>
 									</nav>
 								</div>
 							</li>
@@ -193,8 +194,8 @@
 												echo "
 										</nav>
 										<nav class='btn-call'>
-											<a href='#' onclick='LinkCartelera(this); return false;' class='lnkCartelera' style='display:block'>Ver Cartelera</a>
-											<a href='sinopsisPelicula.php?id_pelicula=$ID' onclick='LinkSinopsis(this); return false;'>Ver Sinopsis</a>
+											<a href='verCartelera.php?$ciudad=$ciudad' onclick='LinkCartelera(this); return false;' class='lnkCartelera' style='display:block'>Ver Cartelera</a>
+											<a href='sinopsisPelicula.php?id_pelicula=$ID&ciudad=$ciudad' onclick='LinkSinopsis(this); return false;'>Ver Sinopsis</a>
 										</nav>
 									</div>
 								</figure>";
@@ -233,8 +234,8 @@
 									echo "</nav>
 
 									<nav>
-										<a href='#' class='lnkCartelera' onclick='LinkCartelera(this); return false;' style='display:block'>Ver Cartelera</a>
-										<a href='sinopsisPelicula.php?id_pelicula=$ID' onclick='LinkSinopsis(this); return false;'>Ver Sinopsis</a>
+										<a href='verCartelera.php?ciudad=$ciudad' class='lnkCartelera' onclick='LinkCartelera(this); return false;' style='display:block'>Ver Cartelera</a>
+										<a href='sinopsisPelicula.php?id_pelicula=$ID&ciudad=$ciudad' onclick='LinkSinopsis(this); return false;'>Ver Sinopsis</a>
 									</nav>
 								</div>
 							</li>

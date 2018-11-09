@@ -1,0 +1,1136 @@
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arimo, Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	background-attachment: fixed;
+	margin: 0px;
+	color: #575757;
+	scrollbar-arrow-color: #3cafda;
+	scrollbar-base-color: #002c52;
+
+}
+.nombrecomplejo {
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+}
+td {
+	font-size: 10px;
+}
+th {
+	font-size: 10px;
+}
+.tituloscartelera {
+	font-size: 12px;
+	color: #ffffff;
+}
+.fondomedio {
+	background-image: url('/visinternetticketing/Imagenes/FondoCarteleraMedio.gif');
+}
+.TicketTypeCell {
+	text-align: right;
+}
+
+
+.Price {
+	text-align: right;
+}
+select.cartelera {
+	font-size: 12px;
+	border-left-color: #ffcc00;
+	background: #ffffff;
+	border-bottom-color: #ffcc00;
+	color: #000000;
+	border-top-color: #ffcc00;
+	border-right-color: #ffcc00;
+}
+select {
+	background: #d8d8d8;
+	border-right: #ffffff 1px solid;
+	border-top: #ffffff 1px solid;
+	font-size: 12px;
+	background: #d8d8d8;
+	border-left: #ffffff 1px solid;
+	border-bottom: #ffffff 1px solid;
+}
+
+textarea {
+	border-right: #ffffff 1px solid;
+	border-top: #ffffff 1px solid;
+	font-size: 12px;
+	background: #d8d8d8;
+	border-left: #ffffff 1px solid;
+	border-bottom: #ffffff 1px solid;
+}
+
+.Oculto {
+	display: none;
+	visibility: hidden;
+}
+.Separado LABEL {
+	padding-right: 15px;
+	padding-left: 1px;
+	padding-bottom: 0px;
+	vertical-align: middle;
+	padding-top: 0px;
+}
+.Derecha {
+	text-align: right;
+}
+input.radioBoton {
+	border-right: #ffffff 0px;
+	border-top: #ffffff 0px;
+	background: none transparent scroll repeat 0% 0%;
+	border-left: #ffffff 0px;
+	border-bottom: #ffffff 0px;
+	font-family: none;
+}
+.radioBoton input {
+	border-right: #ffffff 0px;
+	border-top: #ffffff 0px;
+	background: none transparent scroll repeat 0% 0%;
+	border-left: #ffffff 0px;
+	border-bottom: #ffffff 0px;
+	font-family: none;
+}
+.radio input {
+	border-right: #ffffff 0px;
+	border-top: #ffffff 0px;
+	background: none transparent scroll repeat 0% 0%;
+	border-left: #ffffff 0px;
+	border-bottom: #ffffff 0px;
+	font-family: none;
+}
+input.textarea {
+	border-right: #ffffff 1px solid;
+	border-top: #ffffff 1px solid;
+	font-size: 9px;
+	border-left: #ffffff 1px solid;
+	color: #000000;
+	border-bottom: #ffffff 1px solid;
+	background-color: #ffffff;
+}
+.textoAzulPeque?o {
+	font-weight: normal;
+	font-size: 9px;
+	color: #b9ddf0;
+}
+.textoAzul {
+	font-weight: normal;
+	font-size: 12px;
+	color: #b9ddf0;
+}
+.textoAzulBold {
+	font-weight: bold;
+	font-size: 12px;
+	color: #b9ddf0;
+}
+.textoPequenosGris {
+	font-size: 8px;
+	color: #cccccc;
+}
+.textoGris {
+	font-size: 9px;
+	color: #cccccc;
+}
+.textoAmarillo {
+	font-weight: normal;
+	font-size: 12px;
+	color: #f7c915;
+}
+.textoAmarilloBold {
+	font-weight: bold;
+	font-size: 12px;
+	color: #f7c915;
+}
+.textoNormalPequeno {
+	font-size: 9px;
+	color: #ffffff;
+}
+.textoNormalPequenoBold {
+	font-weight: bold;
+	font-size: 9px;
+	color: #ffffff;
+}
+.textoNormal {
+	font-size: 12px;
+	color: #ffffff;
+}
+.textoNormalBold {
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.textoNegroPeque?o {
+	font-size: 9px;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.textoNegro {
+	font-size: 12px;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.textoNegroBold {
+	font-weight: bold;
+	font-size: 12px;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+td.InicioCuadroAzul {
+	background-image: url('/visinternetticketing/Imagenes/Fondos/FondoMuestraTop.gif');
+	background-repeat: no-repeat;
+}
+td.FinCuadroAzul {
+	background-image: url('/visinternetticketing/Imagenes/Fondos/FondoMuestraBottom.gif');
+	background-repeat: no-repeat;
+}
+
+td.InicioCarteleraCH {
+	background-image: url('Imagenes/Fondos/Fondo2.jpg');
+	background-repeat: no-repeat;
+}
+td.FinCarteleraCH {
+	background-image: url('Imagenes/Fondos/Fondo2.jpg');
+	background-repeat: no-repeat;
+}
+td.MedioCarteleraCH {
+	background-image: url('Imagenes/Fondos/Fondo2.jpg');
+}
+
+table.FondoTablaComplejo {
+	background-image: url('/visinternetticketing/Imagenes/Fondos/FondoTablaComplejo.gif');
+}
+
+.tituloCartelera {
+	color: #f5b902;
+	font-size: 10px;
+}
+
+a.HorarioCartelera {
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+a:visited.HorarioCartelera {
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+/* -- Defines what each ROW looks like in the user friendly error table */
+.ErrorRow {
+	height: 25px;
+}
+
+/* -- Defines what the TEXT looks like in the user friendly error table */
+.ErrorCell {
+	text-align: left;
+	text-indent: 0px;
+	font-size: 12px;
+	color: red;
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~	STYLES ON visSelectSeats.aspx													  */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* -- Welcome text for loyalty members */
+.SeatPageWelcome {
+	font-size: 12px;
+	color: white;
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* -- Giving a quick explanation to the user how to change their seats */
+.AppletExplanation {
+	color: #575757;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+/* -- Giving a quick explanation to the user how to change their seats */
+.Legend {
+	font-size: 10px;
+	color: gray;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+/* -- Allows you to put a background colour and border around the count down clock. */
+.LegendTable {
+}
+
+#divLegend div {
+	display: inline;
+	margin: 0 15px 0 0;
+}
+
+/* -- Border around the details table */
+.SeatsDetailsTableBorder {
+}
+
+/* -- Text below the applet with additional applet info */
+.AppletFooter {
+	font-size: 12px;
+	color: gray;
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* -- used for javascript seatplan */
+.Screen-Container {
+}
+
+.Screen-Front {
+	background: url('images/seating/ScreenForSeating_450.png');
+	height: 46px;
+	width: 450px;
+	margin-top: 15px;
+}
+
+.Screen-Back {
+}
+
+.Screen-AreaName {
+	font-size: 17px;
+	color: #000000;
+	font-style: normal;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.Screen-AllAreas {
+	background: #FFFFFF none repeat scroll 0 0;
+	overflow: auto;
+	width: 100%;
+}
+
+.Screen-AreaSeats {
+	position: relative;
+}
+
+div.SelectSeatdivs {
+	/*background-repeat:no-repeat;   background-position:bottom center;*/
+	line-height: 2em;
+}
+
+div.SelectSeatRows {
+	line-height: 2em;
+}
+
+p.SeatName {
+	position: absolute;
+	z-index: 1;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+
+p.RowDescription {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+
+img.SeatImage {
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+
+
+.DetailsSubHeader, .ConfirmDetailsSubHeader {
+	font-weight: bold;
+	color: #575757;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+}
+
+
+
+.DetailsSubHeaderFinal {
+	font-weight: bold;
+	color: #575757;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	font-size: 20px;
+
+}
+
+.txtTotalPurchaseDetails {
+	font-weight: bold;
+	font-size: 12px;
+	font-style: Bold;
+}
+.DetailsTextTotal {
+	font-weight: bold;
+	font-size: 12px;
+	font-style: Bold;
+}
+.DetailsSubHeaderTotal {
+	font-weight: bold;
+	font-size: 12px;
+	color: #FFCB08;
+	font-style: Bold;
+}
+.TicketTypeHeader {
+	font-size: 100%;
+	color: #969ea9;
+	text-align: right;
+}
+
+.DetailsHeader {
+	font-weight: bold;
+	color: #575757;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	width: 25%;
+	float: left;
+}
+
+.TimeRemaining {
+	font-size: 12px;
+	font-family: Arial;
+	font-style: Bold;
+}
+.DetailsText, .ConfirmDetailsText {
+	font-style: normal;
+	color: #969ea9;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+
+
+.TicketTypeFooter {
+	font-weight: bold;
+}
+.RadioPayMethod {
+	font-size: 12px;
+	color: #FFCB08;
+	font-style: Bold;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.ConfirmDetailsHeader {
+	font-weight: bold;
+	font-size: 14px;
+	font-style: Bold;
+}
+.ConfirmDetailsSubHeaderTotal {
+	font-size: 12px;
+	font-style: Bold;
+}
+
+.ConfirmDetailsTextTotal {
+	font-size: 12px;
+	font-style: Bold;
+}
+
+.textoAmarilloLink {
+	color: darkblue;
+	font-size: 13px;
+	font-style: Bold;
+	text-decoration: none;
+}
+
+.PaymentdetailsSubHeader {
+	font-style: normal;
+	font-size: 10px;
+	color: white;
+}
+
+.FP_FormasDePago {
+	display:none;
+}
+.cssFormaPago {
+	color: white;
+	text-align: left;
+	height: 100px;
+}
+.FP_Imagenes {
+	vertical-align: middle;
+	color: white;
+}
+
+.cssFPTarjeta {
+	height: 30px;
+}
+.cssFPBancomer {
+	height: 30px;
+}
+.cssFPPaypal {
+	height: 30px;
+}
+
+.walletSaldo {
+	font-weight: bold;
+	font-size: 13px;
+	color: #8cb5d5;
+}
+
+.tablaGeneral {
+	border: double;
+	box-shadow: 10px 10px 50px #888888;
+}
+
+#visOrderTracker_lblCartelExtra {
+	text-align: left;
+	color: #969ea9;
+}
+.MedioCartelera {
+	width: 70%;
+}
+
+.BodyTable {
+	margin: 0 0 0px 0;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.TicketTypeSubTotal {
+	font-weight: bold;
+}
+
+.TicketTypeRowAlt, .TicketTypeRow {
+	color: black;
+}
+
+#lblAboveTicketdetail {
+	color: #575757;
+}
+
+#objOrderTotal {
+	font-size: 20px;
+	font-weight: bold;
+	color: #0b5ba1;
+	text-align: center;
+}
+
+#objOrderTax {
+	text-align: center;
+	font-size: 100%;
+	font-weight: normal;
+	margin-top: 8px;
+	color: #969ea9;
+}
+
+#objHeaderTotal {
+	text-align: center;
+	font-size: 18px;
+	white-space: nowrap;
+}
+
+#tblTotal td {
+	text-align: center;
+	padding: 4px 0px 4px 0px;
+}
+
+.DetailsTableBorder th {
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+}
+
+#objSeatPlan {
+	width: 800px;
+}
+
+.Seating-Screen {
+	width: 800px;
+	height: 40px;
+}
+.Seating-Container {
+	width: 888px;
+}
+
+.Seating-Theatre {
+	width: 850px;
+}
+
+#orderDetails div div table, #tblError {
+	margin: 0px 0px 0px 0px;
+}
+.PaymentdetailsRow td span {
+	color: #575757;
+	display: block;
+	font-size: 14px;
+	font-style: normal;
+	padding-right: 8px;
+	text-align: right;
+}
+
+#tblExtraCardDetails_col2 tr td, .ConfirmDetailsRow td {
+	padding: 0px 4px 10px 4px;
+	white-space: nowrap;
+}
+#tblContenido tr td, #tblError tr td, #rowEmailConfirmation td, .ConfirmDetailsInfoRow td {
+
+}
+
+td #tblDetails {
+	width:70%;
+	margin: 0 auto;
+}
+
+.separadorTabla {
+	border-bottom: solid 1px #d8d8d8;
+	font-weight: bold;
+	color: #333;
+}
+.separadorTabla td {
+	padding: 10px 8px 10px 8px;
+}
+
+#filaTotal {
+
+	background: #ededed;
+	border: solid 1px #d8d8d8;
+}
+
+#filaTotal td {
+	padding: 10px 0px 10px 8px;
+}
+
+.total {
+	color: #333;
+	font-size: 1.2em;
+	font-weight: bold
+}
+.totalFinal {
+	color: #0b5ba1;
+	padding: 10px 8px 10px 8px;
+	font-size: 20px;
+	font-weight: bold
+}
+.TimeoutText {
+	color: gray;
+}
+
+.btnHor {
+	color: gray;
+}
+
+.spinner {
+	white-space:nowrap;
+}
+
+.spinner input  {
+	width:50px !important;
+	border:0 !important;
+	text-align:center;
+}
+
+.TicketQtyCell .selector {
+	display:none;
+}
+
+#Tr1 td {
+	text-align:center;
+}
+.boletos td {
+	padding: 10px 8px 10px 8px;
+}
+.boletos td span {
+	color:Black;
+}
+
+#r1 td, #r2 td, #r3 td {
+	white-space:normal;
+}
+
+#uniform-dropCardExpiryMonth, #uniform-dropCardExpiryYear {
+	width:47% !important;
+}
+#tblExtraCardDetails {
+	width:100% !important;
+}
+
+#dPago {
+	width:100% !important;
+}
+
+.ImagePrintTicket {
+	position:absolute;
+}
+
+/*-- Estilos que sobre escriben la apariencia de id --*/
+
+#divEwalletUSR table {
+	background-color: #F5F5F5 !important;
+	max-width: 400px;
+	width: 100% !important;
+}
+#divEwalletUSR .PaymentDetailsRow input[type="text"], #divEwalletUSR .PaymentDetailsRow input[type="password"] {
+	border: 1px solid #E1E3E6;
+	border-radius: 3px;
+	padding: 8px 5px;
+	-webkit-transition: .30s all;
+	-moz-transition: .30s all;
+	-o-transition: .30s all;
+	-ms-transition: .30s all;
+	transition: .30s all;
+	width: 80%;
+}
+
+#divEwalletUSR .PaymentDetailsRow input[type="text"]:focus, #divEwalletUSR .PaymentDetailsRow input[type="password"]:focus {
+	background: #d8d8d8;
+	border-color: #d8d8d8;
+}
+
+#divEwalletUSR .Boton {
+	background: #0B5BA1;
+	box-shadow: 0 2px 0 #0B5393;
+	font-family: Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 8px 10px;
+	-webkit-transition: .30s all;
+	-moz-transition: .30s all;
+	-o-transition: .30s all;
+	-ms-transition: .30s all;
+	transition: .30s all;
+}
+#divEwalletUSR .Boton {
+	background: #0B5393;
+}
+
+#divEwalletUSR table tr td {
+	color: #575757;
+	font-weight: underline;
+}
+#divEwalletUSR table tr td a.txtLINK {
+	color: #575757;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+#divEwalletUSR #lblError {
+	background: none repeat scroll 0 0 #353535;
+	bottom: 0;
+	display: block;
+	left: 0;
+	padding: 4px 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+/* Sesión iniciada */
+#divEwalletHOME > table {
+	background: #F5F5F5 !important;
+	color: #575757;
+	font-size: 14px;
+	font-weight: normal;
+	max-width: 400px;
+	width: 100% !important;
+}
+#divEwalletHOME > table td {
+	display: block;
+	font-size: 12px;
+	width: 100%;
+}
+#divEwalletHOME font {
+	display: block;
+	height: auto !important;
+	width: 100%;
+}
+#divEwalletHOME #lblNombre {
+	background-color: #353535;
+	color: #FFFFFF;
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px;
+}
+#divEwalletHOME #lblNombre:before {
+    content: "¡HOLA! ";
+}
+#divEwalletHOME > table table {
+	background: #F8F8F8 !important;
+	border: 2px solid #E6E6E6;
+	border-radius: 4px;
+	color: #575757 !important;
+	width: 100% !important;
+}
+#divEwalletHOME > table table .Creditos {
+	color: #575757;
+	font-size: 25px;
+	font-weight: bold;
+}
+#divEwalletHOME span#lblTitulo {
+	border-bottom: 1px solid;
+	color: #575757;
+	display: block;
+	font-size: 14px;
+	font-weight: normal;
+}
+#divEwalletHOME span#lblTitulo a {
+	background-color: #353535;
+	border-radius: 4px;
+	color: #feca30;
+	display: inline-block;
+	padding: 4px 6px;
+}
+#divEwalletHOME #pnlTarjetas {
+	background: #E6E6E6;
+	margin-top: -12px;
+	padding: 12px;
+ 
+
+
+}
+#divEwalletHOME #pnlTarjetas br {
+	display: none;
+}
+#divEwalletHOME #pnlTarjetas a {
+	border-bottom: 1px dotted;
+	color: #575757;
+	display: block;
+	font-family: helvetica,sans-serif;
+	font-size: 15px;
+	font-weight: lighter;
+	line-height: 12px;
+	padding-bottom: 6px;
+	padding-right: 0;
+	padding-top: 6px;
+	position: relative;
+	text-align: left;
+	-webkit-transition: .30s all;
+	-moz-transition: .30s all;
+	-o-transition: .30s all;
+	-ms-transition: .30s all;
+	transition: .30s all;
+}
+#divEwalletHOME #pnlTarjetas a:hover {
+	background-color: #F8F8F8;
+}
+
+#divEwalletHOME #pnlTarjetas a:hover:after {
+	background-color: #575757;
+}
+
+#divEwalletHOME #pnlTarjetas a:last-child {
+	border: medium none;
+}
+
+#divEwalletHOME #pnlTarjetas a:after {
+	border: 1px solid;
+	border-radius: 5em;
+	content: "";
+	height: 8px;
+	margin-top: -5px;
+	position: absolute;
+	right: 6px;
+	top: 50%;
+	-webkit-transition: .30s all;
+	-moz-transition: .30s all;
+	-o-transition: .30s all;
+	-ms-transition: .30s all;
+	transition: .30s all;
+	width: 8px;
+}
+#divEwalletHOME .cartel {
+	color: #575757;
+	font-size: 14px;
+	font-weight: normal;
+}
+/*Fee Confirmación*/
+.fee {
+	border-bottom: 1px dashed #e1e3e6;
+	border-top: 1px dashed #e1e3e6;
+	display: block;
+	max-width: 640px;
+	padding: 10px;
+	position: relative;
+}
+.fee .desglose {
+	position: relative;
+}
+
+.fee .desglose > p {
+	background-color: #eee;
+	padding: 10px;
+}
+.fee .desglose .desc-donativo {
+	color: #222;
+	text-align: center;
+}
+
+.fee .desglose .desc-donativo p strong {
+	display: inline-block;
+	width: 80px;
+}
+
+.fee .desglose .desc-donativo p:first-child {
+	border-bottom: 1px dashed #e1e3e6;
+	display: block;
+	font-weight: 300;
+	padding: 10px;
+}
+
+.fee .desglose .desc-donativo p:first-child a {
+	background-color: #237bc7;
+	border-radius: 2px;
+	box-shadow: 0 2px #1f6aab;
+	color: #fff;
+	display: inline-block;
+	padding: 4px;
+	-webkit-transition: .30s all;
+	-moz-transition: .30s all;
+	-o-transition: .30s all;
+	transition: .30s all;
+}
+.fee .desglose .desc-donativo p:first-child a:hover {
+	background-color: #2888db;
+	border-radius: 0px;
+	box-shadow: 0 2px #1f6aab;
+}
+
+.fee .desglose .desc-donativo p .descripcion-fee {
+	background-color: #0b5393;
+	border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	height: 18px;
+	margin-right: 1%;
+	text-align: center;
+	width: 18px;
+}
+
+.fee .desglose .info-txt {
+	background-color: #eee;
+	border: 1px solid;
+	border-radius: 4px;
+	left: 50%;
+	display: none
+	margin-left: -282px;
+	max-width: 540px;
+	padding: 10px;
+	position: absolute;
+	top: 28%;
+	width: 100%;
+}
+
+.fee .desglose .info-txt a {
+	position: absolute;
+	right: 6px;
+	top: 6px;
+}
+
+.fee .desglose .info-txt h3 {
+	font-size: 1.2em;
+	margin: 0;
+	padding-bottom: 4px;
+}
+
+.fee .desglose .info-txt p {
+	text-align: center;
+	padding: 0;
+}
+
+
+.tokenOverride {
+  background-color: #fff;
+}
+.tokenOverride > table {
+  width: 100% !important;
+}
+.tokenOverride > table > tbody > tr > td:first-child {
+  width: 50% !important;
+}
+.tokenOverride > table > tbody > tr > td:first-child #pnlLogin {
+  width: 90%;
+  margin: 0 auto;
+}
+.tokenOverride > table > tbody > tr > td:first-child #pnlLogin > #divEwalletUSR > table {
+  background-color: #f5f5f5 !important;
+}
+.tokenOverride > table > tbody > tr > td:first-child #pnlLogin > #divEwalletUSR > table tbody tr:first-child td:first-child {
+  background-color: #f5f5f5 !important;
+  color: #237bc7;
+}
+.tokenOverride > table > tbody > tr > td:first-child #pnlLogin > #divEwalletUSR > table tbody tr:first-child td:first-child img {
+  display: none;
+}
+.tokenOverride > table > tbody > tr > td:first-child #pnlLogin > #divEwalletUSR > table tbody tr:nth-child(8) {
+  font-size: 12px;
+}
+.tokenOverride > table > tbody > tr > td:first-child #pnlLogin > #divEwalletUSR > table tbody tr:nth-child(9) td {
+  padding: 10px 0;
+}
+.tokenOverride > table > tbody > tr > td:first-child #pnlLogin > #divEwalletUSR > table tbody tr:nth-child(9) td a {
+  color: #237bc7;
+}
+.tokenOverride > table > tbody > tr > td:nth-child(2) > #divEwalletUSR {
+  width: 80%;
+  margin: 0 auto;
+}
+.tokenOverride > table > tbody > tr > td:nth-child(2) > #divEwalletUSR table tbody tr:first-child td:first-child {
+  background-color: #f5f5f5 !important;
+  color: #237bc7;
+}
+.tokenOverride > table > tbody > tr #divEwalletUSR .Boton {
+  margin-bottom: 15px;
+  width: 80%;
+  background-color: #0b5ba1;
+}
+.tokenOverride .Errorcell {
+  text-align: center;
+  padding: 10px 0;
+}
+#pnlTokenizacionPago.tokenOverride {
+  width: 100% !important;
+}
+#pnlTokenizacionPago.tokenOverride #fraTokenizacion {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#divEwalletCont.tokenOverride br {
+  display: none;
+}
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table {
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+  background-color: #fff !important;
+}
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td {
+  text-align: center;
+}
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td:first-child {
+  color: #237BC7;
+  font-weight: bold;
+  height: 55px;
+  display: block;
+}
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #lblNombre {
+  background-color: white;
+  color:#0f0f0f;
+  font-weight: normal;
+  padding: 0;
+  margin: 15px 0;
+}
+
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #lblNombre:before {
+  content:'Hola, '
+}
+
+
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #lblTitulo {
+  display:none;
+}
+
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #pnlTarjetas {
+  margin-top: 0;
+  text-align: center;
+}
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #pnlTarjetas:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #pnlTarjetas a {
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 0 200px 0 50px;
+  display: inline-block;
+  border-bottom: none;
+  height: 30px;
+  line-height:30px;
+}
+
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #pnlTarjetas a:after {
+  display: block;
+  content: 'Código de seguridad:';
+  width: auto;
+  border: none;
+  height: 32px;
+  font-size: 13px;
+  top:4px;
+  right: 20px;
+}
+
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #pnlTarjetas a:hover:after {
+  background-color: transparent;
+}
+
+
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #pnlTarjetas a:before {
+  content: '';
+  display: block;
+  border: 2px solid #bababa;
+  border-radius: 10px;
+  height: 10px;
+  margin-top: -5px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transition: .30s all;
+  -moz-transition: .30s all;
+  -o-transition: .30s all;
+  -ms-transition: .30s all;
+  transition: .30s all;
+  width: 10px;
+}
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #pnlTarjetas a:hover:before {
+  background-color: #237BC7;
+  border-color:#1060a4;
+}
+
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #pnlTarjetas input.TOKEN_TARJETAS_CODIGO {
+  width: 50px !important;
+  height: 32px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+}
+
+#divEwalletCont.tokenOverride #pnlHome #divEwalletHOME > table td #pnlTarjetas input.TOKEN_TARJETAS_CODIGO:before{
+  content: 'Código de seguridad:';
+  display: block;
+  left:0;
+}
+
+#pnlSeleccion {
+     font-size: 17px;
+}
+
+.TOKEN_TARJETAS_BOTON_ACEPTAR{
+     margin-right: 10px;
+}

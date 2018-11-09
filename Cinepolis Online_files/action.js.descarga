@@ -1,0 +1,229 @@
+$(function () {
+
+  var wAncho = $(window).width();
+  var clickOrTouch = (('ontouchend' in window)) ? 'touchclick' : 'click';
+
+  NProgress.start();
+  setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
+  if ($("figure").hasClass("responsive")) {
+    $('figure.responsive').picture();
+  }
+
+
+  /* 05. Cambiar de País
+  ================================================== */
+  var $oe_menu_pais = $('#opcionPais');
+  var $oe_menu_list = $oe_menu_pais.children('.selectPais');
+  if (detectmob()) {
+      $oe_menu_list.click(function(e) {
+          var $this = $(this);
+          var $parentli = $this.children('.submenu');
+          var _this = this;
+          efectoFooter($parentli, _this);
+          e.preventDefault();
+          e.stopPropagation();
+      });
+  } else {
+      $oe_menu_list.bind('mouseenter', function() {
+          var $this = $(this);
+          $this.addClass('slided selected');
+          $this.parent().find("a > i.icon-caret-up, a > i.icon-caret-down").toggleClass('icon-caret-up icon-caret-down');
+          $this.children('.submenu').css('z-index', '9999').stop(true, true).slideDown(200, function() {
+              $oe_menu_list.not('.slided').children('div').hide();
+              $this.removeClass('slided');
+          });
+      }).bind('mouseleave', function() {
+          var $this = $(this);
+          $this.removeClass('selected').children('div').css('z-index', '1');
+          $this.parent().find("a > i.icon-caret-up, a > i.icon-caret-down").toggleClass('icon-caret-up icon-caret-down');
+      });
+
+      $oe_menu_pais.bind('mouseenter', function() {
+          var $this = $(this);
+          $this.addClass('hovered');
+      }).bind('mouseleave', function() {
+          var $this = $(this);
+          $this.removeClass('hovered');
+          $oe_menu_list.children('.submenu').hide();
+      })
+
+  }
+
+/* 01. Estilo de Formularios
+================================================== */
+  $("select, input[type='radio']:not(.rankingSubmit) , input[type='checkbox'], input[type='file']").uniform();
+  $('[placeholder]').focus(function() {
+    var input = $(this);
+    if (input.val() == input.attr('placeholder')) {
+      input.val('');
+      input.removeClass('placeholder');
+    }
+  }).blur(function() {
+    var input = $(this);
+    if (input.val() == '' || input.val() == input.attr('placeholder')) {
+      input.addClass('placeholder');
+      input.val(input.attr('placeholder'));
+    }
+  }).blur();
+
+
+/* 02. Activar navegación
+================================================== */
+  var $active, 
+  $content, 
+  $links = $("a.abrirContent");
+
+  $links.on(clickOrTouch, function(e){
+    e.stopPropagation();
+    var $idvar = $(this).attr('href');
+    var $item = $($idvar);               
+    var $visible = $(".dropdown:visible");
+
+    $("footer nav ul li").closest('li').siblings('li').find('ul:visible').hide();
+
+    if( $visible.length > 0 && $idvar !== ("#"+$visible.attr('id'))){
+      $visible.hide();
+      $item.slideToggle(200);
+      $links.toggleClass('active');
+      $links.find("i").toggleClass('icon-plus-sign icon-minus-sign');
+     
+    }else{
+      $(this).toggleClass('active');
+      $item.slideToggle(200);
+      if ($(this).attr('id')=="btnAbrirNav")
+      {
+        $(this).find("i").toggleClass('icon-plus-sign icon-minus-sign');
+      }
+    }
+    e.preventDefault();
+   
+  });
+
+/* 03. Submenú en mobile
+================================================== */
+  var cambiarRight=0, cambiarContent=0, dir=true;
+  $("#btnMenu a").on(clickOrTouch, function(e) {
+    $(this).toggleClass('active');
+    dir = !dir;
+    cambiarContent = dir? 0 : 80;
+    $(".wrapper").toggleClass('wrapper-active');
+    $(".wrapper").stop().animate({left: cambiarContent+"%"}, 300, function() {
+      // Animation complete.
+        if(cambiarContent == 80){
+          $("body, html").css({height:"100%"});
+        }else{
+          $("body, html").css({height:"auto"});
+          $(".navMobile .marcas").stop().animate({left:'-100%'}, 100);
+        }
+    });
+    $(".navMobile").toggleClass('nav-active');
+   
+    e.preventDefault();
+  });
+  $("<div class='navMobile' id='masCinepolis'/>").insertBefore(".wrapper");
+  var $navMobile;
+  $navMobile = $(".navegacion").clone();
+  $navMobile.find(".navContent").removeClass('dropdown').removeAttr("id");
+  $navMobile.appendTo(".navMobile");
+
+ /* $("body").swipe({
+    swipeRight:function(event, direction, distance, duration, fingerCount) {
+      $("#btnMenu a").trigger( "click" );
+    },
+    swipeLeft:function(event, direction, distance, duration, fingerCount) {
+      if($(".wrapper" ).hasClass("wrapper-active")){
+        $("#btnMenu a").trigger( "click" );
+      }
+    },
+    excludedElements:$.fn.swipe.defaults.excludedElements+", .slider, .caroufredsel_wrapper"
+  });*/
+
+
+  $(".nuestrasMarcas a").on(clickOrTouch, function(e) {
+    $(".navMobile .marcas").stop().animate({left:'0px'}, 300);
+    e.preventDefault();
+  });
+  $("a.btnRegresar").on(clickOrTouch, function(e) {
+    $(".navMobile .marcas").stop().animate({left:'-100%'}, 300);
+    e.preventDefault();
+  });
+
+  $(".closebutton").on(clickOrTouch, function(e) {
+    $(this).parent().parent().fadeOut("400");
+
+    e.preventDefault();
+  });
+
+/* 04. Formulario de Login
+================================================== */
+  $(".textInput input").blur(function() {
+        if (!$(this).data('hasTyped')) {
+            $(this).parent(".textInput").find("label").removeClass('focus active');
+        }
+    }).keyup(function() {
+        $(this).data('hasTyped', this.value.length);
+        $(this).parent(".textInput").find("label").addClass('active');
+    }).focus(function() {
+        if (!$(this).data('hasTyped')) {
+            $(this).parent(".textInput").find("label").addClass('focus');
+        }
+  });
+
+/* 05. Cambiar de País
+================================================== */
+  $("footer nav ul li").on(clickOrTouch, function(e){
+    e.stopPropagation();
+    var $parentli = $(this).closest('li');
+    $(".dropdown:visible").hide();
+    $parentli.siblings('li').find('ul:visible').hide();
+    $parentli.find('> ul').stop().slideToggle(200);
+    $(this).find("a > i.icon-caret-up, a > i.icon-caret-down").toggleClass('icon-caret-up icon-caret-down');
+    e.preventDefault();
+  });
+
+
+  if(wAncho <= 700){
+    $(".filtroBusqueda").addClass("dropdown");
+    $("#menuNavega").removeClass("dropdown");
+  }
+
+  /* 07. Nice Scroll
+================================================== */
+  if(detectmob()) {
+    $(".navMobile").hide();
+    $(window).load(function() {
+      if(wAncho <= 700){
+        $(".navMobile").show();
+      }                          
+    }); 
+  }else{
+    $("html").niceScroll({
+        cursorcolor: '#000',
+        cursorwidth: '7px',
+        cursoropacitymax: 0.6,
+        cursorborder: '0',
+        autohidemode: false,
+        cursorborderradius: '3px',
+        horizrailenabled:false,
+        zindex:9999
+    });
+  }
+});
+
+$(window).resize(function() {
+    var wAncho = $(window).width();
+    if ($("figure").hasClass("responsive")) {
+      $('figure.responsive').picture();
+    }
+    if(wAncho <= 700){
+      $(".filtroBusqueda").addClass("dropdown");
+      $("#menuNavega").removeClass("dropdown");
+    } else{
+      $(".filtroBusqueda").removeClass("dropdown");
+      $("#menuNavega").addClass("dropdown");
+      $(".filtroBusqueda").show();
+    }
+    
+});
+
+

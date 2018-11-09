@@ -1,0 +1,134 @@
+	
+
+    var oCombo;
+    var stContext = '';
+    
+	
+	function loadComplejo()
+	{
+		var CityValue = parseInt(document.getElementById(stContext + 'ddlCiudad').value)+1;
+		var City = document.getElementById(stContext + 'ddlCiudad').options[CityValue].getAttribute("clave");
+		oCombo = document.getElementById(stContext + "ddlComplejo");
+		
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+			xmlhttp=new XMLHttpRequest();
+		else
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200){
+				var obj = JSON.parse(xmlhttp.responseText);
+				
+				oCombo.options.length = 0;
+				var o = new Option();
+					o.text = "Selecciona un cine";
+					o.value =  0;
+				if (navigator.appName == "Microsoft Internet Explorer")
+				  oCombo.add(o);
+				 else
+					oCombo.add(o,null);
+				for(var i=0;i<obj.length;i++){
+					var objeto = obj[i];
+					
+					var o = new Option();
+					o.text = objeto.Nombre;
+					o.value =  objeto.CodigoComplejo;
+					 if (navigator.appName == "Microsoft Internet Explorer")
+					  oCombo.add(o);
+					 else
+						oCombo.add(o,null);
+				}
+				
+			}
+		}
+	    // alert(City);
+		if (window.parent.document.location.protocol == 'https:')
+		    xmlhttp.open("GET", "https://stage.cinepolis.com/manejadores/Complejos.ashx?c=" + City, true);
+		else
+		    xmlhttp.open("GET", "http://stage.cinepolis.com/manejadores/Complejos.ashx?c=" + City, true);
+
+		//xmlhttp.open("GET","http://stage.cinepolis.com/manejadores/Complejos.ashx?c=" + City,true);
+		xmlhttp.send();
+	}	
+    
+    //changeCombo(1, 'ddlCiudad');
+    
+    function changeCombo(Tipo, Combo) {
+        var City = document.getElementById(stContext + 'ddlCiudad').value;      
+        var Cinema = document.getElementById(stContext + 'ddlComplejo').value;
+        oCombo = document.getElementById(stContext + Combo);
+
+        document.getElementById(stContext + Combo).disabled = false;
+        if (document.all) { xhttpTop = new ActiveXObject("Msxml2.XMLHTTP"); } else { xhttpTop = new XMLHttpRequest(); }
+        xhttpTop.onreadystatechange = getXML;
+		//window.open("http://www.cineticket-la.com/hn2/MJOProcessHomeCombos.aspx?Tipo=" + Tipo + '&City=' + City + '&Cinema=' + Cinema);
+ 
+		if (window.parent.document.location.protocol=='https:')
+			xhttpTop.open("GET", "SMJOProcessHomeCombos.aspx?Tipo=" + Tipo + '&City=' + City + '&Cinema=' + Cinema , true);
+		else
+			xhttpTop.open("GET", "MJOProcessHomeCombos.aspx?Tipo=" + Tipo + '&City=' + City + '&Cinema=' + Cinema , true);
+		xhttpTop.send();         
+    }
+
+    function getXML() {          
+        if (xhttpTop.readyState == 4) {
+           var nodes =xhttpTop.responseXML.getElementsByTagName("node");
+               if (nodes.length>0)
+                oCombo.options.length = 0                             
+            for (var i = 0; i < nodes.length; i++) {
+                var o = new Option();
+                    o.text = nodes[i].childNodes[1].childNodes[0].nodeValue;
+                    o.value =  nodes[i].childNodes[0].childNodes[0].nodeValue;
+                     if (navigator.appName == "Microsoft Internet Explorer")
+                      oCombo.add(o);
+                     else
+                oCombo.add(o,null);
+            }           
+        }
+    }
+
+     
+	if (document.implementation.hasFeature("XPath", "3.0")) {
+	    if (typeof XMLDocument == "undefined") { XMLDocument = Document; }
+	    XMLDocument.prototype.selectNodes = function(cXPathString, xNode) {
+	        if (!xNode) { xNode = this; }
+	        var oNSResolver = this.createNSResolver(this.documentElement)
+	        var aItems = this.evaluate(cXPathString, xNode, oNSResolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
+	        var aResult = [];
+	        for (var i = 0; i < aItems.snapshotLength; i++) { aResult[i] = aItems.snapshotItem(i); }
+	        return aResult;
+	    }
+	    XMLDocument.prototype.selectSingleNode = function(cXPathString, xNode) {
+	        if (!xNode) { xNode = this; }
+	        var xItems = this.selectNodes(cXPathString, xNode);
+	        if (xItems.length > 0) { return xItems[0]; }
+	        else { return null; }
+	    }
+	    Element.prototype.selectNodes = function(cXPathString) {
+	        if (this.ownerDocument.selectNodes) { return this.ownerDocument.selectNodes(cXPathString, this); }
+	        else { throw "For XML Elements Only"; }
+	    }
+	    Element.prototype.selectSingleNode = function(cXPathString) {
+	        if (this.ownerDocument.selectSingleNode) { return this.ownerDocument.selectSingleNode(cXPathString, this); }
+	        else { throw "For XML Elements Only"; }
+	    }
+	}
+
+
+
+    function SelectSession(a) {
+        var Cinema = document.getElementById(stContext + 'ddlComplejo').value;		
+		var CityValue = parseInt(document.getElementById(stContext + 'ddlCiudad').value)+1;
+		var City =   document.getElementById(stContext + 'ddlCiudad').options[CityValue].getAttribute("clave");
+ 
+		if(Cinema == "0")
+			window.location = 'http://www.cinepolis.com/cartelera/'+City;
+		else
+			window.location = 'http://www.cinepolis.com/cartelera/'+City+"/"+Cinema; 
+    }
+
+   
+
+					
+					
