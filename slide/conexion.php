@@ -7,7 +7,7 @@ function conectarBDslide()
 	$user = "user=equipo4@equipo4";
 	$password = "password=Judith123";
 
-	$bd = pg_connect("$host $port $dbname");
+	$bd = pg_connect("$host $dbname $user $password");
 	if (!$bd ) {
 		echo "Error: " .pg_last_error();
 	}else{
