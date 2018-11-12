@@ -14,8 +14,4 @@ function conectarBD()
 		return $bd;
 	}
 }
- ?>
-
-
-
-
+?>
