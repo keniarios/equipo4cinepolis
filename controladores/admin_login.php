@@ -12,7 +12,6 @@ if($row = pg_fetch_array($result))
     //if($row["contrasena"] == $Vcontrasena)
   if(password_verify($Vcontrasena,$row["contrasena"]))
       {
-        //Creamos sesión
         session_start();
         //Almacenamos el nombre de usuario en una variable de sesión usuario
         $_SESSION['id_registropersonal'] = $row["id_registropersonal"];
