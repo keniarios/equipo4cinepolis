@@ -70,10 +70,10 @@ function __doPostBack(eventTarget, eventArgument) {
     <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0" />
 
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-    <link rel="apple-touch-icon-precomposed" href="imagenes/logo-icons/icon-57x57.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="imagenes/logo-icons/icon-72x72.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="imagenes/logo-icons/icon-114x114.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="imagenes/logo-icons/icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" href="Imagenes/logo-icons/icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="Imagenes/logo-icons/icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="Imagenes/logo-icons/icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="Imagenes/logo-icons/icon-144x144.png"/>
               
     <!--[if lt IE 9]>
         <script type="text/javascript"  src="scripts/html5.js"></script>
@@ -547,7 +547,7 @@ Agradeceremos se consulte la política de precios en el cine de tu preferencia. 
         </label>
         <div class="row">
             <i class="col2">
-                <img src="imagenes/icon-folio.jpg" alt="Folio">
+                <img src="Imagenes/icon-folio.jpg" alt="Folio">
             </i>
 
             <div class="col10">
@@ -644,7 +644,7 @@ Agradeceremos se consulte la política de precios en el cine de tu preferencia. 
             <span>
                 Utiliza tu
                 <em>
-                    <img src="imagenes/icon-cinepass-ticket.png">
+                    <img src="Imagenes/icon-cinepass-ticket.png">
                 </em> 
                 da clic aquí
             </span>
@@ -681,7 +681,7 @@ Agradeceremos se consulte la política de precios en el cine de tu preferencia. 
             <span>
                 Si deseas utilizar tu 
                 <em>
-                    <img src="imagenes/icon-pase-anual-ticket.png">
+                    <img src="Imagenes/icon-pase-anual-ticket.png">
                 </em> 
                 da clic aquí
             </span>
