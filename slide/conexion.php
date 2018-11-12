@@ -4,7 +4,7 @@ function conectarBDslide()
 {
 	$host = "host=equipo4.postgres.database.azure.com";
 	$dbname = "dbname=cinepolis";
-	$user = "user=quipo4@equipo4";
+	$user = "user=equipo4@equipo4";
 	$password = "password=Judith123";
 
 	$bd = pg_connect("$host $port $dbname");
