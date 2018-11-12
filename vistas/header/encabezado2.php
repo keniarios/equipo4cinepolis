@@ -5,15 +5,7 @@
 <head>
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
-	<script src='../../js/jquery-3.3.1.min.js'></script>
-	<script src='../../js/popper.min.js'></script>
-	<script src='../../js/bootstrap.min.js'></script>
-	<link rel='stylesheet' href='../../css/bootstrap.min.css'>
-	<link rel='stylesheet' type='text/css' href='../../css/estilo.css'>
 	
-	<script src="../../js/misfunciones.js" type="text/javascript" charset="utf-8" async defer></script>
-	<link rel="stylesheet" href="../../css/jquery-ui.css">
-  	<script src="../../js/jquery-ui.js"></script>
 
 </head>
 <body>
@@ -79,9 +71,9 @@
 				<img src="../img/logocabecera.png" class="img-logo d-inline-block align-top">
 			</a>
 			<div id="info-usuario">
-				<span onmouseover="zoomIn()" onmouseout="zoomOut()"><img src="../img/usuario.png" class="img-user"></span><br>
+				<span onmouseover="zoomIn();" onmouseout="zoomOut();"><img src="../img/usuario.png" class="img-user"></span><br>
 				<span><label id="tipoUsuario"><?php echo $puesto ?></label></span>
-				<div id="perfil" onmouseover="zoomIn()" onmouseout="zoomOut()"  style="cursor:default;display:none;position:absolute;margin-left: -90px;margin-top: -40px;width: 9rem;background-color:#fff;border-radius:5px;box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important;font-size: 10pt;z-index: 1;text-align: left;">
+				<div id="perfil" onmouseover="zoomIn();" onmouseout="zoomOut();"  style="cursor:default;display:none;position:absolute;margin-left: -90px;margin-top: -40px;width: 9rem;background-color:#fff;border-radius:5px;box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important;font-size: 10pt;z-index: 1;text-align: left;">
 					<label for="" style="padding: 5px;font-size: 13pt;color: black;"><?php echo $nombre . ' ' . $appaterno ?></label><hr>
 					<ul style="padding:5px;LIST-STYLE: NONE;margin: 0px;">
 						<li id="contra" onmouseover="focoMenuPerfil(this.id)" onmouseout="sinfocoMenuPerfil(this.id)" >
