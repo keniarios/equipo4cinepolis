@@ -12,8 +12,8 @@
 	<link rel='stylesheet' type='text/css' href='../css/estilo.css'>
 	
 	<script src="../js/misfunciones.js" type="text/javascript" charset="utf-8" async defer></script>
-	<link rel="stylesheet" href="../css/jquery-ui.css">
-  	<script src="../js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="../css/jQuery-ui.css">
+  	<script src="../js/jQuery-ui.js"></script>
 
 </head>
 <body>
