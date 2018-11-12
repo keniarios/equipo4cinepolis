@@ -32,3 +32,31 @@ $('select#ciudad').change(function(){
 			$('#sucursal').html(data);
 	}); 
 });
+
+$('select#ddlViewByCiudad').change(function(){
+	var Ciudad = $(this).val();
+	$.ajax({
+		type: 'POST',
+		url: '../controladores/llamadasporAjax/admin_mostrarCiudad.php', 	
+		data: {Ciudad: Ciudad} 
+		}).done(function(data) {   
+			$('#ddlViewBy').html(data);
+	}); 
+});
+
+$('select#ciudadSala').change(function(){
+	var Ciudad = $(this).val();
+	$.ajax({
+		type: 'POST',
+		url: '../controladores/llamadasporAjax/admin_mostrarSucursales.php', 	
+		data: {Ciudad: Ciudad} 
+		}).done(function(data) {   
+			$('#sucursal').html(data);
+	}); 
+});
+
+
+/*$('#divOrderTickets').click(function(){
+	var edad = $('#rptAreaCategory__ctl0_rptTicketList__ctl1_ddlQtyInput').val();
+	alert("hi");
+});*/

@@ -110,7 +110,7 @@ $puesto = $_SESSION['puesto'];
 			    			<div class="row">
 			    				<div class="col-md-6">
 			    					<div class="form-group"><label>Ciudad:</label>
-			    						<select id="ciudad" class="form-control input-sm" required>
+			    						<select id="ciudadSala" class="form-control input-sm" required>
 			    							<option value="">Selecciona</option>
 			    							<?php
 										    while ($datos=pg_fetch_array($ResultSucursal)) {
@@ -1662,7 +1662,7 @@ $puesto = $_SESSION['puesto'];
 			function guardar(){
 				var nombre = $("#nombre").val();
 				var sucursal = $("#sucursal").val();
-				var ciudad = $("#ciudad").val();
+				var ciudad = $("#ciudadSala").val();
 				var estatus = $("#estatus").val();
 				var tipo = $("#tipo").val();
 				var listaAsientos = [];
