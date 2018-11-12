@@ -36,7 +36,7 @@
                             <a href="https://inetvis.cineticket.com.mx/compra/visSelectTickets.aspx?tkn=&amp;cinemacode=954&amp;txtSessionId=10261&amp;distributor=Fox&amp;originalTitle=Bohemian%20Rhapsody%20(Estados%20Unidos,%202018)&amp;language=&amp;genre=DRAMA&amp;rating=B&amp;director=Bryan%20Singer&amp;protagonist=Allen%20Leech&amp;_ga=2.169038049.1153251463.1541480097-231010952.1539140855#" class="btnPais cf">
                                 <i class="icon-caret-up"></i>
                                 <span>México</span> <i class="float-right">
-                                    <img src="./archivosCompraBoletos/icon-bandera-mx.png"></i>
+                                    <img src="./Cinepolis Online_files/icon-bandera-mx.png"></i>
                             </a>
                         </div>
                     </li>
@@ -110,15 +110,15 @@
             </div>
             <ul class="logosReconocimientos g960">
                 <li><a href="http://www.coca-cola.com.mx/es/index.html" target="_blank">
-                    <img src="./archivosCompraBoletos/lg-cocacola.png" alt="Coca-cola"></a></li>
+                    <img src="./Cinepolis Online_files/lg-cocacola.png" alt="Coca-cola"></a></li>
                 <li><a href="http://www.comscore.com/esl/" target="_blank">
-                    <img src="./archivosCompraBoletos/lg-comscore.png" alt="comScore"></a></li>
+                    <img src="./Cinepolis Online_files/lg-comscore.png" alt="comScore"></a></li>
                 <li><a href="http://www.amipci.org.mx/" target="_blank">
-                    <img src="./archivosCompraBoletos/lg-socio-amipci.png" alt="Socio AMIPCI"></a></li>
+                    <img src="./Cinepolis Online_files/lg-socio-amipci.png" alt="Socio AMIPCI"></a></li>
                 <li>
-                    <img src="./archivosCompraBoletos/lg-super-empresa.png" alt="Super Empresa"></li>
+                    <img src="./Cinepolis Online_files/lg-super-empresa.png" alt="Super Empresa"></li>
                 <li>
-                    <img src="./archivosCompraBoletos/lg-esr.png" alt="Empresa Socialmente Responsable"></li>
+                    <img src="./Cinepolis Online_files/lg-esr.png" alt="Empresa Socialmente Responsable"></li>
             </ul>
             <p class="g960 reconocimiento">Reconocimiento AMIPCI PEOPLE’S CHOICE 2009 e INNOVACIÓN 2008</p>
             <div class="row copyright">

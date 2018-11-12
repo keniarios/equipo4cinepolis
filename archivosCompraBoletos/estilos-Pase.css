@@ -1,0 +1,119 @@
+ 
+div.facebook .pp_close {
+	background: url("../_CARTELERA/imagenes/png/boton-cerrar.png") no-repeat; width: 22px; height: 22px; cursor: pointer;
+}
+ 
+div.pp_pic_holder a:focus {
+	
+}
+div.pp_overlay {
+	background: rgb(0, 0, 0); left: 0px; top: 0px; width: 100%; display: none; position: absolute; z-index: 9500;
+}
+div.pp_pic_holder {
+	width: 100px; display: none; position: absolute; z-index: 10000;
+}
+.pp_top {
+	height: 20px; position: relative;
+}
+* html .pp_top {
+	padding: 0px 20px;
+}
+.pp_top .pp_left {
+	left: 0px; width: 20px; height: 20px; position: absolute;
+}
+.pp_top .pp_middle {
+	left: 20px; height: 20px; right: 20px; position: absolute;
+}
+* html .pp_top .pp_middle {
+	left: 0px; position: static;
+}
+.pp_top .pp_right {
+	left: auto; top: 0px; width: 20px; height: 20px; right: 0px; position: absolute;
+}
+.pp_content {
+	height: 10px;
+}
+.pp_content .ppt {
+	left: auto; top: auto; margin-bottom: 5px; position: relative;
+}
+.pp_fade {
+	display: none;
+}
+.pp_content_container {
+	width: 100%; text-align: left; position: relative;
+}
+.pp_content_container .pp_left {
+	padding-left: 20px;
+}
+.pp_content_container .pp_right {
+	padding-right: 20px;
+}
+.pp_content_container .pp_details {
+	margin: 10px 0px 2px;
+}
+.pp_description {
+	margin: 0px 0px 5px; display: none;
+}
+.pp_nav {
+	margin: 3px 0px 0px; clear: left; float: left;
+}
+.pp_nav p {
+	margin: 2px 4px; float: left;
+}
+.pp_hoverContainer {
+	top: 0px; width: 100%; position: absolute; z-index: 2000;
+}
+a.pp_expand {
+	top: 10px; width: 20px; height: 20px; right: 30px; text-indent: -10000px; display: none; position: absolute; z-index: 20000; cursor: pointer;
+}
+a.pp_contract {
+	top: 10px; width: 20px; height: 20px; right: 30px; text-indent: -10000px; display: none; position: absolute; z-index: 20000; cursor: pointer;
+}
+a.pp_close {
+	text-indent: -10000px; float: right; display: block;
+}
+.pp_bottom {
+	height: 20px; position: relative;
+}
+* html .pp_bottom {
+	padding: 0px 20px; 
+}
+.pp_bottom .pp_left {
+	left: 0px; width: 20px; height: 20px; position: absolute;
+}
+.pp_bottom .pp_middle {
+	left: 20px; height: 20px; right: 20px; position: absolute;
+}
+* html .pp_bottom .pp_middle {
+	left: 0px; position: static;
+}
+.pp_bottom .pp_right {
+	left: auto; top: 0px; width: 20px; height: 20px; right: 0px; position: absolute;
+}
+.pp_loaderIcon {
+	margin: -12px 0px 0px -12px; left: 50%; top: 50%; width: 24px; height: 24px; display: block; position: absolute;
+}
+#pp_full_res {
+	line-height: 1 !important;
+}
+#pp_full_res .pp_inline {
+	text-align: left;
+}
+#pp_full_res .pp_inline p {
+	margin: 0px 0px 15px;
+}
+div.ppt {
+	left: 0px; top: 0px; color: rgb(32, 47, 62); font-size: 17px; display: none; position: absolute; z-index: 9999;
+}
+.clearfix::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+.clearfix {
+	display: inline-block;
+}
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}

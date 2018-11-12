@@ -9,14 +9,12 @@
 		<!-- TOP HEADER -->
 		<div class="contentBusqueda g960 cf">
 			 
-			<h1 class="col3"><a href="index.php" title="Cinépolis"><img src="./archivosCompraBoletos/lg-cinepolis.png" alt="Cinépolis"></a></h1>
+			<h1 class="col3"><a href="index.php" title="Cinépolis"><img src="./Cinepolis Online_files/lg-cinepolis.png" alt="Cinépolis"></a></h1>
 
 			<div class="col8 filtroBusqueda" id="busqueda">
 				<div class="col5">
 					<div class="selectBlanco">
-						   <div class="selectorA" id="uniform-ddlCiudad" style="width: 261px; background: url(../Imagenes/icon-select-form-gris.png) no-repeat 100% 0; border-radius: 5px; background-color: #fff;">
-						   	<!--<span style="width: 249.008px; user-select: none;">Selecciona una ciudad</span>-->
-						   	<select name="ddlCiudad" onchange="loadComplejo()" id="ddlCiudad" class="combo">
+						   <div class="selector" id="uniform-ddlCiudad" style="width: 261px;"><span style="width: 249.008px; user-select: none;">Selecciona una ciudad</span><select name="ddlCiudad" onchange="loadComplejo()" id="ddlCiudad" class="combo">
 									<option value="Selecciona una ciudad" selected="selected" clave="0">Selecciona una ciudad</option>
 									<option value="0" clave="acapulco">Acapulco</option>
 									<option value="1" clave="aguascalientes">Aguascalientes</option>
@@ -142,12 +140,9 @@
 				</div>
 				<div class="col5">
 					<div class="selectBlanco">
-						 <div class="selectorA" id="uniform-ddlComplejo" style="width: 261px; background: url(../Imagenes/icon-select-form-gris.png) no-repeat 100% 0; border-radius: 5px; background-color: #fff;">
-						 	<!--<span style="width: 182.008px; user-select: none;">Selecciona un cine</span>-->
-						 	<select name="ddlComplejo" onchange="SelectSession(1)" id="ddlComplejo" class="combo">
-						 		<option value="0">Selecciona un cine</option>
-						 		</select>
-						 	</div>
+						 <div class="selector" id="uniform-ddlComplejo" style="width: 194px;"><span style="width: 182.008px; user-select: none;">Selecciona un cine</span><select name="ddlComplejo" onchange="SelectSession(1)" id="ddlComplejo" class="combo">
+						 <option value="0">Selecciona un cine</option>
+                                    </select></div>
 					</div>
 				</div>
 				<div class="col2">
@@ -234,7 +229,7 @@
 		</div>
 	</header>
 	<div id="nav-spacer"></div>
-	<script type="text/javascript" language="javascript" src="./archivosCompraBoletos/top.js.descarga"></script>
+	<script type="text/javascript" language="javascript" src="./Cinepolis Online_files/top.js.descarga"></script>
 	<!-- Inicio proceso de compra -->
 	
 	<!-- Fin de proceso de compra -->
