@@ -16,7 +16,7 @@ $puesto = $_SESSION['puesto'];
 
 <?php  
  	$Pciudad = $_GET['ciudad'];
- 	$PnCiudad = mb_strtoupper($Pciudad);
+ 	//$PnCiudad = mb_strtoupper($Pciudad);
     $Pid_sucursal = $_GET['id_sucursal'];
 
     include ('../bd/conexion.php'); $conexion = conectarBD();
@@ -40,7 +40,7 @@ $puesto = $_SESSION['puesto'];
 
 	<div class="panel panel-default" >
 		  <div class="panel-heading" id="cab-panel" style="margin-top: 35px;">
-		    <label class="panel-title" style="color:black;font-size:20px;">ALTAS DE HORARIOS DE <?php echo "$PnCiudad, <b style='font-weight: bold; font-size: 14px;'>Sucursal: $row[0]</b>"; ?></label>
+		    <label class="panel-title" style="color:black;font-size:20px;">ALTAS DE HORARIOS DE <?php echo "$Pciudad, <b style='font-weight: bold; font-size: 14px;'>Sucursal: $row[0]</b>"; ?></label>
 		  </div>
 		  <div class="panel-body" id="cuerpoform" style="margin-bottom: 35px;">
 
