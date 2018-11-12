@@ -11,7 +11,7 @@
 	<link rel='stylesheet' href='../css/bootstrap.min.css'>
 	<link rel='stylesheet' type='text/css' href='../css/estilo.css'>
 	
-	<script src="../js/misfunciones.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="../js/misFunciones.js" type="text/javascript" charset="utf-8" async defer></script>
 	<link rel="stylesheet" href="../css/jQuery-ui.css">
   	<script src="../js/jQuery-ui.js"></script>
 
