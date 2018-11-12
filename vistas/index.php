@@ -16,7 +16,7 @@ $puesto = $_SESSION['puesto'];
 
 <!DOCTYPE html>
 <html>
-<?php include('header/encabezado2.php'); ?>
+
 <head>
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
@@ -30,6 +30,7 @@ $puesto = $_SESSION['puesto'];
 	<link rel="stylesheet" href="../css/jquery-ui.css">
   	<script src="../js/jquery-ui.js"></script>
 </head>
+<?php include('header/encabezado2.php'); ?>
 <body style="background-color: #EBECEF;">
 	<?php INCLUDE ('listarPersonalContenido.php'); ?>
 </body>
