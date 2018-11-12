@@ -11,8 +11,6 @@ function conectarBD()
 	if (!$bd ) {
 		echo "Error: " .pg_last_error();
 	}else{
-		//echo "<H3>Conexion Exitosa - PosgreSQL<H3><HR>";
-
 		return $bd;
 	}
 }
