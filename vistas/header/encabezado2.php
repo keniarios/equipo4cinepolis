@@ -8,11 +8,11 @@
 	<script src='../../js/jquery-3.3.1.min.js'></script>
 	<script src='../../js/popper.min.js'></script>
 	<script src='../../js/bootstrap.min.js'></script>
-	<link rel='stylesheet' href='../css/bootstrap.min.css'>
-	<link rel='stylesheet' type='text/css' href='../css/estilo.css'>
+	<link rel='stylesheet' href='../../css/bootstrap.min.css'>
+	<link rel='stylesheet' type='text/css' href='../../css/estilo.css'>
 	
 	<script src="../../js/misfunciones.js" type="text/javascript" charset="utf-8" async defer></script>
-	<link rel="stylesheet" href="../css/jquery-ui.css">
+	<link rel="stylesheet" href="../../css/jquery-ui.css">
   	<script src="../../js/jquery-ui.js"></script>
 
 </head>
