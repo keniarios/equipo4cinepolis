@@ -1,19 +1,14 @@
 <?php
 require_once ('../bd/conexion.php'); $conexion = conectarBD();
-
 $Vcorreo = strtoupper($_POST["correo"]);
 $Vcontrasena = $_POST["contrasena"];
-
 $query = "SELECT * FROM registropersonal WHERE correo = '$Vcorreo'";
 $result = pg_query($query);
-
 if($row = pg_fetch_array($result))
  {
-    //if($row["contrasena"] == $Vcontrasena)
   if(password_verify($Vcontrasena,$row["contrasena"]))
       {
         session_start();
-        //Almacenamos el nombre de usuario en una variable de sesión usuario
         $_SESSION['id_registropersonal'] = $row["id_registropersonal"];
     		$_SESSION['numeroempleado'] = $row["numeroempleado"];
     		$_SESSION['nombre'] = $row["nombre"];
