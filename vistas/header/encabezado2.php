@@ -1,20 +1,4 @@
-<?php
 
-//session_start();
-if(!isset($_SESSION['id_registropersonal'])) 
-{
-  header('Location: frm_admin_login.php');
-}
-
-$idusuariosesion = $_SESSION['id_registropersonal'];
-$correo = $_SESSION['correo'];
-$nombre = $_SESSION['nombre'];
-$appaterno = $_SESSION['appaterno'];
-$apmaterno = $_SESSION['apmaterno'];
-$puesto = $_SESSION['puesto'];
-$telefono = $_SESSION['telefono'];
-
-?>
 
 <!DOCTYPE html>
 <html>

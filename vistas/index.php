@@ -16,7 +16,7 @@ $puesto = $_SESSION['puesto'];
 
 <!DOCTYPE html>
 <html>
-
+<?php include('header/encabezado2.php'); ?>
 <head>
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
