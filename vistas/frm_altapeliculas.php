@@ -12,7 +12,7 @@ $nombre = $_SESSION['nombre'];
 $appaterno = $_SESSION['appaterno'];
 $puesto = $_SESSION['puesto'];
 
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
