@@ -54,8 +54,8 @@
 				</ul>
 			</div>
 			<div class='bx-controls bx-has-controls-direction'>
-				<div class='bx-controls-direction'>
-					<a class='bx-prev icon-chevron-left' href></a>
+				<div class='bx-controls-direction' onclick='javascript:dataLayer.push({&quot;event&quot;: &quot;Thumb &quot;});>
+					<a class='bx-prev icon-chevron-left' href onclick='javascript:dataLayer.push({&quot;event&quot;: &quot;Thumb &quot;});></a>
 					<a class='bx-next icon-chevron-right' href></a>
 				</div>
 			</div>

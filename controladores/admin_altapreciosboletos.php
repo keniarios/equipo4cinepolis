@@ -32,7 +32,7 @@ if (isset($_POST['opcionCiudad']))
 
 
 			$ciudad = $_POST['opcionCiudad'];
-			$cine = $_POST['opcionCine'];
+			$id_cine = $_POST['opcionCine'];
 			$tiposala = $_POST['tipoSala'];
 			$adultoprimerrango = $_POST['adultoprimerrango'];
 			$terceraedadprimerrango = $_POST['terceraedadprimerrango'];
@@ -45,7 +45,7 @@ if (isset($_POST['opcionCiudad']))
 
 			$linktrailer = "Vacio";
 
-			$query = "INSERT INTO precioboletos (nombrecine, tiposala, adultoprimerrango, terceraedadprimerrango, ninosprimerrango, adultosegundorango, terceraedadsegundorango, ninossegundorango, nombreciudad) VALUES ('$cine', '$tiposala', '$adultoprimerrango', '$terceraedadprimerrango', '$ninosprimerrango', '$adultosegundorango', '$terceraedadsegundorango', '$ninossegundorango','$ciudad')";
+			$query = "INSERT INTO precioboletos (id_sucursal, tiposala, adultoprimerrango, terceraedadprimerrango, ninosprimerrango, adultosegundorango, terceraedadsegundorango, ninossegundorango, nombreciudad) VALUES ('$id_cine', '$tiposala', '$adultoprimerrango', '$terceraedadprimerrango', '$ninosprimerrango', '$adultosegundorango', '$terceraedadsegundorango', '$ninossegundorango','$ciudad')";
 				pg_query($query);
 				?>
 					<script languaje="javascript">

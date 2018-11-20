@@ -26,7 +26,7 @@ $puesto = $_SESSION['puesto'];
     $row = pg_fetch_array($Tsucursal);
 
     //consulta para sacar las peliculas
-    $result = pg_query("SELECT id_pelicula, titulo, idiomaespanol, idiomaingles, subtituloespanol, subtituloingles, pelicula3d, idiomaespanol3d, idiomaingles3d, subtituloespanol3d, subtituloingles3d FROM peliculas ORDER BY titulo");
+    $result = pg_query("SELECT id_pelicula, titulo, idiomaespanol, idiomaingles, subtituloespanol, subtituloingles, pelicula3d, idiomaespanol3d, idiomaingles3d, subtituloespanol3d, subtituloingles3d FROM peliculas WHERE ciudad='$Pciudad' ORDER BY titulo");
 ?>
 
 <!DOCTYPE html>

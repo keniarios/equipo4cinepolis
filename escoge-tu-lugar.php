@@ -1,30 +1,27 @@
 <?php
 	include ('bd/conexion.php'); $conexion = conectarBD();
 
-	$id_horario = $_GET['id_horario'];
-	$Cedad3era = $_POST['edad3era'];
-	$Cadulto = $_POST['adulto'];
-	$Cninos = $_POST['ninos'];
-	$precioTotal3raEdad = $_POST['precioTotal3raEdad'];
-	$precioTotalAdulto = $_POST['precioTotalAdulto'];
-	$precioTotalNino = $_POST['precioTotalNino'];
 
-
-	/*$id_horario = $_GET['id_horario'];
-	$Cedad3era = $_GET['edad3era'];
-	$Cadulto = $_GET['adulto'];
-	$Cninos = $_GET['ninos'];
-	$precioTotal3raEdad = $_GET['precioTotal3raEdad'];
-	$precioTotalAdulto = $_GET['precioTotalAdulto'];
-	$precioTotalNino = $_GET['precioTotalNino'];
-	*/
+	//Creamos sesión
+    session_start();
+	if(!isset($_SESSION['id_horario'])) 
+	{
+	  header('Location: index.php');
+	}
+	$id_horario = $_SESSION['id_horario'];
+	$Cedad3era = $_SESSION['edad3era'];
+	$Cadulto = $_SESSION['adulto'];
+	$Cninos = $_SESSION['ninos'];
+	$precioTotal3raEdad = $_SESSION['precioTotal3raEdad'];
+	$precioTotalAdulto = $_SESSION['precioTotalAdulto'];
+	$precioTotalNino = $_SESSION['precioTotalNino'];
 
 	//DEFINIR EL TOTAL DEL PRECIO
 	$PrecioTotal = $precioTotal3raEdad + $precioTotalAdulto + $precioTotalNino;
 
 	//ASIENTOS
 	$asientos = $Cedad3era + $Cadulto + $Cninos;
-	//$ocupados = "b01,b02,b03,b04,b05";
+	$ocupados = "b01,b02,b03,b04,b05";
 
 	//SELECCIONAR DATOS DE LA PELICULA
 	$Timagen = pg_query("SELECT horarios.id_pelicula, horarios.hora, horarios.fecha, peliculas.imagen, peliculas.nombreoriginal, altasucursal.nombre FROM horarios INNER JOIN peliculas ON horarios.id_pelicula = peliculas.id_pelicula INNER JOIN altasucursal ON horarios.id_sucursal = altasucursal.id_sucursal  WHERE horarios.id_horario=$id_horario;");
@@ -32,6 +29,11 @@
 
 	$Tdatos = pg_query("select horarios.id_horario, horarios.id_pelicula, horarios.hora, horarios.fecha, peliculas.imagen, peliculas.nombreoriginal, altasucursal.nombre, clasificacion, idioma, horarios.sala from horarios INNER JOIN peliculas ON horarios.id_pelicula = peliculas.id_pelicula INNER JOIN altasucursal on horarios.id_sucursal = altasucursal.id_sucursal  WHERE horarios.id_horario=$id_horario;");
 
+
+	$CiudadSucursalHeader = pg_query("SELECT nombre, ALS.ciudad FROM altasucursal ALS INNER JOIN HORARIOS H ON ALS.id_sucursal=H.id_sucursal and id_horario='$id_horario'");
+	$DatosSucursalHeader = pg_fetch_array($CiudadSucursalHeader);
+	$nombresucursalHeader = $DatosSucursalHeader['nombre'];
+	$nombreciudadHeader = $DatosSucursalHeader['ciudad'];
 ?>
 
 
@@ -44,7 +46,7 @@
 	<link rel="stylesheet" type="text/css" href="css/css-adrian/responsive-master.css">
 	<link rel="stylesheet" type="text/css" href="css/css-adrian/master.css">
 	<link rel="stylesheet" type="text/css" href="css/css-adrian/compra.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">-->
 
 	<!-- CSS-->
 	<link href="../archivosCompraBoletos/master.css" rel="stylesheet">
@@ -176,11 +178,128 @@ function validacion(objeto)
     </script>-->
 
 <?php
-	include('headercompraboleto/headerCompra.php');
+	//include('headercompraboleto/headerCompra.php');
 ?>
 
+<!-- HEADER -->
+	<header>
+		<!-- TOP HEADER -->
+		<div class="contentBusqueda g960 cf">
+			 
+			<h1 class="col3"><a href="index.php" title="Cinépolis"><img src="./archivosCompraBoletos/lg-cinepolis.png" alt="Cinépolis"></a></h1>
 
-<?php echo "<form id='frm' action='haztupago.php?id_horario=$id_horario&edad3era=$Cedad3era&precioTotal3raEdad=$precioTotal3raEdad&adulto=$Cadulto&precioTotalAdulto=$precioTotalAdulto&ninos=$Cninos&precioTotalNino=$precioTotalNino' method='POST'>";?>
+			<div class="col8 filtroBusqueda" id="busqueda">
+				<div class="col5">
+					<div class="selectBlanco">
+						   <div class="selector" id="uniform-ddlCiudad" style="width: 261px; background: url(../Imagenes/icon-select-form-gris.png) no-repeat 100% 0; border-radius: 5px; background-color: #fff;">
+						   	<select name="ddlCiudad" onchange="loadComplejo()" id="ddlCiudad" class="combo" style="opacity: .8;">
+									<?php echo "<option value='$nombreciudadHeader' selected='selected' clave='0'>$nombreciudadHeader</option>";?>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col5">
+					<div class="selectBlanco">
+						 <div class="selector" id="uniform-ddlComplejo" style="width: 261px; background: url(../Imagenes/icon-select-form-gris.png) no-repeat 100% 0; border-radius: 5px; background-color: #fff;">
+						 	<!--<span style="width: 182.008px; user-select: none;">Selecciona un cine</span>-->
+						 	<select name="ddlComplejo" onchange="SelectSession(1)" id="ddlComplejo" class="combo" style="opacity: .8;">
+						 		<?php echo "<option value='$nombresucursalHeader'>$nombresucursalHeader</option>";?>
+						 		</select>
+						 	</div>
+					</div>
+				</div>
+				<div class="col2">
+					 
+					 <input name="" type="button" value="VER CARTELERA" onclick="SelectSession(1)" class="btn btnEnviar">
+				</div>
+			</div>
+			<div class="col1">
+				 
+				<fieldset id="login" class="dropdown">
+					<h3>Ingresa tus datos</h3>
+					<p class="textInput">
+						<label for="email">Correo electrónico</label>
+						<input id="email" name="email" value="" title="email" tabindex="4" type="email">
+					</p>
+					<p class="textInput">
+						<label for="password" class="accessAid">Contrase�a</label>
+						<input id="password" name="password" value="" title="password" tabindex="5" type="password">
+					</p>
+					
+					<input class="btn btnSend" value="Entrar a Cinépolis® ID" tabindex="6" type="submit">
+					
+					<p class="linksLogin">
+						<a href="https://inetvis.cineticket.com.mx/compra/visSelectTickets.aspx?tkn=&amp;cinemacode=954&amp;txtSessionId=10261&amp;distributor=Fox&amp;originalTitle=Bohemian%20Rhapsody%20(Estados%20Unidos,%202018)&amp;language=&amp;genre=DRAMA&amp;rating=B&amp;director=Bryan%20Singer&amp;protagonist=Allen%20Leech&amp;_ga=2.169038049.1153251463.1541480097-231010952.1539140855#" class="linkPassword" title="Recupera tu contrase�a">�Olvidaste tu contrase�a?</a>
+						<a class="linkRegister" title="Registrate para Ingresar" href="https://inetvis.cineticket.com.mx/compra/visSelectTickets.aspx?tkn=&amp;cinemacode=954&amp;txtSessionId=10261&amp;distributor=Fox&amp;originalTitle=Bohemian%20Rhapsody%20(Estados%20Unidos,%202018)&amp;language=&amp;genre=DRAMA&amp;rating=B&amp;director=Bryan%20Singer&amp;protagonist=Allen%20Leech&amp;_ga=2.169038049.1153251463.1541480097-231010952.1539140855#">�No estás registrado?</a>
+					</p>
+
+					<input class="btn btnFaceConect" value="O accede con Facebook" tabindex="6" type="submit">
+					<p class="text-center linksLogin">
+						<a href="https://inetvis.cineticket.com.mx/compra/visSelectTickets.aspx?tkn=&amp;cinemacode=954&amp;txtSessionId=10261&amp;distributor=Fox&amp;originalTitle=Bohemian%20Rhapsody%20(Estados%20Unidos,%202018)&amp;language=&amp;genre=DRAMA&amp;rating=B&amp;director=Bryan%20Singer&amp;protagonist=Allen%20Leech&amp;_ga=2.169038049.1153251463.1541480097-231010952.1539140855#" title="Descubre los beneficios de Cinépolis® ID">�Qué es Cinépolis ID?</a>
+					</p>
+				</fieldset>
+			</div>
+			<div id="btnBusqueda">
+				<a href="https://inetvis.cineticket.com.mx/compra/visSelectTickets.aspx?tkn=&amp;cinemacode=954&amp;txtSessionId=10261&amp;distributor=Fox&amp;originalTitle=Bohemian%20Rhapsody%20(Estados%20Unidos,%202018)&amp;language=&amp;genre=DRAMA&amp;rating=B&amp;director=Bryan%20Singer&amp;protagonist=Allen%20Leech&amp;_ga=2.169038049.1153251463.1541480097-231010952.1539140855#busqueda" title="Buscar Cartelera" class="abrirContent"><i class="icon-search"></i></a>
+			</div>
+		</div>
+		<!-- NAVEGACIÓN -->
+		<div class="navegacion">
+			<div class="navContent g960 cf dropdown" id="menuNavega">
+				<nav>					
+				</nav>
+				<nav>					
+				</nav>
+				
+			</div>
+			<div class="AbrirNav g960 cf">
+				<a href="https://inetvis.cineticket.com.mx/compra/visSelectTickets.aspx?tkn=&amp;cinemacode=954&amp;txtSessionId=10261&amp;distributor=Fox&amp;originalTitle=Bohemian%20Rhapsody%20(Estados%20Unidos,%202018)&amp;language=&amp;genre=DRAMA&amp;rating=B&amp;director=Bryan%20Singer&amp;protagonist=Allen%20Leech&amp;_ga=2.169038049.1153251463.1541480097-231010952.1539140855#menuNavega" id="btnAbrirNav" class="col6 abrirContent" style="display:none">
+					 
+				</a>
+				<ul class="redesSociales col6">
+					<li>
+						<a href="http://www.cinepolis.com/aplicaciones-moviles/" target="_blank" title="App Cinépolis" data="Apps Cinépolis®">
+							<i class="icon-mobile-phone"></i>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.youtube.com/cinepolisonline" target="_blank" title="YouTube Cinépolis" data="Youtube">
+							<i class="icon-youtube"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://plus.google.com/+Cin%C3%A9polis/posts" target="_blank" title="Google-plus Cinépolis" data="Google+">
+							<i class="icon-google-plus-sign"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/cinepolis" target="_blank" title="Twitter Cinépolis" data="Twitter">
+							<i class="icon-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/cinepolisonline" target="_blank" title="Facebook Cinépolis" data="Facebook">
+							<i class="icon-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://inetvis.cineticket.com.mx/compra/visSelectTickets.aspx?tkn=&amp;cinemacode=954&amp;txtSessionId=10261&amp;distributor=Fox&amp;originalTitle=Bohemian%20Rhapsody%20(Estados%20Unidos,%202018)&amp;language=&amp;genre=DRAMA&amp;rating=B&amp;director=Bryan%20Singer&amp;protagonist=Allen%20Leech&amp;_ga=2.169038049.1153251463.1541480097-231010952.1539140855#" target="_blank" title="Accesibilidad Cinépolis" data="Inclusite®">
+							<i class="icon-inclusite"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div id="nav-spacer"></div>
+	<script type="text/javascript" language="javascript" src="./archivosCompraBoletos/top.js.descarga"></script>
+	<!-- Inicio proceso de compra -->
+	
+	<!-- Fin de proceso de compra -->
+
+
+<?php //echo "<form id='frm' action='inicia-sesion.php?id_horario=$id_horario&edad3era=$Cedad3era&precioTotal3raEdad=$precioTotal3raEdad&adulto=$Cadulto&precioTotalAdulto=$precioTotalAdulto&ninos=$Cninos&precioTotalNino=$precioTotalNino' method='POST'>";?>
+<?php echo "<form id='frm' action='inicia-sesion.php' method='POST'>";?>
 			<input type="hidden" name="asientosSeleccionados" id="asientosSeleccionados">
 			<div class="container">
 			<section>
@@ -300,38 +419,57 @@ function validacion(objeto)
 		                                    <em><span id='visOrderTracker_txtSessionDateDetails' class='DetailsText'>$dialetra $diames</span></em></p>
 		                                    <p><span id='visOrderTracker_lblSessionTime' class='DetailsSubHeader'>Función</span>
 		                                    <em><span id='visOrderTracker_txtSessionTimeDetails' class='DetailsText'>$hora</span></em></p>
-		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>Sala</span></span>
-		                                    <em><span id='visOrderTracker_txtScreenDetails' class='DetailsText'>$nombreSala</span></em></p>
+		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader' style='display: none;'>Sala</span></span>
+		                                    <em><span id='visOrderTracker_txtScreenDetails' class='DetailsText' style='display: none;'>$nombreSala</span></em></p>
 		                                ";
 		                            }
 		                        ?>
 							</div>
 							<div class="col4">
 								<p><span id="visOrderTracker_lblTicket" class="DetailsSubHeader">Boletos</span></p>
-								
-
-		<table>
+								<table>
 									<tbody> 
-		                        <tr class="DetailsRow">
-		                            <td><span id="visOrderTracker_rptTicketSet__ctl0_txtTktOrderDetails" class="DetailsText"><?php echo $Cedad3era; ?> 3 ERA EDAD</span></td>
-		                            <td style="display:none" class="Price"><span id="visOrderTracker_rptTicketSet__ctl0_txtTktPriceDetails" class="DetailsText">$<?php echo $precioTotal3raEdad; ?>.00</span></td>
-		                            <td class="Points"><span id="visOrderTracker_rptTicketSet__ctl0_txtTktPointsDetails" class="DetailsText"></span></td>
-		                            <td><span id="visOrderTracker_rptTicketSet__ctl0_txtTktSeatDetails" class="DetailsText"></span></td>
-		                        </tr>
+									<?php 
+		                        		if ($Cedad3era>0) {
+		                        			echo "
+		                        			<tr class='DetailsRow'>
+					                            <td><span id='visOrderTracker_rptTicketSet__ctl1_txtTktOrderDetails' class='DetailsText'>$Cedad3era 3 ERA EDAD</span></td>
+					                            <td style='display:none' class='Price'><span id='visOrderTracker_rptTicketSet__ctl1_txtTktPriceDetails' class='DetailsText'>$".$precioTotal3raEdad.".00</span></td>
+					                            <td class='Points'><span id='visOrderTracker_rptTicketSet__ctl1_txtTktPointsDetails' class='DetailsText'></span></td>
+					                            <td><span id='visOrderTracker_rptTicketSet__ctl1_txtTktSeatDetails' class='DetailsText'></span></td>
+					                        </tr>
+		                        			";
+		                        		}
+
+		                        		if ($Cadulto>0) {
+		                        			echo "
+		                        			<tr class='DetailsRow'>
+					                            <td><span id='visOrderTracker_rptTicketSet__ctl1_txtTktOrderDetails' class='DetailsText'>$Cadulto ADULTO</span></td>
+					                            <td style='display:none' class='Price'><span id='visOrderTracker_rptTicketSet__ctl1_txtTktPriceDetails' class='DetailsText'>$".$precioTotalAdulto.".00</span></td>
+					                            <td class='Points'><span id='visOrderTracker_rptTicketSet__ctl1_txtTktPointsDetails' class='DetailsText'></span></td>
+					                            <td><span id='visOrderTracker_rptTicketSet__ctl1_txtTktSeatDetails' class='DetailsText'></span></td>
+					                        </tr>
+		                        			";
+		                        		}
+
+		                        		if ($Cninos>0) {
+		                        			echo "
+		                        			<tr class='DetailsRow'>
+					                            <td><span id='visOrderTracker_rptTicketSet__ctl1_txtTktOrderDetails' class='DetailsText'>$Cninos NIÑOS</span></td>
+					                            <td style='display:none' class='Price'><span id='visOrderTracker_rptTicketSet__ctl1_txtTktPriceDetails' class='DetailsText'>$".$precioTotalNino.".00</span></td>
+					                            <td class='Points'><span id='visOrderTracker_rptTicketSet__ctl1_txtTktPointsDetails' class='DetailsText'></span></td>
+					                            <td><span id='visOrderTracker_rptTicketSet__ctl1_txtTktSeatDetails' class='DetailsText'></span></td>
+					                        </tr>
+		                        			";
+		                        		}
+		                        	?>
 		                    
-		                        <tr class="DetailsRow">
-		                            <td><span id="visOrderTracker_rptTicketSet__ctl1_txtTktOrderDetails" class="DetailsText"><?php echo $Cadulto; ?> ADULTO</span></td>
-		                            <td style="display:none" class="Price"><span id="visOrderTracker_rptTicketSet__ctl1_txtTktPriceDetails" class="DetailsText">$<?php echo $precioTotalAdulto; ?>.00</span></td>
-		                            <td class="Points"><span id="visOrderTracker_rptTicketSet__ctl1_txtTktPointsDetails" class="DetailsText"></span></td>
-		                            <td><span id="visOrderTracker_rptTicketSet__ctl1_txtTktSeatDetails" class="DetailsText"></span></td>
-		                        </tr>
-		                    
-		                        <tr class="DetailsRow">
+		                        <!--<tr class="DetailsRow">
 		                            <td><span id="visOrderTracker_rptTicketSet__ctl2_txtTktOrderDetails" class="DetailsText"><?php echo $Cninos; ?> NIÑOS</span></td>
 		                            <td style="display:none" class="Price"><span id="visOrderTracker_rptTicketSet__ctl2_txtTktPriceDetails" class="DetailsText">$<?php echo $precioTotalNino; ?>.00</span></td>
 		                            <td class="Points"><span id="visOrderTracker_rptTicketSet__ctl2_txtTktPointsDetails" class="DetailsText"></span></td>
 		                            <td><span id="visOrderTracker_rptTicketSet__ctl2_txtTktSeatDetails" class="DetailsText"></span></td>
-		                        </tr>
+		                        </tr>-->
 		                    
 								</tbody></table>
 								  <span id="visOrderTracker_lblConcession" class="DetailsText"></span> 
@@ -424,8 +562,12 @@ function validacion(objeto)
 					</tr>
 				</tbody></table>
 				</div><!--FIN class="col10"-->
-				
-
+			</td>
+		</tr>
+	</tbody>
+</table>
+				<!--imagen pantalla-->
+				<img src="img/SeatScreen.png" style="margin-top: 25px; width: 90%; height: 25px;">
 		                        <table cellspacing="0" cellpadding="0" width="100%" border="0" style="padding-bottom:15px;">
 									<tbody><tr>
 										<td align="center" width="100%">

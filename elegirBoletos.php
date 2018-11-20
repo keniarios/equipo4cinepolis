@@ -3,9 +3,24 @@
  	$fechaActual = date("Y-m-d");
  	$horaActual = date("H:i");
 
-	$idhorario = $_GET['id_horario'];
+ 	//Creamos sesión
+    session_start();
+	if(!isset($_SESSION['id_horario'])) 
+	{
+	  header('Location: index.php');
+	}
+	$idhorario = $_SESSION['id_horario'];
 
 	include ('bd/conexion.php'); $conexion = conectarBD();
+
+	$CiudadSucursalHeader = pg_query("SELECT nombre, ALS.ciudad FROM altasucursal ALS INNER JOIN HORARIOS H ON ALS.id_sucursal=H.id_sucursal and id_horario='$idhorario'");
+	$DatosSucursalHeader = pg_fetch_array($CiudadSucursalHeader);
+	//Almacenamos el nombre de usuario en una variable de sesión usuario
+    $_SESSION['nombre'] = $DatosSucursalHeader["nombre"];
+    $_SESSION['ciudad'] = $DatosSucursalHeader["ciudad"];
+    $nombresucursalHeader = $_SESSION['nombre'];
+	$nombreciudadHeader = $_SESSION['ciudad'];
+
 
 	$Timagen = pg_query("SELECT horarios.id_horario, horarios.id_pelicula, horarios.hora, horarios.fecha, peliculas.imagen, peliculas.nombreoriginal, altasucursal.nombre FROM horarios INNER JOIN peliculas ON horarios.id_pelicula = peliculas.id_pelicula INNER JOIN altasucursal ON horarios.id_sucursal = altasucursal.id_sucursal  WHERE horarios.id_horario=$idhorario;");
 	
@@ -86,8 +101,8 @@ height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></nos
         <script type="text/javascript" charset="utf-8" src="./archivosCompraBoletos/jquery-Pase.js.descarga"></script>
 
         <!--FORMULARIO-->
-		<!--<form name="frmSelectTickets" method="post" action="https://inetvis.cineticket.com.mx/compra/visSelectTickets.aspx?tkn=&amp;cinemacode=954&amp;txtSessionId=10261&amp;distributor=Fox&amp;originalTitle=Bohemian+Rhapsody+(Estados+Unidos%2c+2018)&amp;language=&amp;genre=DRAMA&amp;rating=B&amp;director=Bryan+Singer&amp;protagonist=Allen+Leech&amp;_ga=2.169038049.1153251463.1541480097-231010952.1539140855" id="frmSelectTickets">-->
-		<?php echo "<form name='frmSelectTickets' method='post' action='escoge-tu-lugar.php?id_horario=$idhorario' id='frmSelectTickets'>"; ?>
+        <?php //echo "<form name='frmSelectTickets' method='post' action='escoge-tu-lugar.php?id_horario=$idhorario' id='frmSelectTickets'>"; ?>
+		<?php echo "<form name='frmSelectTickets' method='post' action='controladores/valores_escoge-tu-lugar.php' id='frmSelectTickets'>"; ?>
 			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
 			<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
 
@@ -155,53 +170,7 @@ height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></nos
 		    </script>
 		 
 
-
-			<div class="navMobile" id="masCinepolis"><div class="navegacion">
-				<div class="navContent g960 cf">
-					<nav>					
-					</nav>
-					<nav>					
-					</nav>
-					
-				</div>
-				<div class="AbrirNav g960 cf">
-					<a href="https://inetvis.cineticket.com.mx/compra/visSelectTickets.aspx?tkn=&amp;cinemacode=954&amp;txtSessionId=10261&amp;distributor=Fox&amp;originalTitle=Bohemian%20Rhapsody%20(Estados%20Unidos,%202018)&amp;language=&amp;genre=DRAMA&amp;rating=B&amp;director=Bryan%20Singer&amp;protagonist=Allen%20Leech&amp;_ga=2.169038049.1153251463.1541480097-231010952.1539140855#menuNavega" id="btnAbrirNav" class="col6 abrirContent" style="display:none">
-						 
-					</a>
-					<ul class="redesSociales col6">
-						<li>
-							<a href="http://www.cinepolis.com/aplicaciones-moviles/" target="_blank" title="App Cinépolis" data="Apps Cinépolis®">
-								<i class="icon-mobile-phone"></i>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.youtube.com/cinepolisonline" target="_blank" title="YouTube Cinépolis" data="Youtube">
-								<i class="icon-youtube"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://plus.google.com/+Cin%C3%A9polis/posts" target="_blank" title="Google-plus Cinépolis" data="Google+">
-								<i class="icon-google-plus-sign"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://twitter.com/cinepolis" target="_blank" title="Twitter Cinépolis" data="Twitter">
-								<i class="icon-twitter"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.facebook.com/cinepolisonline" target="_blank" title="Facebook Cinépolis" data="Facebook">
-								<i class="icon-facebook"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://inetvis.cineticket.com.mx/compra/visSelectTickets.aspx?tkn=&amp;cinemacode=954&amp;txtSessionId=10261&amp;distributor=Fox&amp;originalTitle=Bohemian%20Rhapsody%20(Estados%20Unidos,%202018)&amp;language=&amp;genre=DRAMA&amp;rating=B&amp;director=Bryan%20Singer&amp;protagonist=Allen%20Leech&amp;_ga=2.169038049.1153251463.1541480097-231010952.1539140855#" target="_blank" title="Accesibilidad Cinépolis" data="Inclusite®">
-								<i class="icon-inclusite"></i>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div></div><div class="wrapper">
+<div class="wrapper">
 		
 
 		<?php  
@@ -381,8 +350,8 @@ height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></nos
                                     <em><span id='visOrderTracker_txtSessionDateDetails' class='DetailsText'>$dialetra $diames</span></em></p>
                                     <p><span id='visOrderTracker_lblSessionTime' class='DetailsSubHeader'>Función</span>
                                     <em><span id='visOrderTracker_txtSessionTimeDetails' class='DetailsText'>$hora</span></em></p>
-                                    <p style='display:none'><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>Sala</span></span>
-                                    <em><span id='visOrderTracker_txtScreenDetails' class='DetailsText'>SALA 2</span></em></p>
+                                    <p style='display:none'><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader' style='display: none;'>Sala</span></span>
+                                    <em><span id='visOrderTracker_txtScreenDetails' class='DetailsText' style='display: none;'>SALA 2</span></em></p>
                                 ";
                             }
                         ?>
@@ -424,7 +393,8 @@ height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></nos
 											
 										</p>
 										<p class="text-center">
-											<input type="image" name="ibtnChangeSession" id="ibtnChangeSession" class="ImageChangeSession" src="./archivosCompraBoletos/changesession.gif" border="0"> 
+											<img id="imgCancelOrderLF13" src="archivosCompraBoletos/changesession.gif" class="ImageCancel" border="0">
+											
 										</p>
 									</div>
 											
@@ -1411,7 +1381,7 @@ height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></nos
 	
 
 </font>
-<div id="ascrail2000" class="nicescroll-rails" style="width: 7px; z-index: 9999; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 0.6;"><div style="position: relative; top: 248px; float: right; width: 7px; height: 239px; background-color: rgb(0, 0, 0); border: 0px; background-clip: padding-box; border-radius: 3px;"></div></div>
+<!--<div id="ascrail2000" class="nicescroll-rails" style="width: 7px; z-index: 9999; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 0.6;"><div style="position: relative; top: 248px; float: right; width: 7px; height: 239px; background-color: rgb(0, 0, 0); border: 0px; background-clip: padding-box; border-radius: 3px;"></div></div>-->
 <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1479175765731211");fbq("track","PageView");
 fbq("track","AddToCart",{content_type:"product",content_name:"Bohemian Rhapsody, La Historia de Fre Esp (B)",content:"Fox"});</script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1479175765731211&amp;ev=PageView&amp;noscript=1"></noscript>

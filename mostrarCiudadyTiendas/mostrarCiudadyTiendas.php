@@ -5,9 +5,16 @@
 
 	include_once ('conexion.php'); $conexion = conectarBDCS();
 
+	$ParaMetrogetsucursal="";
+	if (isset($_GET['id_sucursal'])) {
+		$ParaMetrogetsucursal=$_GET['id_sucursal'];
+		$resultSucursalNombre = pg_query("SELECT nombre FROM altasucursal WHERE estatus=1 and id_sucursal='$ParaMetrogetsucursal'");
+		
+		while ($datoSucursal=pg_fetch_array($resultSucursalNombre)) {
+			$NombreSucursal= $datoSucursal['nombre'];
+		}
+	}
     $resultSucursales =  pg_query("SELECT DISTINCT ON (ciudad) ciudad, id_sucursal, nombre FROM altasucursal WHERE estatus=1  ORDER BY ciudad");
-    //$resultSucursales2 = pg_query("SELECT ciudad, id_sucursal, nombre FROM altasucursal WHERE estatus=1 and ciudad='Culiacán' ORDER BY ciudad");
-    $resultSucursales2 = pg_query("SELECT ciudad, id_sucursal, nombre FROM altasucursal WHERE estatus=1 ORDER BY ciudad");
     pg_close($conexion);
 
 
@@ -38,30 +45,28 @@
 								$ciudad = $datos['ciudad'];
 
 								if ($ciudad == "Culiacán") {
-									echo "<option value='$ciudad' clave='$ciudad'>$ciudad</option>";
 								}else{
 									echo "<option value='$ciudad' clave='$ciudad'>$ciudad</option>";
 								}
 							}
 						}
 						else{
-							if (isset($_GET['ciudad'])) {
-								$ParaMetrogetsucursal=$_GET['id_sucursal'];
-							}
-
 							echo "<select name='opcionCiudades' id='opcionCiudades'>
-							<option value=''>Selecciona una ciudad</option>";
-								while ($datos=pg_fetch_array($resultSucursales)) {
-									$ciudad = $datos['ciudad'];
+							<option value=''>Selecciona un ciudad</option>";
 
-									if ($ciudad == "Culiacán") {
-										echo "<option value='$ciudad' clave='$ciudad'>$ciudad</option>";
-									}else{
-										echo "<option value='$ciudad' clave='$ciudad'>$ciudad</option>";
-									}
+							while ($datos=pg_fetch_array($resultSucursales)) {
+								$ciudad = $datos['ciudad'];
+
+								if ($ciudad == "Culiacán") {
+									echo "<option value='$ciudad' clave='$ciudad'>$ciudad</option>";
+								}else{
+									echo "<option value='$ciudad' clave='$ciudad'>$ciudad</option>";
 								}
 							}
+						}
+							
 						?>
+						}
 					</select>
 					</span>
 				</div>
@@ -75,9 +80,7 @@
 						<?php $contadorT=0;?>
 					<select name="Sucursales" id="Sucursales" onchange="location = this.value;">
 						<option>Selecciona un cine</option>
-						<?php
-							//echo "<option value='cartelera.php?ciudad=$ciudadS3&id_sucursal3=$id_sucursal'>$nombreS3</option>";
-						?>
+						<?php//echo "<option value='cartelera.php?ciudad=$ciudadS3&id_sucursal3=$id_sucursal'>$nombreS3</option>";?>
 						
 					</select>
 					</span>

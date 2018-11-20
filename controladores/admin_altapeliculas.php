@@ -42,7 +42,7 @@ if (isset($_POST['opcionclasificacion']))
 				<?php
 				}
 				else{
-						if (isset($_POST['opcionEstatus'])) {
+						if (isset($_POST['opcionciudad'])) {
 							$valoropcionciudad = $_POST['opcionciudad'];
 
 							if ($valoropcionciudad == "") {

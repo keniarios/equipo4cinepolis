@@ -1,4 +1,20 @@
+<?php
 
+//session_start();
+if(!isset($_SESSION['id_registropersonal'])) 
+{
+  header('Location: frm_admin_login.php');
+}
+
+$idusuariosesion = $_SESSION['id_registropersonal'];
+$correo = $_SESSION['correo'];
+$nombre = $_SESSION['nombre'];
+$appaterno = $_SESSION['appaterno'];
+$apmaterno = $_SESSION['apmaterno'];
+$puesto = $_SESSION['puesto'];
+$telefono = $_SESSION['telefono'];
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -11,9 +27,9 @@
 	<link rel='stylesheet' href='../css/bootstrap.min.css'>
 	<link rel='stylesheet' type='text/css' href='../css/estilo.css'>
 	
-	<script src="../js/misFunciones.js" type="text/javascript" charset="utf-8" async defer></script>
-	<link rel="stylesheet" href="../css/jQuery-ui.css">
-  	<script src="../js/jQuery-ui.js"></script>
+	<script src="../js/misfunciones.js" type="text/javascript" charset="utf-8" async defer></script>
+	<link rel="stylesheet" href="../css/jquery-ui.css">
+  	<script src="../js/jquery-ui.js"></script>
 
 </head>
 <body>

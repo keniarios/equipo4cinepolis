@@ -6,7 +6,8 @@
 	<link href="../css/vistasCliente/master2.css" rel='stylesheet' type='text/css' />
 	<link href="../css/vistasCliente/master3.css" rel='stylesheet' type='text/css' />
 	<link href="../css/vistasCliente/master4.css" rel='stylesheet' type='text/css' />
-	
+	<link href="../css/vistasCliente/Master5-1339141376.css" rel='stylesheet' type='text/css' />
+	<link href="../css/vistasCliente/Master6-2006319605.css" rel='stylesheet' type='text/css' />
 	<link href="../css/vistasCliente/estiloSelect.css" rel='stylesheet' type='text/css' />
 
 	<!--EMPEZAR-->
@@ -49,8 +50,6 @@
 <!--<script type="text/javascript" async="" src="https://www.google-analytics.com/gtm/js?id=GTM-KX39WKQ&amp;t=gtm5&amp;cid=231010952.1539140855"></script>-->
 <script type="text/javascript" async="" src="../js/vistaCliente/js.js"></script>
 
-
-<!--<script src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;pvsid=3250507804717860&amp;correlator=2293137208286070&amp;output=json_html&amp;callback=googletag.impl.pubads.callbackProxy1&amp;impl=fifs&amp;json_a=1&amp;eid=21061743%2C21062491&amp;vrg=264&amp;guci=2.2.0.0.2.2.0&amp;plat=1%3A32776%2C2%3A16809992&amp;sc=0&amp;sfv=1-0-29&amp;iu_parts=21703872347%2CMX-Front%2CMX-Front-BI%2CMX-Front-LB%2CMX-Front-MR%2CMX-Front-SS&amp;enc_prev_ius=%2F0%2F1%2F2%2C%2F0%2F1%2F3%2C%2F0%2F1%2F4%2C%2F0%2F1%2F5&amp;prev_iu_szs=460x251%2C728x90%2C300x250%2C120x600&amp;eri=1&amp;cookie=ID%3D978ae53339f04b76%3AT%3D1539490632%3AS%3DALNI_MZEGu8ceD4w-ycqCfrMDAKyzaIuFQ&amp;bc=7&amp;amp_v=021810052256480&amp;abxe=1&amp;lmt=1539493100&amp;dt=1539493100506&amp;dlt=1539493077444&amp;idt=5360&amp;frm=20&amp;biw=1349&amp;bih=657&amp;oid=3&amp;adxs=0%2C0%2C0%2C0&amp;adys=278%2C278%2C278%2C278&amp;adks=1814460300%2C2108258274%2C135826278%2C3904990309&amp;gut=v2&amp;ifi=1&amp;u_tz=-360&amp;u_his=5&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;u_sd=1&amp;flash=0&amp;url=http%3A%2F%2Fwww.cinepolis.com%2F&amp;ref=http%3A%2F%2Fwww.cinepolis.com%2Fcartelera%2Fcdmx-norte&amp;dssz=55&amp;icsg=17498770243779&amp;std=0&amp;vis=1&amp;scr_x=0&amp;scr_y=278&amp;psz=456x-1%7C728x-1%7C299x-1%7C120x-1&amp;msz=0x-1%7C0x-1%7C0x-1%7C0x-1&amp;ga_vid=231010952.1539140855&amp;ga_sid=1539493101&amp;ga_hid=2090347707&amp;fws=128%2C128%2C128%2C128"></script>-->
 <!--<script src="http://script.crazyegg.com/pages/scripts/0012/6530.js?427636" async="" type="text/javascript"></script>-->
 <script src="" async="" type="text/javascript"></script>
 
@@ -139,12 +138,11 @@
 	<title>Cinépolis</title>
 
 	
-<!--<script type="text/javascript" async="" src="http://dgy6rx5roq02d.cloudfront.net/triggit-analytics.min.js"></script>-->
+<script type="text/javascript" async="" src="http://dgy6rx5roq02d.cloudfront.net/triggit-analytics.min.js"></script>
 <link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-29/html/container.html">
 
 </head>
-<body> 
-
+<body>
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M66T72" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>dataLayer = [];
@@ -179,12 +177,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	}
 	//]]></script>
 
-	<!--<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIYIQr44lyw1IYvRT9_TdoO7dBLhMt_tvVsfmBpqVzrZOmyLkcJgvBrjxSHvKuPf3A2&amp;t=636480115623431523" type="text/javascript"></script>-->
+	<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIYIQr44lyw1IYvRT9_TdoO7dBLhMt_tvVsfmBpqVzrZOmyLkcJgvBrjxSHvKuPf3A2&amp;t=636480115623431523" type="text/javascript"></script>
 
 	<script type="text/javascript">//<![CDATA[
 	 ;var EsVIP= false; //]]></script>
 
-	 	<!--<script src="/WebResource.axd?d=x2nkrMJGXkMELz33nwnakIcmZSxXWKxyv_hgsiG3p0XKQ1nm43WWVia1LCFf_q4A_fABVUsIYEokz22OvKIxNZ9tRBYh3FqtegGLyKVwr-U1&amp;t=636480115623431523" type="text/javascript"></script>-->
+	 	<script src="/WebResource.axd?d=x2nkrMJGXkMELz33nwnakIcmZSxXWKxyv_hgsiG3p0XKQ1nm43WWVia1LCFf_q4A_fABVUsIYEokz22OvKIxNZ9tRBYh3FqtegGLyKVwr-U1&amp;t=636480115623431523" type="text/javascript"></script>
 
 	 	<script type="text/javascript">//<![CDATA[
 	function WebForm_OnSubmit() {

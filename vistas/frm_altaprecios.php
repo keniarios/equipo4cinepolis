@@ -12,7 +12,11 @@ $nombre = $_SESSION['nombre'];
 $appaterno = $_SESSION['appaterno'];
 $puesto = $_SESSION['puesto'];
 
-?>
+
+	include ('../bd/conexion.php'); $conexion = conectarBD();
+	$resultCiudad = pg_query("SELECT DISTINCT ON (ciudad) * FROM altasucursal WHERE estatus=1 ORDER BY ciudad");
+
+ ?>
 
 <!DOCTYPE html>
 <html>
@@ -27,11 +31,14 @@ $puesto = $_SESSION['puesto'];
     function showContent() {
     	elementoetiqueta = document.getElementById("etiqueta3d");
     	elementotiposala = document.getElementById("etiquetatiposala");
-    	elementoradionormal = document.getElementById("radionormal");
+    	elementoradiobasica = document.getElementById("radiobasica");
 		elementoradio3d = document.getElementById("radio3d");
 		elementoradioimax = document.getElementById("radioimax");
 		elementoradiojunior = document.getElementById("radiojunior");
-
+		elementoradioradiodearte = document.getElementById("radiodearte");
+		elementoradioradiomacroxe = document.getElementById("radiomacroxe");
+		elementoradio4dx = document.getElementById("radio4dx");
+		elementoradiovip = document.getElementById("radiovip");
 
     	elementoidioma = document.getElementById("informacionidioma3d");
     	
@@ -61,11 +68,16 @@ $puesto = $_SESSION['puesto'];
         	 elementoetiqueta.style.display='block';
             elementoidioma.style.display='block';
             elementotiposala.style.display='block';
-            elementoradionormal.style.display='block';
+            elementoradiobasica.style.display='block';
 			elementoradio3d.style.display='block';
 			elementoradioimax.style.display='block';
-			elementoradio3d.style.display='block';
 			elementoradiojunior.style.display='block';
+			elementoradioradiodearte.style.display='block';
+			elementoradioradiomacroxe.style.display='block';
+			elementoradio4dx.style.display='block';
+			elementoradiovip.style.display='block';
+
+
            // elementosubtitulo.style.display='block';
             //alert(strUser);
 
@@ -75,10 +87,16 @@ $puesto = $_SESSION['puesto'];
         	elementoetiqueta.style.display='none';
             elementoidioma.style.display='none';
             elementotiposala.style.display='none';
-            elementoradionormal.style.display='none';
+            elementoradiobasica.style.display='none';
             elementoradio3d.style.display='none';
             elementoradioimax.style.display='none';
             elementoradiojunior.style.display='none';
+            elementoradioradiodearte.style.display='none';
+            elementoradioradiomacroxe.style.display='none';
+            elementoradio4dx.style.display='none';
+            elementoradiovip.style.display='none';
+
+
             //elementosubtitulo.style.display='none';
         }
     }
@@ -127,8 +145,14 @@ $puesto = $_SESSION['puesto'];
 			    						<label>Seleccione Ciudad</label>
 			    						<select name="opcionCiudad" id="ddlViewByCiudad" style="height: 30px; width: auto" onchange="javascript:showContent()">
 			    							<option value="">Seleccione</option>
-					    					<option value="Culiacán">Culiacán</option>
-					    					<option value="Mazatlán">Mazatlán</option>
+			    							<?php
+				    							while ($datos=pg_fetch_array($resultCiudad)) {
+													$ID = $datos['id_sucursal'];
+													$nombre = $datos['nombre'];
+													$ciudad = $datos['ciudad'];
+													echo "<option value='$ciudad'>$ciudad</option>";
+												}
+											?>
 				    					</select>
 				    				</div>
 				    			</div>
@@ -141,11 +165,6 @@ $puesto = $_SESSION['puesto'];
 			    						<label>Seleccione Cine</label>
 			    						<select name="opcionCine" id="ddlViewBy" style="height: 30px; width: auto;" onchange="javascript:showContent()">
 			    							<option value="">Seleccione</option>
-					    					<option value="Cinépolis Culiacán">Cinépolis Culiacán</option>
-					    					<option value="Cinépolis Paseo San Isidro">Cinépolis Paseo San Isidro</option>
-					    					<option value="Cinépolis Plaza Azahares">Cinépolis Plaza Azahares</option>
-					    					<option value="Cinépolis Sendero Ganadera Culiacán">Cinépolis Sendero Ganadera Culiacán</option>
-					    					<option value="Cinépolis VIP Culiacán">Cinépolis VIP Culiacán</option>
 				    					</select>
 				    				</div>
 				    			</div>
@@ -163,27 +182,46 @@ $puesto = $_SESSION['puesto'];
 							    	</div>
 							</div>
 			    			
-			    			<div class="form-check" id="radionormal"  style="display: none";>
-			    			
-							  <input type="radio" class="form-check-input" name="tipoSala" value="Normal" checked>
-							  <label class="form-check-label">Normal</label>
-							</div>
-
-							
-							<div class="form-check" id="radio3d"  style="display: none";>
-							  <input type="radio" class="form-check-input" name="tipoSala" value="3D">
-							  <label class="form-check-label">3D</label>
-							</div>
-
-							<div class="form-check" id="radioimax"  style="display: none";>
-							  <input type="radio" class="form-check-input" name="tipoSala" value="Imax">
-							  <label class="form-check-label">Imax</label>
+			    			<div class="form-check" id="radiobasica"  style="display: none";>
+							 <input type="radio" class="form-check-input" name="tipoSala" value="Básica" checked>
+							  <label class="form-check-label">Básica</label>
 							</div>
 
 							<div class="form-check" id="radiojunior"  style="display: none";>
 							  <input type="radio" class="form-check-input" name="tipoSala" value="Junior">
 							  <label class="form-check-label">Junior</label>
 							</div>
+
+							<div class="form-check" id="radiovip"  style="display: none";>
+							  <input type="radio" class="form-check-input" name="tipoSala" value="VIP">
+							  <label class="form-check-label">VIP</label>
+							</div>
+
+							<div class="form-check" id="radio4dx"  style="display: none";>
+							  <input type="radio" class="form-check-input" name="tipoSala" value="4DX">
+							  <label class="form-check-label">4DX</label>
+							</div>
+
+							<div class="form-check" id="radioimax"  style="display: none";>
+							  <input type="radio" class="form-check-input" name="tipoSala" value="IMAX">
+							  <label class="form-check-label">IMAX</label>
+							</div>
+
+							<div class="form-check" id="radiomacroxe"  style="display: none";>
+							  <input type="radio" class="form-check-input" name="tipoSala" value="MACRO XE">
+							  <label class="form-check-label">MACRO XE</label>
+							</div>
+							
+							<div class="form-check" id="radio3d"  style="display: none";>
+							  <input type="radio" class="form-check-input" name="tipoSala" value="3D">
+							  <label class="form-check-label">3D</label>
+							</div>
+
+							<div class="form-check" id="radiodearte"  style="display: none";>
+							  <input type="radio" class="form-check-input" name="tipoSala" value="De Arte">
+							  <label class="form-check-label">De Arte</label>
+							</div>
+
 
 
 							<div class="row" align="center" id="etiqueta3d" style="display: none;">
@@ -206,47 +244,47 @@ $puesto = $_SESSION['puesto'];
 					    					<div class="form-group row">
 										    <label class="col-sm-3 col-form-label">ADULTO</label>
 										    <div class="col-sm-8">
-										      <input type="text" name="adultoprimerrango" class="form-control" id="" placeholder="59" maxlength="3" required>
+										      <input type="text" name="adultoprimerrango" class="form-control" id="" placeholder="59" maxlength="3" onkeypress="return valida(event);" required>
 										    </div>
 										  	</div>
 
 										  	<div class="form-group row">
 										    <label class="col-sm-3 col-form-label">3 ERA EDAD</label>
 										    <div class="col-sm-8">
-										      <input type="text" name="terceraedadprimerrango" class="form-control" id="" placeholder="48" maxlength="3" required>
+										      <input type="text" name="terceraedadprimerrango" class="form-control" id="" placeholder="48" maxlength="3" onkeypress="return valida(event);" required>
 										    </div>
 										  	</div>
 
 										  	<div class="form-group row">
 										    <label class="col-sm-3 col-form-label">NIÑOS</label>
 										    <div class="col-sm-8">
-										      <input type="text" name="ninosprimerrango" class="form-control" id="" placeholder="48" maxlength="3" required>
+										      <input type="text" name="ninosprimerrango" class="form-control" id="" placeholder="48" maxlength="3" onkeypress="return valida(event);" required>
 										    </div>
 										  	</div>
 
 									</div>
 
 									<div class="form-group">
-				    					<label id="informacion3d"><h6>Después de las 15 horas</h6></label><br>
+				    					<label id="informacion3d"><h6>Después de las 15:00 horas</h6></label><br>
 				    					
 					    					<div class="form-group row">
 										    <label class="col-sm-3 col-form-label">ADULTO</label>
 										    <div class="col-sm-8">
-										      <input type="text" name="adultosegundorango" class="form-control" id="" placeholder="59" maxlength="3" required>
+										      <input type="text" name="adultosegundorango" class="form-control" id="" placeholder="59" maxlength="3" onkeypress="return valida(event);" required>
 										    </div>
 										  	</div>
 
 										  	<div class="form-group row">
 										    <label class="col-sm-3 col-form-label">3 ERA EDAD</label>
 										    <div class="col-sm-8">
-										      <input type="text" name="terceraedadsegundorango" class="form-control" id="" placeholder="48" maxlength="3" required>
+										      <input type="text" name="terceraedadsegundorango" class="form-control" id="" placeholder="48" maxlength="3" onkeypress="return valida(event);" required>
 										    </div>
 										  	</div>
 
 										  	<div class="form-group row">
 										    <label class="col-sm-3 col-form-label">NIÑOS</label>
 										    <div class="col-sm-8">
-										      <input type="text" name="ninossegundorango" class="form-control" id="" placeholder="48" maxlength="3" required>
+										      <input type="text" name="ninossegundorango" class="form-control" id="" placeholder="48" maxlength="3" onkeypress="return valida(event);" required>
 										    </div>
 										  	</div>
 
@@ -262,13 +300,7 @@ $puesto = $_SESSION['puesto'];
 			    		</form>
 				  </div>
 				</div>
-
-        		
-		
-		
-	
-
-
 </body>
+<script src="../js/llamadasAjax.js"></script>
 <?php include('footer/footer.php'); ?>
 </html>

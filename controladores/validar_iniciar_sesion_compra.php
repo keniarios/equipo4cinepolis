@@ -1,9 +1,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
 <?php
-require_once ('../../bd/conexion.php'); $conexion = conectarBD();
 
-$Vcorreo = strtoupper($_POST["txbCinepolisIdMaster"]);
-$Vcontrasena = $_POST["txbContrasenaMaster"];
+  $id_horario = $_GET['id_horario'];
+  $Cedad3era = $_GET['edad3era'];
+  $Cadulto = $_GET['adulto'];
+  $Cninos = $_GET['ninos'];
+  $precioTotal3raEdad = $_GET['precioTotal3raEdad'];
+  $precioTotalAdulto = $_GET['precioTotalAdulto'];
+  $precioTotalNino = $_GET['precioTotalNino'];
+
+require_once ('../bd/conexion.php'); $conexion = conectarBD();
+
+$Vcorreo = strtoupper($_POST["txtCinepolisID"]);
+$Vcontrasena = $_POST["txtPass"];
 
 $query = "SELECT * FROM registrocinepolisid WHERE correo = '$Vcorreo'";
 $result = pg_query($query);
@@ -30,14 +39,14 @@ if($row = pg_fetch_array($result))
         $_SESSION['lada'] = $row["lada"];
         $_SESSION['telefono'] = $row["telefono"];
 
-        header("Location: ../../cinepolisID/index.php");
+        header("Location: inicia-sesion.php?id_horario=$id_horario&edad3era=$Cedad3era&precioTotal3raEdad=$precioTotal3raEdad&adulto=$Cadulto&precioTotalAdulto=$precioTotalAdulto&ninos=$Cninos&precioTotalNino=$precioTotalNino");
       }
       else
       {
 ?>
         <script languaje="javascript">
           alert("Contraseña Incorrecta");
-          location.href = "../../index.php";
+          location.href = "inicia-sesion.php?id_horario=$id_horario&edad3era=$Cedad3era&precioTotal3raEdad=$precioTotal3raEdad&adulto=$Cadulto&precioTotalAdulto=$precioTotalAdulto&ninos=$Cninos&precioTotalNino=$precioTotalNino";
         </script>
       <?php
       }
@@ -47,7 +56,7 @@ if($row = pg_fetch_array($result))
   ?>
       <script languaje="javascript">
         alert("El correo y/o contraseña son Incorrectos!");
-        location.href = "../../index.php";
+        location.href = "inicia-sesion.php?id_horario=$id_horario&edad3era=$Cedad3era&precioTotal3raEdad=$precioTotal3raEdad&adulto=$Cadulto&precioTotalAdulto=$precioTotalAdulto&ninos=$Cninos&precioTotalNino=$precioTotalNino";
       </script>
   <?php
 }

@@ -10,6 +10,7 @@
  	include_once ('conexion.php'); $conexion = conectarBDver();
 
  	if (isset($_GET['id_sucursal']) == "") {
+ 		//BUSCA LOS CINES DE LA CIUDAD
  		$resultSucursales = pg_query("SELECT DISTINCT ON (H.id_sucursal) ALS.id_sucursal, nombre FROM altasucursal ALS INNER JOIN horarios H ON ALS.id_sucursal=H.id_sucursal WHERE estatus='1' and ALS.ciudad='$Pciudad' and fecha='$fechaActual' and hora>='$horaActual' ORDER BY H.id_sucursal desc,hora");
  	}else{
  		$Pid_sucursal = $_GET['id_sucursal'];
@@ -23,7 +24,7 @@
 	<title></title>
 </head>
 <body>
-<?php
+			<?php
 				while ($datosSucursales=pg_fetch_array($resultSucursales)) {
 						$IDTienda = $datosSucursales['id_sucursal'];
 						$nombre = $datosSucursales['nombre'];
@@ -66,7 +67,7 @@
 								echo "
 									<article data-oculto='0' class='row tituloPelicula ng-scope' ng-repeat='movie in date.Movies' style='display: block; border-style: solid; border-width: 1px; border-color: #e1e3e6; width: 100%;'>
 										<figure class='col4' style='margin-top: 30px; margin-left: 2%;'>
-											<a href='sinopsisPelicula.php?id_pelicula=$ID'>
+											<a href='sinopsisPelicula.php?id_pelicula=$ID&ciudad=$Pciudad'>
 												<div class='corner 4dx'></div>
 												<img ng-src='$imagen' width='139px' height='204px' alt='$titulo' src='$imagen'>
 											</a>
@@ -87,214 +88,56 @@
 											</header>
 											";
 
-											//COLOCAR VARIABLES DE IDIOMA Y HORA
+											//funciones
+											$ValidacionResult = pg_query("SELECT idioma FROM horarios WHERE fecha='$fechaActual' and id_pelicula='$ID' and hora>='$horaActual' GROUP BY 1");
+
+											while ($ResultIdioma=pg_fetch_array($ValidacionResult)) {
+														$Idioma = $ResultIdioma['idioma'];
+
+														if ($Idioma == "Español") {
+						                                    $SubIdioma = "ESP";}else{
+						                                    if ($Idioma == "Ingles") {
+						                                        $SubIdioma = "ING";}else{
+						                                        if ($Idioma == "Sub. Español") {
+						                                            $SubIdioma = "SUB ESP";}else{
+						                                            if ($Idioma == "Sub. Ingles") {
+						                                                $SubIdioma = "SUB ING";}else{
+						                                                if ($Idioma == "Español 3D") {
+						                                                    $SubIdioma = "ESP 3D";}else{
+						                                                    if ($Idioma == "Ingles 3D") {
+						                                                    	$SubIdioma = "ING 3D";}else{
+						                                                        if ($Idioma == "Sub. Español 3D") {
+						                                                            $SubIdioma = "SUB ESP 3D";}else{
+						                                                            if ($Idioma == "Sub. Ingles 3D") {
+						                                                                $SubIdioma = "SUB ING 3D";}}}}}}}}
+
+												echo "
+												<div class='horarioExp TRAD 2D ESP' ng-init='AddSegob(format.Name,format.SegobPermission,movie.Title)' data-ocultoporhorario='0' data-conteo='0' ng-show='!loading' ng-repeat='format in movie.Formats'>
+													<div class='row'>";
+
+														echo "
+														<div class='col3 cf ng-binding' ng-bind-html='getExperiences(format.Name) | to_trusted'>
+															<p><span>$SubIdioma</span></p>
+														</div>
+														<div class='col9 cf'>";
+
+														$resultHorario = pg_query("SELECT id_horario, hora, idioma, sala, id_sucursal, ciudad FROM horarios WHERE fecha='$fechaActual' and id_pelicula='$ID' and hora>='$horaActual' and idioma='$Idioma' ORDER BY hora");
+													
+														while ($datoshorarios=pg_fetch_array($resultHorario)) {
+															$id_horario = $datoshorarios['id_horario'];
+															$hora = $datoshorarios['hora'];
+
+															echo "
+															<time class='btn btnhorario ng-scope' data-oculto='0' value='13:20' ng-repeat='showtime in format.Showtimes'>
+																<a href='controladores/valores_elegirBoletos.php?id_horario=$id_horario' class='ng-binding' style='text-decoration: none;'>$hora</a>
+															</time>
+															";
+														}
+														echo "</div>";//FIN_class='col9'
+													echo "</div>";//FIN_class='row'
+												echo "</div>";//FIN_class='horarioExp'
+											}
 											echo "
-											<div class='horarioExp TRAD 2D ESP' ng-init='AddSegob(format.Name,format.SegobPermission,movie.Title)' data-ocultoporhorario='0' data-conteo='0' ng-show='!loading' ng-repeat='format in movie.Formats'>
-												<div class='row' style='margin-bottom: 30px;'>";
-
-												/*$resultHorario = pg_query("SELECT id_horario, hora, idioma, sala, id_sucursal, ciudad FROM horarios WHERE fecha='$fechaActual' and id_pelicula='$ID' and hora>='$horaActual' ORDER BY id_pelicula, hora");*/
-												$resultHorario = pg_query("SELECT id_horario, hora, idioma, sala, id_sucursal, ciudad FROM horarios WHERE fecha='$fechaActual' and id_pelicula='$ID' and hora>='$horaActual' ORDER BY hora");
-
-												$contadorEspañol = 0; $contadorIngles = 0; $contadorSubEspañol = 0; $contadorSubIngles = 0; $contadorEspañol3D = 0; $contadorIngles3D = 0; $contadorSubEspañol3D = 0; $contadorSubIngles3D = 0;
-
-													while ($datoshorarios=pg_fetch_array($resultHorario)) {
-														$id_horario = $datoshorarios['id_horario'];
-														$hora = $datoshorarios['hora'];
-														$idioma = $datoshorarios['idioma'];
-														$sala = $datoshorarios['sala'];
-														$id_sucursal = $datoshorarios['id_sucursal'];
-														$ciudad = $datoshorarios['ciudad'];
-
-														if ($idioma == "Español") {
-															if ($contadorEspañol==0) {
-																$contadorEspañol++;
-																echo "
-																<div class='col3 cf ng-binding' ng-bind-html='getExperiences(format.Name) | to_trusted'>
-																	<p><span>ESP</span></p>
-																</div>
-																<div class='col9 cf'>
-																	<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'>
-																		<a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																	</time>
-																";
-															}
-															else{
-																echo "
-																	<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'>
-																		<a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																	</time>
-																";
-															}
-															echo "</div>";
-														}
-														if ($idioma == "Ingles") {
-															if ($contadorIngles==0) {
-																$contadorIngles++;
-																echo "
-																<div class='col3 cf ng-binding' ng-bind-html='getExperiences(format.Name) | to_trusted'>
-																	<p><span>ING</span></p>
-																</div>
-																<div class='col9 cf'>
-																	<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'>
-																		<a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																	</time>
-																";
-															}
-															else{
-																echo "
-																	<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'>
-																		<a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																	</time>
-																";
-															}
-															echo "</div>";
-														}
-														if ($idioma == "Sub. Español") {
-															if ($contadorSubEspañol==0) {
-																$contadorSubEspañol++;
-																echo "
-																<div class='horarioExp TRAD 2D SUB' ng-init='AddSegob(format.Name,format.SegobPermission,movie.Title)' data-ocultoporhorario='0' data-conteo='0' ng-show='!loading' ng-repeat='format in movie.Formats'>
-																<div class='row'>
-																	<div class='col3 cf ng-binding' ng-bind-html='getExperiences(format.Name) | to_trusted'><p><span>SUB ESP</span></p>
-																	</div>
-
-																	<div class='col9 cf'>
-																		<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'>
-																			<a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																		</time>
-																";
-															}
-															else
-															{
-																echo "
-																		<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'>
-																			<a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																		</time>
-																";
-															}
-																echo "</div>";//fin_horarioExp TRAD 2D SUB
-														}
-														if ($idioma == "Sub. Ingles") {
-															if ($contadorSubIngles==0) {
-																$contadorSubIngles++;
-																echo "
-																<div class='horarioExp TRAD 2D SUB' ng-init='AddSegob(format.Name,format.SegobPermission,movie.Title)' data-ocultoporhorario='0' data-conteo='0' ng-show='!loading' ng-repeat='format in movie.Formats'>
-																<div class='row'>
-																	<div class='col3 cf ng-binding' ng-bind-html='getExperiences(format.Name) | to_trusted'><p><span>SUB ING</span></p>
-																	</div>
-
-																	<div class='col9 cf'>
-																		<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'><a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																		</time>
-																";
-															}
-															else
-															{
-																echo "
-																		<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'><a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																		</time>
-																";
-															}
-																echo "</div>";//fin_horarioExp TRAD 2D SUB
-														}
-														if ($pelicula3d == 1) {
-															if ($idioma == "Español 3D") {
-																if ($contadorEspañol3D==0) {
-																	$contadorEspañol3D++;
-																	echo "
-																	<div class='horarioExp TRAD 2D SUB' ng-init='AddSegob(format.Name,format.SegobPermission,movie.Title)' data-ocultoporhorario='0' data-conteo='0' ng-show='!loading' ng-repeat='format in movie.Formats'>
-																	<div class='row'>
-																		<div class='col3 cf ng-binding' ng-bind-html='getExperiences(format.Name) | to_trusted'><p><span>ESP 3D</span></p>
-																		</div>
-
-																		<div class='col9 cf'>
-																			<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'><a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																			</time>
-																	";
-																}
-																else
-																{
-																	echo "
-																			<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'><a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																			</time>
-																	";
-																}
-																	echo "</div>";//fin_horarioExp TRAD 2D SUB
-															}
-															if ($idioma == "Ingles 3D") {
-																if ($contadorIngles3D==0) {
-																	$contadorIngles3D++;
-																	echo "
-																	<div class='horarioExp TRAD 2D SUB' ng-init='AddSegob(format.Name,format.SegobPermission,movie.Title)' data-ocultoporhorario='0' data-conteo='0' ng-show='!loading' ng-repeat='format in movie.Formats'>
-																	<div class='row'>
-																		<div class='col3 cf ng-binding' ng-bind-html='getExperiences(format.Name) | to_trusted'><p><span>ING 3D</span></p>
-																		</div>
-
-																		<div class='col9 cf'>
-																			<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'><a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																			</time>
-																	";
-																}
-																else
-																{
-																	echo "
-																			<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'><a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																			</time>
-																	";
-																}
-																	echo "</div>";//fin_horarioExp TRAD 2D SUB
-															}
-															if ($idioma == "Sub. Español 3D") {
-																if ($contadorSubEspañol3D==0) {
-																	$contadorSubEspañol3D++;
-																	echo "
-																	<div class='horarioExp TRAD 2D SUB' ng-init='AddSegob(format.Name,format.SegobPermission,movie.Title)' data-ocultoporhorario='0' data-conteo='0' ng-show='!loading' ng-repeat='format in movie.Formats'>
-																	<div class='row'>
-																		<div class='col3 cf ng-binding' ng-bind-html='getExperiences(format.Name) | to_trusted'><p><span>SUB ESP 3D</span></p>
-																		</div>
-
-																		<div class='col9 cf'>
-																			<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'><a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																			</time>
-																	";
-																}
-																else
-																{
-																	echo "
-																			<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'><a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																			</time>
-																	";
-																}
-																	echo "</div>";//fin_horarioExp TRAD 2D SUB
-															}
-															if ($idioma == "Sub. Ingles 3D") {
-																if ($contadorSubIngles3D==0) {
-																	$contadorSubIngles3D++;
-																	echo "
-																	<div class='horarioExp TRAD 2D SUB' ng-init='AddSegob(format.Name,format.SegobPermission,movie.Title)' data-ocultoporhorario='0' data-conteo='0' ng-show='!loading' ng-repeat='format in movie.Formats'>
-																	<div class='row'>
-																		<div class='col3 cf ng-binding' ng-bind-html='getExperiences(format.Name) | to_trusted'><p><span>SUB ESP 3D</span></p>
-																		</div>
-
-																		<div class='col9 cf'>
-																			<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'><a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																			</time>
-																	";
-																}
-																else
-																{
-																	echo "
-																			<time class='btn btnhorario ng-scope' data-oculto='0' value='$hora' ng-repeat='showtime in format.Showtimes'><a href='elegirBoletos.php?id_horario=$id_horario' class='ng-binding'>$hora</a>
-																			</time>
-																	";
-																}
-																	echo "</div>";//fin_horarioExp TRAD 2D SUB
-															}
-														}//fin condicion pelicula3d
-													}//FIN WHILE $datoshorarios
-													echo "
-												</div>
-											</div>
 										</div>
 									</article>
 									";

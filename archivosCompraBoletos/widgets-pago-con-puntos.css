@@ -1,0 +1,208 @@
+.widget-pago-puntos {
+  background: url("https://static.cinepol.is/cortinillas/1/imagenes/img-pago-puntos-pattern.png");
+  font-size: 14px;
+}
+.w-pago--login {
+  max-width: 860px;
+  margin: auto;
+  padding: 1em;
+  width: 100%;
+}
+.w-pago-title {
+  color: #0b5ba1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: inherit;
+  text-align: center;
+}
+.w-pago-title--yellow {
+  color: #feca00;
+}
+.w-login-id {
+  background-color: #fff;
+  border: 1px solid #e1e3e6;
+  border-radius: 0.6em;
+  padding: 1.6em 1em;
+}
+.w-login-item {
+  margin-bottom: 0.6em;
+}
+.w-login-item-row {
+  border-top: 1px solid #e1e3e6;
+  padding-top: 0.6em;
+}
+.w-login-item .selector {
+  background-color: #e1e3e6;
+  height: 33px;
+  padding: 0;
+}
+.w-login-item .selector:hover {
+  background-color: #e1e3e6;
+  border: 0 none;
+}
+.w-login-item .selector span {
+  height: 33px;
+  padding: 0 33px 0 6px;
+}
+.w-login-item .selector span:before {
+  font-family: 'cinepolis-icons';
+  content: "\f0d7";
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 33px;
+}
+.w-login-item .selector .w-login-down {
+  cursor: pointer;
+}
+.w-login-item-wallet {
+  margin: 0;
+}
+.w-login-label {
+  color: #a4a4a4;
+  float: none;
+  margin-bottom: 0.6em;
+  text-align: left;
+  font-weight: 400;
+  width: 100%;
+}
+.w-login-input {
+  background-color: #e1e3e6;
+  margin: 0 !important;
+  width: 100% !important;
+  -webkit-appearance: none;
+}
+.w-login-link {
+  color: #0b5ba1;
+  font-size: 0.8em;
+  text-decoration: underline !important;
+}
+.w-login-nav {
+  margin: 1em auto 0;
+}
+.w-login-split {
+  color: #a4a4a4;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  margin: 1em 0;
+}
+.w-login-split span {
+  background-color: #fff;
+  display: block;
+  font-size: 1.4em;
+  font-weight: 300;
+  margin: auto;
+  position: relative;
+  vertical-align: baseline;
+  width: 35px;
+  z-index: 12;
+}
+.w-login-split:before {
+  border-bottom: 1px solid #e1e3e6;
+  content: "";
+  left: 0;
+  margin-top: 1px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.w-login-wallet {
+  margin: auto;
+  float: none;
+  width: 198px;
+}
+.w-login-wallet-check {
+  background-color: #666;
+  border-radius: 12px 0 0 12px;
+  float: left;
+  height: 50px;
+  margin-right: -10px;
+  padding-top: 14px;
+  text-align: center;
+  width: 46px;
+}
+.w-login-wallet img {
+  float: left;
+  width: 160px;
+}
+.w-login-btn {
+  border-radius: 0.4em;
+  border-style: solid;
+  border-width: 0 0 4px;
+  padding: 0.6em 0 0.3em;
+  width: 100%;
+}
+.w-login-btn--yellow {
+  background-color: #feca00;
+  border-color: #e8b903;
+}
+.w-login-btn--blue {
+  background-color: #0b5ba1;
+  border-color: #004a88;
+  color: #fff;
+}
+.w-pago-beneficios {
+  font-family: "Montserrat", sans-serif;
+  margin: 0.6em auto;
+  max-width: 300px;
+  width: 100%;
+}
+.w-pago-beneficios-title {
+  border-bottom: 2px solid;
+  color: #0b5ba1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4em;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0 auto 0.6em;
+  max-width: 200px;
+  text-align: center;
+  padding-bottom: 0.4em;
+  width: 100%;
+}
+.w-pago-beneficios-caption {
+  color: #585858;
+  display: block;
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 15px;
+  margin-top: 0.4em;
+  text-align: center;
+}
+.w-pago-disclaimer {
+  float: none;
+  font-weight: 300;
+  margin: auto;
+  max-width: 280px;
+  text-align: left;
+  width: 100%;
+}
+.w-pago-disclaimer p {
+  display: inline-block;
+  width: calc(100% - 40px);
+  vertical-align: top;
+}
+.w-pago-disclaimer a {
+  text-decoration: underline;
+}
+@media screen and (min-width: 600px) {
+  .widget-pago-puntos {
+    font-size: 16px;
+  }
+  .w-pago-title {
+    font-size: 1.6em;
+    line-height: 26px;
+  }
+  .w-pago-beneficios {
+    max-width: 500px;
+  }
+  .w-pago-beneficios-caption {
+    font-size: 1em;
+  }
+  .w-pago-disclaimer {
+    max-width: 400px;
+  }
+}

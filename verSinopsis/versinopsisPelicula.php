@@ -9,7 +9,13 @@
  	//$DiaMes = date("d %B");
  	//$fecha = date("Y-m-d H:i:s");
 
- 	$Pciudad = "Culiacán";
+ 	//$Pciudad = "Culiacán";
+ 	if (isset($_GET['ciudad'])) {
+ 		$Pciudad = $_GET['ciudad'];
+ 	}
+ 	else{
+ 		$Pciudad = "Culiacán";
+ 	}
  	$P_id_pelicula = $_GET['id_pelicula'];
 
 	include ('conexion.php'); $conexion = conectarBDverSinosis();
@@ -62,7 +68,7 @@
 				<article class="g1024 cf">
 					<div class="col10 cf encabezado">
 						<h2 class="col9">
-							<a href="cartelera.php" id="ContentPlaceHolder1_link_encartelera" class="btn-h2-df-norte" style="text-decoration: none;"><i class="icon-chevron-left"></i>CARTELERA EN <?php echo $Pciudad ?></a>
+							<?php echo "<a href='cartelera.php?ciudad=$Pciudad' id='ContentPlaceHolder1_link_encartelera' class='btn-h2-df-norte' style='text-decoration: none;'><i class='icon-chevron-left'></i>CARTELERA EN $Pciudad</a>";?>
 						</h2>
 						<nav class="col3 sociales"><span>Compartir:</span>
 							<ul>
@@ -300,14 +306,14 @@
 														<div class='format ng-scope' ng-repeat='format in date.Formats | orderBy:'Name'>
 															<label ng-bind-html='getExperiences(format.Name) | to_trusted' class='ng-binding'><p><span>ESP</span></p></label>
 															<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 															</time>";
 														}
 														else
 														{
 															echo "
 															<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 															</time>";
 														}
 														echo "
@@ -321,14 +327,14 @@
 														<div class='format ng-scope' ng-repeat='format in date.Formats | orderBy:'Name'>
 															<label ng-bind-html='getExperiences(format.Name) | to_trusted' class='ng-binding'><p><span>ING</span></p></label>
 															<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 															</time>";
 														}
 														else
 														{
 															echo "
 															<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 															</time>";
 														}
 														echo "
@@ -342,14 +348,14 @@
 														<div class='format ng-scope' ng-repeat='format in date.Formats | orderBy:'Name'>
 															<label ng-bind-html='getExperiences(format.Name) | to_trusted' class='ng-binding'><p><span>SUB ESP</span></p></label>
 															<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 															</time>";
 														}
 														else
 														{
 															echo "
 															<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 															</time>";
 														}
 														echo "
@@ -363,14 +369,14 @@
 														<div class='format ng-scope' ng-repeat='format in date.Formats | orderBy:'Name'>
 															<label ng-bind-html='getExperiences(format.Name) | to_trusted' class='ng-binding'><p><span>SUB ING</span></p></label>
 															<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 															</time>";
 														}
 														else
 														{
 															echo "
 															<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 															</time>";
 														}
 														echo "
@@ -385,14 +391,14 @@
 															<div class='format ng-scope' ng-repeat='format in date.Formats | orderBy:'Name'>
 																<label ng-bind-html='getExperiences(format.Name) | to_trusted' class='ng-binding'><p><span>ESP 3D</span></p></label>
 																<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																	<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																	<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 																</time>";
 															}
 															else
 															{
 																echo "
 																<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																	<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																	<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 																</time>";
 															}
 															echo "
@@ -406,14 +412,14 @@
 															<div class='format ng-scope' ng-repeat='format in date.Formats | orderBy:'Name'>
 																<label ng-bind-html='getExperiences(format.Name) | to_trusted' class='ng-binding'><p><span>ING 3D</span></p></label>
 																<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																	<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																	<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 																</time>";
 															}
 															else
 															{
 																echo "
 																<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																	<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																	<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 																</time>";
 															}
 															echo "
@@ -427,14 +433,14 @@
 															<div class='format ng-scope' ng-repeat='format in date.Formats | orderBy:'Name'>
 																<label ng-bind-html='getExperiences(format.Name) | to_trusted' class='ng-binding'><p><span>SUB ESP 3D</span></p></label>
 																<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																	<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																	<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 																</time>";
 															}
 															else
 															{
 																echo "
 																<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																	<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																	<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 																</time>";
 															}
 															echo "
@@ -448,14 +454,14 @@
 															<div class='format ng-scope' ng-repeat='format in date.Formats | orderBy:'Name'>
 																<label ng-bind-html='getExperiences(format.Name) | to_trusted' class='ng-binding'><p><span>SUB ING 3D</span></p></label>
 																<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																	<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																	<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 																</time>";
 															}
 															else
 															{
 																echo "
 																<time class='btn ng-scope' ng-repeat='time in format.Showtimes'>
-																	<a href='elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
+																	<a href='controladores/valores_elegirBoletos.php?id_horario=$RHid_horario' class='ng-binding' style='text-decoration: none;';>$RHhora</a>
 																</time>";
 															}
 															echo "

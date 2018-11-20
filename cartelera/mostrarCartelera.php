@@ -1,6 +1,6 @@
 <!--codigo-->
 <?php
-	require_once ('bd/conexion.php'); $conexion = conectarBD();
+	include ('bd/conexion.php'); $conexion = conectarBD();
 	$result = pg_query("SELECT id_pelicula, imagen, titulo, pelicula3d, estatus, ciudad FROM peliculas ORDER BY estatus, anoestreno DESC");
 
 	$totalRegistros = pg_numrows($result);
