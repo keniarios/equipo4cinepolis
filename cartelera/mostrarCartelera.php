@@ -256,7 +256,7 @@
 						</ul>
 
 						<!--RENTALAS O COMPRALAS EN KLIC-->
-						<aside class='w-klic w-klic--front cf'">
+						<aside class='w-klic w-klic--front cf' style="margin-top: 3%;">
 							<!--RENTAS Y VENTAS KLIC-->
 							<iframe src='https://www.cinepolis.com/widget-klic?section=estrenos-en-renta' id='ContentPlaceHolder1_iframeKlic' frameborder='0'></iframe>
 						</aside>
