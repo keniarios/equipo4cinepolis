@@ -25,9 +25,9 @@ $result =pg_query("SELECT ciudad FROM altasucursal WHERE estatus=1 GROUP BY 1 OR
 <body>
 
 			<header class="cf">
-					<h2 class="col9">
-						<a href="/cartelera/culiacan" id="ContentPlaceHolder1_lbl_encartelera" class="btn-h2-df-norte" clave="culiacan">CARTELERA EN Culiacán 
-							<i class="icon-chevron-right"></i>
+					<h2 class="col9" style="margin-top: 2%;">
+						<a href="#" id="ContentPlaceHolder1_lbl_encartelera" class="btn-h2-df-norte" clave="culiacan">CARTELERA EN Culiacán 
+							<i class="icon-chevron-right" style="margin-top: 1%;"></i>
 						</a>
 					</h2>
 					<div class="selectGris col3">
