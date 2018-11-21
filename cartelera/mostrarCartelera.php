@@ -16,7 +16,8 @@
 	<!--DESGLOSE PELICULAS-->
 				<div class='row'>
 					<article class='col10'>
-						<ul class='listCartelera tituloPelicula' style='position: relative; height: 500px;'>
+						<!--<ul class='listCartelera tituloPelicula' style='position: relative; height: 500px;'>-->
+						<ul class='listCartelera tituloPelicula' style='position: relative; height: 100%;'>
 							<?php
 							$bandera=0;
 							$banderamacroxe=true;$banderajunior=true;
