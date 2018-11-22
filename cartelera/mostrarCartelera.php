@@ -31,8 +31,9 @@
 								$iconotresDPeliculas = $datos['pelicula3d'];
 								$estatus = $datos['estatus'];
 								$ciudad = $datos['ciudad'];
+								//<li id='ContentPlaceHolder1_rpCarteleaFront_li_carteles_$bandera' class='item' style='position: absolute; left: 0px; top: 0px;'>
 							echo"
-							<li id='ContentPlaceHolder1_rpCarteleaFront_li_carteles_$bandera' class='item' style='position: absolute; left: 0px; top: 0px;'>
+							<li id='ContentPlaceHolder1_rpCarteleaFront_li_carteles_$bandera' class='item'>
 								<figure class='overlay'>
 									<img alt='$tituloPeliculas' src='$fotoPeliculas' width='139' height='203'>";
 									if ($estatus == 1) {
