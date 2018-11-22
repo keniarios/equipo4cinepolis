@@ -250,8 +250,8 @@
 							
 							";
 							?>
-
-							<li style='position: absolute; left: 632px; top: 250px;'>
+							<!--<li style='position: absolute; left: 632px; top: 250px;'>-->
+							<li>
 								<div class='btnConsultar'>
 									<a href='#' style="text-decoration: none;"><span>CONSULTAR CARTELERA COMPLETA <i class='icon-chevron-right'></i></span></a>
 								</div>
