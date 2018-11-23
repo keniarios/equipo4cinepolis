@@ -69,7 +69,7 @@
 						            <p class="cineFavorito"><span>Tu Cinépolis® favorito es:</span><i></i>
 						            </p>
 						            <p class="text-center">
-						                <input type="submit" name="btnCerrarSesion" value="Cerrar sesión" id="btnCerrarSesion" class="btn btnCloseID">
+						                <input type="submit" name="btnCerrarSesion" value="Cerrar sesión" id="btnCerrarSesion" class="btn btnCloseID" onclick="location.href='controladores/cinepolisID/cerrar_sesion.php';">
 						            </p>
 					        	</fieldset>
 					        </div>
