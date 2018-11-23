@@ -1,5 +1,10 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['id_horario'])) 
+	{
+	  header('Location: ../index.php');
+	}
+
 	//Almacenamos el nombre de usuario en una variable de sesión usuario
     $_SESSION['edad3era'] = $_POST["edad3era"];
     $_SESSION['adulto'] = $_POST["adulto"];

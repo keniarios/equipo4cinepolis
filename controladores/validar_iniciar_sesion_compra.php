@@ -1,5 +1,10 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
 <?php
+
+  session_start();
+  if(!isset($_SESSION['id_horario'])) 
+  {
+    header('Location: ../index.php');
+  }
 
   $id_horario = $_GET['id_horario'];
   $Cedad3era = $_GET['edad3era'];

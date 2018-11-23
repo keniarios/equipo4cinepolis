@@ -64,9 +64,6 @@
 <!--<script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script>-->
 
 
-<!--<script src="http://dnn506yrbagrg.cloudfront.net/pages/scripts/0012/6530.js?427636" async="" type="text/javascript"></script>-->
-
-
 <!--<script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-M66T72"></script>-->
 <script async="" src="../js/vistaCliente/gtm.js"></script>
 
