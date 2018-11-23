@@ -21,7 +21,7 @@
 				</a>
 			</div>
 			<h1 class="col3">
-				<a href="index.php" id="link_logomaster" title="Cinépolis®">
+				<a href="../index.php" id="link_logomaster" title="Cinépolis®">
 					<img src="../../img/vistaCliente/lg-cinepolis.png" id="img_logomaster" alt="Cinépolis®">
 					<span>Cinépolis®</span>
 				</a>

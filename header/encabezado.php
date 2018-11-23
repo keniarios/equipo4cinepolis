@@ -1,4 +1,12 @@
-
+<?php 
+	if(!isset($_SESSION['id_cinepolisid'])) 
+	{
+		$id_cinepolisid = -1;
+	}
+	else{
+		$id_cinepolisid = $_SESSION['id_cinepolisid'];
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,59 +49,100 @@
 				</div>
 			</div>
 			<script src="../../scripts/video/video.js" async="async"></script>
-			<div class="col1">
-				<div id="ctl14_pnlCinepolisIDMexico">
-					<div id="ctl14_pnlAnonymousTemplate">
-						<a href="#login" class="btnId abrirContent">
-							<figure>
-								<!--<img src="//static.cinepolis.com/img/icon-ID.png" width="43" height="42" alt="ID Cinépolis">-->
-								<img src="../img/vistaCliente/icon-ID.png" width="43" height="42" alt="ID Cinépolis">
-								<figcaption>Iniciar Sesión</figcaption>
-							</figure>
-						</a>
-						<!--ENVIO-->
-						<FORM method="post" action="controladores/cinepolisID/loginID.php" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
-						<fieldset id="login" class="dropdown" style=""><h3>Ingresa tus datos</h3>
-							<p class="textInput">
-								<label for="txbCinepolisIdMaster" style="width: auto;">Correo electrónico</label>
-								<input name="txbCinepolisIdMaster" type="email" id="txbCinepolisIdMaster" tabindex="4" autocomplete="off" title="email" required>
-								<span id="ctl14_RequiredFieldValidator3" class="validacion" style="display:none;"></span>
-								<span id="ctl14_RegularExpressionValidator4" class="validacion" style="display:none;"></span>
-							</p>
-							<p class="textInput">
-								<label for="txbContrasenaMaster" class="accessAid">Contraseña</label>
-								<input name="txbContrasenaMaster" type="password" id="txbContrasenaMaster" tabindex="5" autocomplete="off" value="" title="password" required>
-								<span id="ctl14_RequiredFieldValidator2" style="display:none;"></span>
-							</p>
-							<input type="submit" name="btnEntrarMaster" value="Entrar a Cinépolis® ID" id="btnEntrarMaster" tabindex="6" class="btn btnSend">
-							<div id="ctl14_ValidationSummary1" style="display:none;"></div>
-							
-							
-							<p class="linksLogin">
-								<a href="#" class="linkPassword" title="Recupera tu contraseña">¿Olvidaste tu contraseña?</a><a class="linkRegister" title="Registrate para Ingresar" href="id-registro.php">¿No estás registrado?</a>
-							</p>
-							<div class="conectar-redes">
-								<p>Conectar con:</p>
-								<ul class="row">
-									<li class="col4">
-										<input class="btn btnFaceConect" value="Facebook" tabindex="6" type="submit">
-									</li>
-									<li class="col4">
-										<input type="submit" name="ctl00$ctl14$btnTwitterConnect" value="Twitter" id="ctl14_btnTwitterConnect" class="btn btnTwitterConect">
-									</li>
-									<li class="col4">
-										<input class="btn btnPlusConnect" value="Google +" tabindex="7" type="submit">
-									</li>
-								</ul>
-							</div>
-							<p class="text-center linksLogin">
-								<a href="#" data-video="../videocinepolisID/cinepolisid.mp4" data-modal="modal-12" title="Descubre los beneficios de Cinépolis® ID" class="btn btnTrailer">¿Qué es Cinépolis® ID?</a>
-							</p>
-						</fieldset>
-					</FORM>
+			
+			<!--VALIDACION SI ESTA LOGEADO EL CLIENTE-->
+			<?php
+			//LOGEADO
+				if ($id_cinepolisid>0) {
+					echo "
+					<div class='col1'>
+						<div id='ctl25_pnlCinepolisIDMexico'>
+							<div>
+					        	<a href='#sesion' class='btnId abrirContent sesionIniciada'>
+					            	<figure>
+					            		<!--<img id='ctl25_lvCinepolisID_imgAvatar' src='https://static.cinepolis.com/marcas/id/mx/avatar/perfil-generico.jpg'>-->
+					                	<img id='ctl25_lvCinepolisID_imgAvatar' src='../../img/vistaCliente/cinepolisID/perfil-generico.jpg'>
+					            	</figure>
+					        	</a>
+
+					        	<fieldset id='sesion' class='dropdown'>
+						            <figure>
+						            	<img id='ctl25_lvCinepolisID_imgPerfil' src='../../img/vistaCliente/cinepolisID/perfil-generico.jpg' style='height:71px;width:71px;'>
+						            </figure>
+						            <h3>Roque Alionso</h3>
+						            <a href='cinecash' title='Descubre los beneficios de Cinépolis® ID' class='btn btnSend'>Ir a mi perfil</a>
+						            <div class='clear'></div>
+						            <p class='puntosID cf'><span>Puntos Club Cinépolis®:</span><i>0.0</i></p>
+						            <p class='puntosID cf'><span>Créditos CineCash®:</span><i>0.0</i></p>
+						            <p class='cineFavorito'><span>Tu Cinépolis® favorito es:</span><i></i>
+						            </p>
+						            <p class='text-center'>
+						                <input type='submit' name='btnCerrarSesion' value='Cerrar sesión' id='btnCerrarSesion' class='btn btnCloseID'>
+						            </p>
+					        	</fieldset>
+					        </div>
+						</div>
 					</div>
-				</div>
-			</div>
+					";//FIN LOGEADO
+				}
+				else{
+					//NO LOGEADO
+					echo "
+					<div class='col1'>
+						<div id='ctl14_pnlCinepolisIDMexico'>
+							<div id='ctl14_pnlAnonymousTemplate'>
+								<a href='#login' class='btnId abrirContent'>
+									<figure>
+										<!--<img src='//static.cinepolis.com/img/icon-ID.png' width='43' height='42' alt='ID Cinépolis'>-->
+										<img src='../img/vistaCliente/icon-ID.png' width='43' height='42' alt='ID Cinépolis'>
+										<figcaption>Iniciar Sesión</figcaption>
+									</figure>
+								</a>
+								<!--ENVIO-->
+								<FORM method='post' action='controladores/cinepolisID/loginID.php' onsubmit='javascript:return WebForm_OnSubmit();' id='form1'>
+								<fieldset id='login' class='dropdown' style='><h3>Ingresa tus datos</h3>
+									<p class='textInput'>
+										<label for='txbCinepolisIdMaster' style='width: auto;'>Correo electrónico</label>
+										<input name='txbCinepolisIdMaster' type='email' id='txbCinepolisIdMaster' tabindex='4' autocomplete='off' title='email' required>
+										<span id='ctl14_RequiredFieldValidator3' class='validacion' style='display:none;'></span>
+										<span id='ctl14_RegularExpressionValidator4' class='validacion' style='display:none;'></span>
+									</p>
+									<p class='textInput'>
+										<label for='txbContrasenaMaster' class='accessAid'>Contraseña</label>
+										<input name='txbContrasenaMaster' type='password' id='txbContrasenaMaster' tabindex='5' autocomplete='off' value=' title='password' required>
+										<span id='ctl14_RequiredFieldValidator2' style='display:none;'></span>
+									</p>
+									<input type='submit' name='btnEntrarMaster' value='Entrar a Cinépolis® ID' id='btnEntrarMaster' tabindex='6' class='btn btnSend'>
+									<div id='ctl14_ValidationSummary1' style='display:none;'></div>
+									
+									
+									<p class='linksLogin'>
+										<a href='#' class='linkPassword' title='Recupera tu contraseña'>¿Olvidaste tu contraseña?</a><a class='linkRegister' title='Registrate para Ingresar' href='id-registro.php'>¿No estás registrado?</a>
+									</p>
+									<div class='conectar-redes'>
+										<p>Conectar con:</p>
+										<ul class='row'>
+											<li class='col4'>
+												<input class='btn btnFaceConect' value='Facebook' tabindex='6' type='submit'>
+											</li>
+											<li class='col4'>
+												<input type='submit' name='ctl00$ctl14$btnTwitterConnect' value='Twitter' id='ctl14_btnTwitterConnect' class='btn btnTwitterConect'>
+											</li>
+											<li class='col4'>
+												<input class='btn btnPlusConnect' value='Google +' tabindex='7' type='submit'>
+											</li>
+										</ul>
+									</div>
+									<p class='text-center linksLogin'>
+										<a href='#' data-video='../videocinepolisID/cinepolisid.mp4' data-modal='modal-12' title='Descubre los beneficios de Cinépolis® ID' class='btn btnTrailer'>¿Qué es Cinépolis® ID?</a>
+									</p>
+								</fieldset>
+							</FORM>
+							</div>
+						</div>
+					</div>";//FIN NO LOGEADO
+				}
+			?>
 		</div>
 
 		<!--NAVEGACION MASTER-->
