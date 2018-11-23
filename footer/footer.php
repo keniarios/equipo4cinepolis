@@ -329,8 +329,8 @@
 		<div class="row copyright">
 			<div class="g1024 cf">
 			<!--<div class="g960 cf">-->
-				<p class="float-left"><small>Es un Proyecto, No es la Pagina Oficial.</small></p>
-				<p class="float-right">Elaborado por <a href="http://www.ia.com.mx" target="_blank">Alumnos de la Facultad de Informática de la Universidad Autónoma de Sinaloa.</a></p>
+				<p class="float-left"><small>Pagina No Oficial.</small></p>
+				<p class="float-right">Desarrollado por <a href="http://www.ia.com.mx" target="_blank">Alumnos de la FIC de la Universidad Autónoma de Sinaloa.</a></p>
 			</div>
 		</div>
 	</footer>

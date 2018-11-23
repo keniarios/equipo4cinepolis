@@ -123,8 +123,8 @@
             <p class="g960 reconocimiento">Reconocimiento AMIPCI PEOPLE’S CHOICE 2009 e INNOVACIÓN 2008</p>
             <div class="row copyright">
                 <div class="g960 cf">
-                    <p class="float-left"><small>Contenido del sitio 2013©  Cinépolis® de México, S.A. de C.V.</small></p>
-                    <p class="float-right">Desarrollado por <a href="http://www.ia.com.mx/" target="_blank">IA Interactive</a></p>
+                    <p class="float-left"><small>Pagina No Oficial.</small></p>
+                    <p class="float-right">Desarrollado por <a href="http://www.ia.com.mx/" target="_blank">Alumnos de la FIC de la Universidad Autónoma de Sinaloa.</a></p>
                 </div>
             </div>
         </footer>
