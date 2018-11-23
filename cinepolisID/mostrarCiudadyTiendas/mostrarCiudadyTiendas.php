@@ -38,7 +38,7 @@
 						<?php 
 						if (isset($_GET['ciudad'])) {
 							$ParaMetrogetciudad=$_GET['ciudad'];
-						echo "<select name='opcionCiudades' id='opcionCiudades'>
+						echo "<select name='opcionCiudadeslogeado' id='opcionCiudadeslogeado'>
 							<option value='$ParaMetrogetciudad'>$ParaMetrogetciudad</option>";
 
 							while ($datos=pg_fetch_array($resultSucursales)) {
@@ -51,7 +51,7 @@
 							}
 						}
 						else{
-							echo "<select name='opcionCiudades' id='opcionCiudades'>
+							echo "<select name='opcionCiudadeslogeado' id='opcionCiudadeslogeado'>
 							<option value=''>Selecciona un ciudad</option>";
 
 							while ($datos=pg_fetch_array($resultSucursales)) {
