@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>Cinecash | CinépolisID</title>
-	<!--<link href="../../css/vistasCliente/master-id.css" rel='stylesheet' type='text/css' />-->
-	<!--<link href="../../css/vistasCliente/master.css" rel='stylesheet' type='text/css' />-->
-	<!--<link href="../../css/vistasCliente/responsive-master.css" rel='stylesheet' type='text/css' />-->
+	<link href="../../css/vistasCliente/master-id.css" rel='stylesheet' type='text/css' />
+	<link href="../../css/vistasCliente/master.css" rel='stylesheet' type='text/css' />
+	<link href="../../css/vistasCliente/responsive-master.css" rel='stylesheet' type='text/css' />
 	<style>
         #fuAvatar {
             opacity: 0;

@@ -27,14 +27,14 @@ if(!isset($_SESSION['id_cinepolisid']))
 <head>
 	<title>Cinecash | CinépolisID</title>
 
-	<link href="../css/vistasCliente/master.css" rel='stylesheet' type='text/css' />
+	<link href="../../css/vistasCliente/master.css" rel='stylesheet' type='text/css' />
 	<!--<link href="../../css/vistasCliente/master2.css" rel='stylesheet' type='text/css' />-->
 	<!--<link href="../../css/vistasCliente/master3.css" rel='stylesheet' type='text/css' />-->
 	<!--<link href="../../css/vistasCliente/master4.css" rel='stylesheet' type='text/css' />-->
-	<link href="../css/vistasCliente/master-id.css" rel='stylesheet' type='text/css' />
-	<link href="../css/vistasCliente/responsive-master.css" rel='stylesheet' type='text/css' />
-	<link href="../css/vistasCliente/site.css" rel='stylesheet' type='text/css' />
-	<link href="../css/vistasCliente/estiloSelect.css" rel='stylesheet' type='text/css' />
+	<link href="../../css/vistasCliente/master-id.css" rel='stylesheet' type='text/css' />
+	<link href="../../css/vistasCliente/responsive-master.css" rel='stylesheet' type='text/css' />
+	<link href="../../css/vistasCliente/site.css" rel='stylesheet' type='text/css' />
+	<link href="../../css/vistasCliente/estiloSelect.css" rel='stylesheet' type='text/css' />
 
 	<!--EMPEZAR-->
 	<meta charset="UTF-8">
