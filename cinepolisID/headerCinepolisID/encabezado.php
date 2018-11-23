@@ -27,7 +27,7 @@
 				</a>
 			</h1>
 				<!--CIUDADES Y SUCURSALES INCLUIDAS-->
-		<?php include ('mostrarCiudadyTiendas/mostrarCiudadyTiendas.php');?>
+		<?php include ('../mostrarCiudadyTiendas/mostrarCiudadyTiendas.php');?>
 
 		
 			<div class="md-modal md-effect-12" id="videoTrailers">
