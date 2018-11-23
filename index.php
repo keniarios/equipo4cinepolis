@@ -7,7 +7,6 @@
 	else{
 		$id_cinepolisid = $_SESSION['id_cinepolisid'];
 	}
-	echo $id_cinepolisid;
 ?>
 <!DOCTYPE html>
 <html>

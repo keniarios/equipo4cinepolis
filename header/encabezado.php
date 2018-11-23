@@ -62,7 +62,7 @@
 						            	<img id="ctl25_lvCinepolisID_imgPerfil" src="../../img/vistaCliente/cinepolisID/perfil-generico.jpg" style="height:71px;width:71px;">
 						            </figure>
 						            <h3>Roque Alionso</h3>
-						            <a href="cinecash" title="Descubre los beneficios de Cinépolis® ID" class="btn btnSend">Ir a mi perfil</a>
+						            <a href="cinepolisID/index.php" title="Descubre los beneficios de Cinépolis® ID" class="btn btnSend">Ir a mi perfil</a>
 						            <div class="clear"></div>
 						            <p class="puntosID cf"><span>Puntos Club Cinépolis®:</span><i>0.0</i></p>
 						            <p class="puntosID cf"><span>Créditos CineCash®:</span><i>0.0</i></p>
