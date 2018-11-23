@@ -21,6 +21,17 @@ $('select#opcionCiudades').change(function(){
 	}); 
 });
 
+$('select#opcionCiudadeslogeado').change(function(){
+	var Ciudad = $(this).val();
+	$.ajax({
+		type: 'POST',
+		url: '../controladores/llamadasporAjax/mostrarSucursales_admin.php', 	
+		data: {Ciudad: Ciudad} 
+		}).done(function(data) {   
+			$('#Sucursales').html(data);
+	}); 
+});
+
 
 $('select#ciudad').change(function(){
 	var Ciudad = $(this).val();
