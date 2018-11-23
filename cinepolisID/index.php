@@ -20,8 +20,6 @@ if(!isset($_SESSION['id_cinepolisid']))
 	$anonacimiento = $_SESSION['anonacimiento'];
 	$lada = $_SESSION['lada'];
 	$telefono = $_SESSION['telefono'];
-
-	echo $id_cinepolisid;
 ?>
 
 <!DOCTYPE html>
