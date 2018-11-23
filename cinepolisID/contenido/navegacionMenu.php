@@ -30,7 +30,7 @@
 			            <a href="cinepass" style="height: 54px;">Cinepass</a>
 		            </li>                  
 		            <li class="config">
-			            <a href="configuracion">
+			            <a href="configuracion.php">
 				            <i class="id-icon-config"></i>
 				            <span>Configuración</span>
 			            </a>

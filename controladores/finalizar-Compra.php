@@ -7,7 +7,7 @@
 
 	if(!isset($_SESSION['id_cinepolisid'])) 
 	{
-		$id_cinepolisid = 0;
+		$id_cinepolisid = -1;
 	}
 	else{
 		$id_cinepolisid = $_SESSION['id_cinepolisid'];
@@ -28,5 +28,5 @@
 	pg_query($query);
 
 
-	header("Location: ../Confirmar-Compra.php");
+	header("Location: ../Index.php");
 ?>
