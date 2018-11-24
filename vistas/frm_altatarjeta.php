@@ -69,6 +69,7 @@
 				<img src="../img/logocabecera.png" class="img-logo d-inline-block align-top">
 			</a>
 		</nav>
+	</div>
 
 				<div class="panel panel-default" >
 					  <div class="panel-heading" id="cab-panel" style="margin-top: 35px;">
