@@ -47,7 +47,7 @@
 </head>
 
 
-<body class="FormStandard" style="">"<!-- Google Tag Manager -->
+<body class="FormStandard" style=""><!-- Google Tag Manager -->
 
 	<script type="text/javascript" async="" src="archivosCompraBoletos/js"></script>
 	<script src="archivosCompraBoletos/6530.js.descarga" async="" type="text/javascript"></script>
@@ -56,7 +56,7 @@
 	<script type="text/javascript" async="" src="archivosCompraBoletos/analytics.js.descarga"></script>
 	<script type="text/javascript" async="" src="archivosCompraBoletos/analytics.js.descarga"></script>
 	
-<!-- End Google Tag Manager -->"
+<!-- End Google Tag Manager -->
 
     <title>Cinepolis Online</title>
 
