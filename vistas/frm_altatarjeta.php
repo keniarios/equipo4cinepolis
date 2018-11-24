@@ -3,8 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	<script src='../js/jquery-3.3.1.min.js'></script>
+	<script src='../js/popper.min.js'></script>
+	<script src='../js/bootstrap.min.js'></script>
+	<link rel='stylesheet' href='../css/bootstrap.min.css'>
+	<link rel='stylesheet' type='text/css' href='../css/estilo.css'>
+	
+	<script src="../js/misfunciones.js" type="text/javascript" charset="utf-8" async defer></script>
+	<link rel="stylesheet" href="../css/jquery-ui.css">
+  	<script src="../js/jquery-ui.js"></script>
 
 <script>
 	function valida(e)
@@ -21,6 +31,52 @@
 
 </head>
 <body style="background-color: #EBECEF;">
+	<style type="text/css">
+		.ui-dialog-titlebar{
+			background-color:#0b5ba1; 
+			color:white;
+			font-family: 'Helvetica';
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#ver').on("click",function(){
+				var form = $('#Perfil'); 
+			    var Perfil = $("#dialog-perfil"),
+			    dialog = Perfil.dialog({
+			      autoOpen: false,
+			      height: 'auto',
+			      width: '460px',
+			      modal: true,
+			      draggable: false,
+			      dialogClass: "alert",
+			      buttons: {
+			        Cerrar: function() {
+			          dialog.dialog( "close" );
+			        }
+			      },
+			      close: function() {
+			      }
+				})
+			dialog.dialog( "open" );
+			});
+		});
+	</script> 
+
+	<div class="container col-md-12" id="menu">
+		<nav class="navbar navbar-light" style="padding-left: 0px;padding-top:25px;margin-right:0px;padding-right:0px; background-color: #0b5ba1;height: 80px;">
+			<a class="navbar-brand" href="" style="margin-right:0px; background-color: #0b5ba1;">
+				<img src="../img/logocabecera.png" class="img-logo d-inline-block align-top">
+			</a>
+		</nav>
+		<div class="row" style="background-color: black;">
+			<nav class="navbar navbar-expand-lg navbar-light" style="padding-left: 30px;padding-top:0px;float: left;">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon" style="background-color:#feca30; "></span>
+					</button>
+				</nav>
+			</div>
+		</div>
 
 				<div class="panel panel-default" >
 					  <div class="panel-heading" id="cab-panel" style="margin-top: 35px;">
