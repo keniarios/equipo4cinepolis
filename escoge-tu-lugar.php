@@ -311,7 +311,7 @@ function validacion(objeto)
 		echo "<form id='frm' action='inicia-sesion.php' method='POST'>";
 	}
 	else{
-		echo "<form id='frm' action='href='haztupago.php' method='POST'>";
+		echo "<form id='frm' action='haztupago.php' method='POST'>";
 	}
 ?>
 			<input type="hidden" name="asientosSeleccionados" id="asientosSeleccionados">
