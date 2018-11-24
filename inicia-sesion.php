@@ -8,7 +8,7 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 	$_SESSION['total'] = 0;
 	$id_tarjeta = 0;
 	$PrecioTotal = 0;
-	
+
 	if(!isset($_SESSION['id_horario'])) 
 	{
 	  header('Location: index.php');
@@ -70,7 +70,7 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 	<body class="FormStandard" onload="window.history.go(1);" style="">
        
 
-        "<!-- Google Tag Manager -->
+        <!-- Google Tag Manager -->
 <script>(function (w, d, s, l, i) {
 w[l] = w[l] || []; w[l].push({
 'gtm.start':
@@ -79,7 +79,7 @@ new Date().getTime(), event: 'gtm.js'
 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
 })(window, document, 'script', 'dataLayer', 'GTM-M66T72');</script>
-<!-- End Google Tag Manager -->"
+<!-- End Google Tag Manager -->
 <style>
     .BotonAmarillo {
 background: #ffcb00;

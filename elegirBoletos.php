@@ -82,7 +82,7 @@
 	<script type="text/javascript" async="" src="https://dgy6rx5roq02d.cloudfront.net/triggit-analytics.min.js"></script>
 </head>
 
-<body style="">"<!-- Google Tag Manager -->
+<body style=""><!-- Google Tag Manager -->
 	<script async="" src="./archivosCompraBoletos/uwt.js.descarga"></script><script async="" src="./archivosCompraBoletos/beacon.js.descarga"></script><script type="text/javascript" async="" src="./archivosCompraBoletos/analytics.js.descarga"></script><script type="text/javascript" async="" src="./archivosCompraBoletos/analytics.js.descarga"></script><script async="" src="./archivosCompraBoletos/gtm.js.descarga"></script><script>(function (w, d, s, l, i) {
 	    w[l] = w[l] || []; w[l].push({
 	        'gtm.start':
