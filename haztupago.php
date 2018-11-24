@@ -1,8 +1,13 @@
 <?php 
-include ('bd/conexion.php'); $conexion = conectarBD();
+	
+	include ('bd/conexion.php'); $conexion = conectarBD();
 
 	//Creamos sesión
     session_start();
+    $_SESSION['id_tarjeta'] = 0;
+	$_SESSION['total'] = 0;
+	$id_tarjeta = 0;
+	$PrecioTotal = 0;
 	if(!isset($_SESSION['id_horario'])) 
 	{
 	  header('Location: index.php');
@@ -14,6 +19,7 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 	$precioTotal3raEdad = $_SESSION['precioTotal3raEdad'];
 	$precioTotalAdulto = $_SESSION['precioTotalAdulto'];
 	$precioTotalNino = $_SESSION['precioTotalNino'];
+
 
 	$PrecioTotal = $precioTotal3raEdad + $precioTotalAdulto + $precioTotalNino;
 

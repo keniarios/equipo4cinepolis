@@ -1,9 +1,14 @@
 <?php
+
 	include ('bd/conexion.php'); $conexion = conectarBD();
 
 
 	//Creamos sesión
     session_start();
+    $_SESSION['id_tarjeta'] = 0;
+	$_SESSION['total'] = 0;
+	$id_tarjeta = 0;
+	$PrecioTotal = 0;
 	if(!isset($_SESSION['id_horario'])) 
 	{
 	  header('Location: index.php');
@@ -15,6 +20,7 @@
 	$precioTotal3raEdad = $_SESSION['precioTotal3raEdad'];
 	$precioTotalAdulto = $_SESSION['precioTotalAdulto'];
 	$precioTotalNino = $_SESSION['precioTotalNino'];
+
 
 	//DEFINIR EL TOTAL DEL PRECIO
 	$PrecioTotal = $precioTotal3raEdad + $precioTotalAdulto + $precioTotalNino;
@@ -299,7 +305,15 @@ function validacion(objeto)
 
 
 <?php //echo "<form id='frm' action='inicia-sesion.php?id_horario=$id_horario&edad3era=$Cedad3era&precioTotal3raEdad=$precioTotal3raEdad&adulto=$Cadulto&precioTotalAdulto=$precioTotalAdulto&ninos=$Cninos&precioTotalNino=$precioTotalNino' method='POST'>";?>
-<?php echo "<form id='frm' action='inicia-sesion.php' method='POST'>";?>
+<?php 
+	if(!isset($_SESSION['id_cinepolisid'])) 
+	{
+		echo "<form id='frm' action='inicia-sesion.php' method='POST'>";
+	}
+	else{
+		echo "<form id='frm' action='href='haztupago.php' method='POST'>";
+	}
+?>
 			<input type="hidden" name="asientosSeleccionados" id="asientosSeleccionados">
 			<div class="container">
 			<section>

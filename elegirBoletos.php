@@ -10,6 +10,22 @@
 	  header('Location: index.php');
 	}
 	$idhorario = $_SESSION['id_horario'];
+	$_SESSION['edad3era'] = 0;
+	$_SESSION['adulto'] = 0;
+	$_SESSION['ninos'] = 0;
+	$_SESSION['precioTotal3raEdad'] = 0;
+	$_SESSION['precioTotalAdulto'] = 0;
+	$_SESSION['precioTotalNino'] = 0;
+	$_SESSION['id_tarjeta'] = 0;
+	$_SESSION['total'] = 0;
+	$Cedad3era = 0;
+	$Cadulto = 0;
+	$Cninos = 0;
+	$precioTotal3raEdad = 0;
+	$precioTotalAdulto = 0;
+	$precioTotalNino = 0;
+	$id_tarjeta = 0;
+	$PrecioTotal = 0;
 
 	include ('bd/conexion.php'); $conexion = conectarBD();
 

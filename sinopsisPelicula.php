@@ -2,6 +2,39 @@
 	date_default_timezone_set("America/Mazatlan");
  	$fechaActual = date("Y-m-d");
  	$horaActual = date("H:i");
+
+ 	session_start();
+	if(!isset($_SESSION['id_cinepolisid'])) 
+	{
+		$id_cinepolisid = -1;
+	}
+	else{
+		$id_cinepolisid = $_SESSION['id_cinepolisid'];
+	}
+
+ 	$_SESSION['id_horario'] = 0;
+	$_SESSION['edad3era'] = 0;
+	$_SESSION['adulto'] = 0;
+	$_SESSION['ninos'] = 0;
+	$_SESSION['precioTotal3raEdad'] = 0;
+	$_SESSION['precioTotalAdulto'] = 0;
+	$_SESSION['precioTotalNino'] = 0;
+	$_SESSION['id_tarjeta'] = 0;
+	$_SESSION['total'] = 0;
+	$_SESSION['nombre'] = "";
+	$_SESSION['ciudad'] = "";
+
+	$id_horario = 0;
+	$Cedad3era = 0;
+	$Cadulto = 0;
+	$Cninos = 0;
+	$precioTotal3raEdad = 0;
+	$precioTotalAdulto = 0;
+	$precioTotalNino = 0;
+	$id_tarjeta = 0;
+	$PrecioTotal = 0;
+	$nombreciudadHeader = "";
+	$nombresucursalHeader = "";
 ?>
 
 <!DOCTYPE html>

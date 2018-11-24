@@ -1,8 +1,14 @@
 <?php 
+
 include ('bd/conexion.php'); $conexion = conectarBD();
 
 	//Creamos sesión
     session_start();
+    $_SESSION['id_tarjeta'] = 0;
+	$_SESSION['total'] = 0;
+	$id_tarjeta = 0;
+	$PrecioTotal = 0;
+	
 	if(!isset($_SESSION['id_horario'])) 
 	{
 	  header('Location: index.php');
@@ -15,6 +21,7 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 	$precioTotalAdulto = $_SESSION['precioTotalAdulto'];
 	$precioTotalNino = $_SESSION['precioTotalNino'];
 	$PrecioTotal = $precioTotal3raEdad + $precioTotalAdulto + $precioTotalNino;
+
 
 
 	$CiudadSucursalHeader = pg_query("SELECT nombre, ALS.ciudad FROM altasucursal ALS INNER JOIN HORARIOS H ON ALS.id_sucursal=H.id_sucursal and id_horario='$id_horario'");
