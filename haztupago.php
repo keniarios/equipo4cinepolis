@@ -1424,12 +1424,12 @@
 			<td width="135" align="center" valign="top">
 				<script type="text/javascript" src="archivosCompraBoletos/getseal"></script>
 				
-					<area alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security" title="" href="javascript:vrsn_splash()" shape="rect" coords="0,50,53,72" tabindex="-1" style="outline:none;">
+					<area alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security" title="" href="altatarjeta.php" shape="rect" coords="0,50,53,72" tabindex="-1" style="outline:none;">
 					<area alt="" title="" href="javascript:symcBuySSL()" shape="rect" coords="53,50,100,72" style="outline:none;"></map>
 					<img name="seal" src="archivosCompraBoletos/getseal(1)" oncontextmenu="return false;" border="0" usemap="#sealmap_small" alt=""> 
 					<map name="sealmap_small" id="sealmap_small">
-						<area alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security" title="" href="javascript:vrsn_splash()" shape="rect" coords="0,0,100,50" tabindex="-1" style="outline:none;">
-						<area alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security" title="" href="javascript:vrsn_splash()" shape="rect" coords="0,50,53,72" tabindex="-1" style="outline:none;"><area alt="" title="" href="javascript:symcBuySSL()" shape="rect" coords="53,50,100,72" style="outline:none;"></map><br>
+						<area alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security" title="" href="altatarjeta.php" shape="rect" coords="0,0,100,50" tabindex="-1" style="outline:none;">
+						<area alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security" title="" href="altatarjeta.php" shape="rect" coords="0,50,53,72" tabindex="-1" style="outline:none;"><area alt="" title="" href="javascript:symcBuySSL()" shape="rect" coords="53,50,100,72" style="outline:none;"></map><br>
 			<a href="#" target="_blank" style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">Certificados SSL</a><br>
 			</td>
 			</tr>
