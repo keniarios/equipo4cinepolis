@@ -106,7 +106,7 @@
 			    				</div>
 
 			    				<div class="col-xs-4 col-sm-4 col-md-4">
-			    					<div class="form-group"><label>Código de seguridad de la tarjeta::</label>
+			    					<div class="form-group"><label>Código de la tarjeta:</label>
 			    						<input type="password" name="codigotarjeta" id="codigotarjeta" class="form-control input-sm" maxlength="3" style="text-transform: uppercase;" onkeypress="return valida(event);" max="3" required>
 			    					</div>
 			    				</div>
