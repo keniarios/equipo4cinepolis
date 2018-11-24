@@ -27,7 +27,6 @@ if (isset($_POST['tipotarjeta'])) {
 		$result = pg_query($query);
 
 
-
 		$query2 = "INSERT INTO paypal (numerotarjetafrente, correo) VALUES ('$numerotarjetafrente', '$correo')";
 		$result2 = pg_query($query2); 
 ?>
