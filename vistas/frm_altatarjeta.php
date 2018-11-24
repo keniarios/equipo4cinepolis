@@ -69,18 +69,10 @@
 				<img src="../img/logocabecera.png" class="img-logo d-inline-block align-top">
 			</a>
 		</nav>
-		<div class="row" style="background-color: black;">
-			<nav class="navbar navbar-expand-lg navbar-light" style="padding-left: 30px;padding-top:0px;float: left;">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon" style="background-color:#feca30; "></span>
-					</button>
-				</nav>
-			</div>
-		</div>
 
 				<div class="panel panel-default" >
 					  <div class="panel-heading" id="cab-panel" style="margin-top: 35px;">
-					    <label class="panel-title" style="color:black;font-size:20px;">ALTAS DE USUARIO</label>
+					    <label class="panel-title" style="color:black;font-size:20px;">ALTAS DE TARJETAS DE BANCO</label>
 					  </div>
 					  <div class="panel-body" id="cuerpoform" style="margin-bottom: 35px;">
 					    <form role="form" action="../controladores/altatarjeta.php" method="post">
