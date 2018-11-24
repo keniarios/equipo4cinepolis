@@ -95,7 +95,7 @@
 			    			</div>
 
 			    			<div class="row" style="padding-top: 20px;width: auto; padding-left:30%; padding-right:30%; padding-bottom:10px;">
-			    				<a href="haztupago.php">Regresar</a>
+			    				<a href="../haztupago.php">Regresar</a>
 			    			</div>
 			    		</form>
 				  </div>
