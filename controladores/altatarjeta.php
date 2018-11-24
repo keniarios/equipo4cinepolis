@@ -23,11 +23,11 @@ if (isset($_POST['tipotarjeta'])) {
 		$correo = strtoupper($_POST['correo']);
 
 		
-		$query = "INSERT INTO tarjetasbanco (nombre, numerotarjetafrente, numerotarjetareverso, nombrebanco, dinerodispobible, tipotarjeta) VALUES ('$nombre', '$numerotarjeta', '$codigotarjeta','Banamex','$dinerodisponible','$valortipotarjeta')";
+		$query = "INSERT INTO tarjetasbanco (nombre, numerotarjetafrente, numerotarjetareverso, nombrebanco, dinerodisponible, tipotarjeta) VALUES ('$nombre', '$numerotarjeta', '$codigotarjeta','Banamex','$dinerodisponible','$valortipotarjeta')";
 		$result = pg_query($query);
 
 
-		$query2 = "INSERT INTO paypal (numerotarjetafrente, correo) VALUES ('$numerotarjetafrente', '$correo')";
+		$query2 = "INSERT INTO paypal (numerotarjetafrente, correo) VALUES ('$numerotarjeta', '$correo')";
 		$result2 = pg_query($query2); 
 ?>
 		<script languaje="javascript">
