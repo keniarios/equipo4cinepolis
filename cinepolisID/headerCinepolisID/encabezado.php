@@ -64,7 +64,7 @@
 				            </p>
 				            <p class="text-center">
 				                <!--<input type="submit" name="btnCerrarSesion" value="Cerrar sesión" id="btnCerrarSesion" class="btn btnCloseID">-->
-				                <a href="../controladores/cinepolisID/cerrar_sesion.php" name="btnCerrarSesion" id="btnCerrarSesion" class="btn btnCloseID">Cerrar sesión</a>
+				                <a href="../controladores/cinepolisID/cerrar_sesion.php" name="btnCerrarSesion" id="btnCerrarSesion" class="btn btnCloseID" style="text-decoration: none;">Cerrar sesión</a>
 				            </p>
 			        	</fieldset>
 			        </div>
