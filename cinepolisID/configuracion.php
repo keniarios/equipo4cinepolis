@@ -218,7 +218,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	}
 	//]]></script>
 
-	<?php include('../extras/NAVMOBILE.php'); ?>
+	<?php //include('../extras/NAVMOBILE.php'); ?>
 
 	<!-- BORRAR EL wrapper DE ABAJO TAMBIEN(donde cierra)-->
 	<div id="wrapper" class="wrapper" style="left: 0%;">

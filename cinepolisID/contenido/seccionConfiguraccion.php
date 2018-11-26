@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,6 +91,24 @@
             <figure class="id-col12 first">
                 <img id="imgPerfil" clientidmode="Static" alt="">
             </figure>
+            <style type="text/css">
+                .btn-id{
+                    width: 100%;
+                    padding: 6px 10px;
+                    background-color: #13a9ce;
+                    border-radius: 3px;
+                    color: white;
+                    border:1px solid #13a9ce;
+                    margin-bottom: 5px;
+                }
+
+                .ddl-id{
+                    width: 110px;
+                    padding: 6px 10px;
+                    border:1px solid #eaeaea;
+                    border-radius: 3px;
+                }
+            </style>
             
             
         </article>
@@ -102,7 +123,6 @@
                 <nav>
                     <div style="position: relative;">
                         <input class="btn-id" id="btn-upload" type="submit" value="Selecciona otra foto">
-                        <input type="file" name="ctl00$ctl00$ContentPlaceHolder1$sitio$fuAvatar" id="fuAvatar">
                     </div>
                     
                 </nav>
@@ -119,26 +139,26 @@
             <div class="id-col8" style="width: 46%!important">
                 <div>
                     <label for="">Nombre(s)</label>
-                    <input name="ctl00$ctl00$ContentPlaceHolder1$sitio$txtNombre" type="text" value="" maxlength="50" id="ContentPlaceHolder1_sitio_txtNombre">
+                    <input name="txtNombre" type="text" value="<?php echo $nombre ?>" maxlength="50" id="ContentPlaceHolder1_sitio_txtNombre">
                     <span id="ContentPlaceHolder1_sitio_rfvNombre" class="validacion" style="display:none;"></span>
                     <span id="ContentPlaceHolder1_sitio_revNombre" class="validacion" style="display:none;"></span>
                 </div>
                 <div class="row">
                     <div class="id-col6">
                         <label for="">Apellido paterno</label>
-                        <input name="ctl00$ctl00$ContentPlaceHolder1$sitio$txtApellidoPaterno" type="text" value="" maxlength="50" id="ContentPlaceHolder1_sitio_txtApellidoPaterno">
+                        <input name="txtApellidoPaterno" type="text" value="<?php echo $apellidopaterno ?>" maxlength="50" id="ContentPlaceHolder1_sitio_txtApellidoPaterno">
                         <span id="ContentPlaceHolder1_sitio_rfvApellidoPaterno" class="validacion" style="display:none;"></span>
                         <span id="ContentPlaceHolder1_sitio_revApellidoPaterno" class="validacion" style="display:none;"></span>
                     </div>
                     <div class="id-col6">
                         <label for="">Apellido materno</label>
-                        <input name="ctl00$ctl00$ContentPlaceHolder1$sitio$txtApellidoMaterno" type="text" value="" maxlength="50" id="ContentPlaceHolder1_sitio_txtApellidoMaterno">
+                        <input name="txtApellidoMaterno" type="text" value="<?php echo $apellidomaterno ?>" maxlength="50" id="ContentPlaceHolder1_sitio_txtApellidoMaterno">
                         <span id="ContentPlaceHolder1_sitio_revApellidoMaterno" class="validacion" style="display:none;"></span>
                     </div>
                 </div>
                 <div>
                     <label for="">Correo electrónico</label>
-                    <input name="ctl00$ctl00$ContentPlaceHolder1$sitio$txtCinpolisID" type="text" value="adrianmoreno.94@hotmail.com" maxlength="62" id="ContentPlaceHolder1_sitio_txtCinpolisID" disabled="disabled" class="aspNetDisabled">
+                    <input name="txtCorreo" type="text" value="<?php echo $correo ?>" maxlength="62" id="ContentPlaceHolder1_sitio_txtCinpolisID" disabled="disabled" class="aspNetDisabled">
                     <span id="rfvCinepolisID" class="validacion" style="display:none;"></span>
                     <span id="ContentPlaceHolder1_sitio_revCinepolisID" class="validacion" style="display:none;"></span>
                 </div>
@@ -147,21 +167,22 @@
                     <div class="row">
                         <div class="id-col6" style="margin-left: -30%; width: 40%!important">
                             <label for="">Celular</label>
-                            <input name="ctl00$ctl00$ContentPlaceHolder1$sitio$txtCelular" type="text" value="6675139846" maxlength="10" id="ContentPlaceHolder1_sitio_txtCelular" style="width: 120px;">
+                            <input name="txtCelular" type="text" value="<?php echo $lada ?>" maxlength="10" id="ContentPlaceHolder1_sitio_txtCelular" style="width: 120px;">
                             <span id="ContentPlaceHolder1_sitio_revCelular" class="validacion" style="display:none;"></span>
                         </div>
                         <div class="id-col6" style="width: 40%!important">
                             <label for="">Teléfono</label>
-                            <input name="ctl00$ctl00$ContentPlaceHolder1$sitio$txtTelefono" type="text" maxlength="10" id="ContentPlaceHolder1_sitio_txtTelefono" style="width: 120px;">
+                            <input name="txtTelefono" type="text" maxlength="10" value="<?php echo $telefono ?>" id="ContentPlaceHolder1_sitio_txtTelefono" style="width: 120px;">
                             <span id="ContentPlaceHolder1_sitio_revTelefono" class="validacion" style="display:none;"></span>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <label for="">Fecha de nacimiento</label>
+                <div style="margin-bottom: 10px;">
+                    <strong for="">Fecha de nacimiento</strong>
                     <div class="row">
                         <div class="id-col4">
-                            <div class="selector id-icon-sele-abajo" id="uniform-ddlDia" style="width: 87px;"><span style="width: 75px; user-select: none;">8</span><select name="ctl00$ctl00$ContentPlaceHolder1$sitio$ddlDia" id="ddlDia">
+                            <div class="" id="uniform-ddlDia" style="width: 87px;">
+                            <select name="ddlDia" id="ddlDia" class="ddl-id" value="<?php echo $dianacimiento ?>">
 	<option value="0">Día</option>
 	<option value="1">1</option>
 	<option value="2">2</option>
@@ -199,26 +220,27 @@
                             <span id="ContentPlaceHolder1_sitio_rfvDia" class="validacion" style="display:none;"></span>
                         </div>
                         <div class="id-col4">
-                            <div class="selector id-icon-sele-abajo" id="uniform-ddlMes" style="width: 138px;"><span style="width: 126px; user-select: none;">Julio</span><select name="ctl00$ctl00$ContentPlaceHolder1$sitio$ddlMes" id="ddlMes">
-	<option value="0">Mes</option>
-	<option value="1">Enero</option>
-	<option value="2">Febrero</option>
-	<option value="3">Marzo</option>
-	<option value="4">Abril</option>
-	<option value="5">Mayo</option>
-	<option value="6">Junio</option>
-	<option value="7">Julio</option>
-	<option value="8">Agosto</option>
-	<option value="9">Septiembre</option>
-	<option value="10">Octubre</option>
-	<option value="11">Noviembre</option>
-	<option value="12">Diciembre</option>
+                            <div class="" id="uniform-ddlMes" style="width: 138px;">
+                            <select name="ddlMes" id="ddlMes" class="ddl-id" value="<?php echo $mesnacimiento ?>">
+                        	<option value="0">Mes</option>
+                        	<option value="1">Enero</option>
+                        	<option value="2">Febrero</option>
+                        	<option value="3">Marzo</option>
+                        	<option value="4">Abril</option>
+                        	<option value="5">Mayo</option>
+                        	<option value="6">Junio</option>
+                        	<option value="7">Julio</option>
+                        	<option value="8">Agosto</option>
+                        	<option value="9">Septiembre</option>
+                        	<option value="10">Octubre</option>
+                        	<option value="11">Noviembre</option>
+                        	<option value="12">Diciembre</option>
 
-</select></div>
+                        </select></div>
                             <span id="ContentPlaceHolder1_sitio_rfvMes" class="validacion" style="display:none;"></span>
                         </div>
                         <div class="id-col4">
-                            <div  style="width: 97px;"><select name="ddlAnio" id="ddlAnio">
+                            <div  style="width: 97px;"><select name="ddlAnio" id="ddlAnio"  class="ddl-id" value="<?php echo $anionacimiento ?>">
 	<option value="0">Año</option>
 	<option value="2003">2003</option>
 	<option value="2002">2002</option>
@@ -307,7 +329,8 @@
 	<option value="1919">1919</option>
 	<option value="1918">1918</option>
 
-</select></div>
+</select>
+</div>
                             <span id="ContentPlaceHolder1_sitio_rfvAnio" class="validacion" style="display:none;"></span>
                         </div>
                     </div>
