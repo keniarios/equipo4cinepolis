@@ -182,8 +182,8 @@
                     <div class="row">
                         <div class="id-col4">
                             <div class="" id="uniform-ddlDia" style="width: 87px;">
-                            <select name="ddlDia" id="ddlDia" class="ddl-id" value="<?php echo $dianacimiento ?>">
-	<option value="0">Día</option>
+                            <select name="ddlDia" id="ddlDia" class="ddl-id">
+	<option value="0"><?php echo $dianacimiento ?></option>
 	<option value="1">1</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
