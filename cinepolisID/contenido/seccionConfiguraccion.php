@@ -183,7 +183,7 @@
                         <div class="id-col4">
                             <div class="" id="uniform-ddlDia" style="width: 87px;">
                             <select name="ddlDia" id="ddlDia" class="ddl-id">
-	<option value=""><?php echo $dianacimiento ?></option>
+	<option value="">Seleccione</option>
 	<option value="01">1</option>
 	<option value="02">2</option>
 	<option value="03">3</option>
@@ -222,16 +222,16 @@
                         <div class="id-col4">
                             <div class="" id="uniform-ddlMes" style="width: 138px;">
                             <select name="ddlMes" id="ddlMes" class="ddl-id">
-                        	<option value=""><?php echo $mesnacimiento ?></option>
-                        	<option value="1">Enero</option>
-                        	<option value="2">Febrero</option>
-                        	<option value="3">Marzo</option>
-                        	<option value="4">Abril</option>
-                        	<option value="5">Mayo</option>
-                        	<option value="6">Junio</option>
-                        	<option value="7">Julio</option>
-                        	<option value="8">Agosto</option>
-                        	<option value="9">Septiembre</option>
+                        	<option value="">Seleccione</option>
+                        	<option value="01">Enero</option>
+                        	<option value="02">Febrero</option>
+                        	<option value="03">Marzo</option>
+                        	<option value="04">Abril</option>
+                        	<option value="05">Mayo</option>
+                        	<option value="06">Junio</option>
+                        	<option value="07">Julio</option>
+                        	<option value="08">Agosto</option>
+                        	<option value="09">Septiembre</option>
                         	<option value="10">Octubre</option>
                         	<option value="11">Noviembre</option>
                         	<option value="12">Diciembre</option>
