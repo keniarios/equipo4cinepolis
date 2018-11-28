@@ -136,7 +136,7 @@
                     </div>
                 </div>
             </div>
-            <div class="id-col8" style="width: 46%!important">
+            <div class="id-col8" style="width: 46%!important; margin-top: 25px;">
                 <div>
                     <label for="">Nombre(s)</label>
                     <input name="txtNombre" type="text" value="<?php echo $nombre ?>" maxlength="50" id="ContentPlaceHolder1_sitio_txtNombre">
