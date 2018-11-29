@@ -17,6 +17,6 @@ require_once ('../../bd/conexion.php'); $conexion = conectarBD();
 	$result = pg_query($query); 
 ?>
 	<script languaje="javascript">
-	    alert('Se registro correctamente, revise su correo para la confirmación.');
-	    //location.href = "../../index.php";
+	    alert('Se actualizo correctamente la información.');
+	    location.href = "../../cinepolisID/configuracion.php";
 	</script>
