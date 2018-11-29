@@ -167,13 +167,8 @@
                     <div class="row">
                         <div class="id-col6" style="margin-left: -30%; width: 40%!important">
                             <label for="">Celular</label>
-                            <input name="txtCelular" type="text" value="<?php echo $lada ?>" maxlength="10" id="ContentPlaceHolder1_sitio_txtCelular" style="width: 120px;">
+                            <input name="txtCelular" type="text" maxlength="10" id="ContentPlaceHolder1_sitio_txtCelular" style="width: 120px;"><?php echo "(".$lada.")".$telefono ?>
                             <span id="ContentPlaceHolder1_sitio_revCelular" class="validacion" style="display:none;"></span>
-                        </div>
-                        <div class="id-col6" style="width: 40%!important">
-                            <label for="">Teléfono</label>
-                            <input name="txtTelefono" type="text" maxlength="10" value="<?php echo $telefono ?>" id="ContentPlaceHolder1_sitio_txtTelefono" style="width: 120px;">
-                            <span id="ContentPlaceHolder1_sitio_revTelefono" class="validacion" style="display:none;"></span>
                         </div>
                     </div>
                 </div>
