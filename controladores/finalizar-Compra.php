@@ -60,5 +60,5 @@
 	$nombreciudadHeader = "";
 	$nombresucursalHeader = "";
 
-	header("Location: ../Index.php");
+	header("Location: ../index.php");
 ?>
