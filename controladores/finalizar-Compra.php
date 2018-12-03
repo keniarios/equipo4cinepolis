@@ -1,7 +1,6 @@
 <?php
+	include ("../bd/conexion.php"); $conexion = conectarBD();
 	date_default_timezone_set("America/Mazatlan");
- 	$fechaActual = date("Y-m-d");
- 	$horaActual = date("H:i");
 
 	session_start();
 	if(!isset($_SESSION['id_horario'])) 
@@ -26,6 +25,8 @@
 	$precioTotalNino = $_SESSION['precioTotalNino'];
 	$id_tarjeta = $_SESSION['id_tarjeta'];
 	$PrecioTotal = $_SESSION['total'];
+	$fechaActual = date("Y-m-d");
+ 	$horaActual = date("H:i");
 
 	$asientos_seleccionados = "b01,b02,b03,b04,b05";
 
