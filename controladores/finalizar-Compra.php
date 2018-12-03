@@ -32,10 +32,10 @@
 
 
 
-	$query = "INSERT INTO ventas (id_horario, id_tarjeta , id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, horacompra, fechacompra, pagototal) VALUES ($id_horario, $id_tarjeta, $id_cinepolisid, $asientos_seleccionados, $Cedad3era, $Cadulto, $Cninos, $precioboletos3raedad, $precioboletosadultos, $precioboletosninos, $horaActual, $fechaActual, $PrecioTotal)";
+	$query = "INSERT INTO ventas (id_horario, id_tarjeta , id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, horacompra, fechacompra, pagototal) 
+	VALUES ('$id_horario', '$id_tarjeta', '$id_cinepolisid', '$asientos_seleccionados', '$Cedad3era', '$Cadulto', '$Cninos', '$precioboletos3raedad', '$precioboletosadultos', '$precioboletosninos', '$horaActual', '$fechaActual', '$PrecioTotal')";
 	pg_query($query);
 
-	
 	$_SESSION['id_horario'] = 0;
 	$_SESSION['edad3era'] = 0;
 	$_SESSION['adulto'] = 0;
