@@ -60,7 +60,6 @@
 	$nombreciudadHeader = "";
 	$nombresucursalHeader = "";
 
-	header("Location: ");
 
 	echo "
 		<script languaje='javascript'>
