@@ -124,7 +124,7 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 ?>
 
     <!--FORMULARIO-->
-    <form name="frmPayment" method="post" action="https://inetvis.cineticket.com.mx/compra/visPayment.aspx?tk=2" id="frmPayment">
+    <form name="frmPayment" method="post" action="controladores/finalizar-Compra.php" id="frmPayment">
 			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
 			<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
 			<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
