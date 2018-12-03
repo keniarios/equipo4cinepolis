@@ -60,5 +60,12 @@
 	$nombreciudadHeader = "";
 	$nombresucursalHeader = "";
 
-	header("Location: ../index.php");
+	header("Location: ");
+
+	echo "
+		<script languaje='javascript'>
+			alert('Venta registrada con Exito.');
+			location.href = '../index.php';
+		</script>
+		";
 ?>
