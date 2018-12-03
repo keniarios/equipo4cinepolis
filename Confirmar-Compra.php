@@ -684,8 +684,7 @@ include ('bd/conexion.php'); $conexion = conectarBD();
                             <tbody>
                             	<tr>
 	                                <td style=" text-align:left">
-	                                    <script>document.getElementById('ibtnPayNow').style.display='none'  </script>
-	                                    <input type="image" name="ibtnPayNow2" id="ibtnPayNow2" tabindex="2" class="ImagePayNow" src="archivosCompraBoletos/paynow.gif" border="0" language="javascript" style="width: 115%;">
+	                                    <input type="image" name="ibtnPayNow2" id="ibtnPayNow2" tabindex="2" class="ImagePayNow" src="archivosCompraBoletos/paynow.gif" border="0" style="width: 115%;">
 	                                </td>
 	                            </tr>
 	                        </tbody>
