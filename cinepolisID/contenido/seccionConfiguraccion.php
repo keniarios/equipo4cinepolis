@@ -175,7 +175,7 @@
                     <label for=""></label>
                     <div class="row">
                         <div class="id-col6" style="margin-left: -30%; width: 40%!important">
-                            <label for="">Lada</label>
+                            <label for="" style="margin-left: -30%;width: 40%!important;">Lada</label><br>
                             <input name="txtLada" type="text" value="<?php echo '('.$lada.')' ?>" id="ContentPlaceHolder1_sitio_txtLada" style="width: 120px;">
                             <span id="ContentPlaceHolder1_sitio_revLada" class="validacion" style="display:none;"></span>
                         </div>
