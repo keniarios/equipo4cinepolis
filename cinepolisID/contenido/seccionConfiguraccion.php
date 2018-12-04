@@ -189,9 +189,10 @@
                 </div>
                 <div style="margin-bottom: 10px;">
                     <strong for="">Fecha de nacimiento</strong>
-                    <div class="row">
-                            
-                            <select name="ddlDia" id="ddlDia" class="ddl-id">
+                    <div class="rows">
+                        <div >
+                            <div>
+                            <select name="dia">
                             	<option value="">Día</option>
                             	<option value="01">1</option>
                             	<option value="02">2</option>
@@ -225,7 +226,9 @@
                             	<option value="30">30</option>
                             	<option value="31">31</option>
 
-                            </select>
+                            </select></div>
+                            <span id="ContentPlaceHolder1_sitio_rfvDia" class="validacion" style="display:none;"></span>
+                        </div>
                         <div class="id-col4">
                             <div class="" id="uniform-ddlMes" style="width: 138px;">
                             <select name="ddlMes" id="ddlMes" class="ddl-id">
