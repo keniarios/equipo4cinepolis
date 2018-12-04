@@ -182,7 +182,7 @@
 
                         <div class="id-col6" >
                             <label for="" style="margin-left: -30%;">Teléfono</label><br>
-                            <input name="txtCelular" type="text" value="<?php echo $telefono ?>" id="ContentPlaceHolder1_sitio_txtCelular" style="width: 120px;">
+                            <input name="txtCelular" type="text" value="<?php echo $telefono ?>" id="ContentPlaceHolder1_sitio_txtCelular" style="margin-left: -30%;width: 50%!important;">
                             <span id="ContentPlaceHolder1_sitio_revCelular" class="validacion" style="display:none;"></span>
                         </div>
                     </div>
