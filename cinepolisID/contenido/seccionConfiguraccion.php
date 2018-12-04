@@ -175,14 +175,14 @@
                     <label for=""></label>
                     <div class="row">
                         <div class="id-col6" style="margin-left: -30%; width: 40%!important">
-                            <label for="" style="width: 100%;margin-left: -30%;">Lada</label><br>
-                            <input name="txtLada" type="text" value="<?php echo $lada ?>" id="ContentPlaceHolder1_sitio_txtLada" style="margin-left: -30%;width: 40%!important;">
+                            <label for="" style="margin-left: -30%;width: 40%!important;">Lada</label><br>
+                            <input name="txtLada" type="text" value="<?php echo $lada ?>" id="ContentPlaceHolder1_sitio_txtLada" style="width: 100%; margin-left: -30%;width: 40%!important;">
                             <span id="ContentPlaceHolder1_sitio_revLada" class="validacion" style="display:none;"></span>
                         </div>
 
                         <div class="id-col6" >
                             <label for="" style="margin-left: -30%;">Teléfono</label>
-                            <input name="txtCelular" type="text" value="<?php echo $telefono ?>" id="ContentPlaceHolder1_sitio_txtCelular" style="width: 100%;margin-left: -30%;">
+                            <input name="txtCelular" type="text" value="<?php echo $telefono ?>" id="ContentPlaceHolder1_sitio_txtCelular" style="width: 120px;">
                             <span id="ContentPlaceHolder1_sitio_revCelular" class="validacion" style="display:none;"></span>
                         </div>
                     </div>
