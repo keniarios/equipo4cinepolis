@@ -163,6 +163,15 @@
                     <span id="ContentPlaceHolder1_sitio_revCinepolisID" class="validacion" style="display:none;"></span>
                 </div>
                 <div>
+                    <!--<label for=""></label>
+                    <div class="row">
+                        <div class="id-col6" style="margin-left: -30%; width: 40%!important">
+                            <label for="">Lada</label>
+                            <input name="txtLada" type="text" value="<?php echo '('.$lada.')' ?>" id="ContentPlaceHolder1_sitio_txtLada" style="width: 120px;">
+                            <span id="ContentPlaceHolder1_sitio_revLada" class="validacion" style="display:none;"></span>
+                        </div>
+                    </div>-->
+
                     <label for=""></label>
                     <div class="row">
                         <div class="id-col6" style="margin-left: -30%; width: 40%!important">
@@ -170,13 +179,10 @@
                             <input name="txtLada" type="text" value="<?php echo '('.$lada.')' ?>" id="ContentPlaceHolder1_sitio_txtLada" style="width: 120px;">
                             <span id="ContentPlaceHolder1_sitio_revLada" class="validacion" style="display:none;"></span>
                         </div>
-                    </div>
 
-                    <label for=""></label>
-                    <div class="row">
-                        <div class="id-col6" style="margin-left: -30%; width: 40%!important">
+                        <div class="id-col6" >
                             <label for="">Teléfono</label>
-                            <input name="txtCelular" type="text" value="<?php echo '('.$lada.')'.$telefono ?>" id="ContentPlaceHolder1_sitio_txtCelular" style="width: 120px;">
+                            <input name="txtCelular" type="text" value="<?php echo $telefono ?>" id="ContentPlaceHolder1_sitio_txtCelular" style="width: 120px;">
                             <span id="ContentPlaceHolder1_sitio_revCelular" class="validacion" style="display:none;"></span>
                         </div>
                     </div>
