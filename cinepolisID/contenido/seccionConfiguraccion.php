@@ -189,10 +189,10 @@
                 </div>
                 <div style="margin-bottom: 10px;">
                     <strong for="">Fecha de nacimiento</strong>
-                    <div class="rows">
+                    <div class="row">
                         <div >
                             <div>
-                            <select name="dia">
+                            <select name="ddlDia" id="ddlDia" class="ddl-id">
                             	<option value="">Día</option>
                             	<option value="01">1</option>
                             	<option value="02">2</option>
