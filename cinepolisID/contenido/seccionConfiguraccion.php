@@ -181,7 +181,7 @@
                         </div>
 
                         <div class="id-col6" >
-                            <label for="" style="margin-left: -30%;">Teléfono</label>
+                            <label for="" style="margin-left: -30%;">Teléfono</label><br>
                             <input name="txtCelular" type="text" value="<?php echo $telefono ?>" id="ContentPlaceHolder1_sitio_txtCelular" style="width: 120px;">
                             <span id="ContentPlaceHolder1_sitio_revCelular" class="validacion" style="display:none;"></span>
                         </div>
