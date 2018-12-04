@@ -190,8 +190,8 @@
                 <div style="margin-bottom: 10px;">
                     <strong for="">Fecha de nacimiento</strong>
                     <div class="row">
-                        <div >
-                            <div>
+                        <div class="id-col4">
+                            <div class="" id="uniform-ddlDia" style="width: 87px;">
                             <select name="ddlDia" id="ddlDia" class="ddl-id">
                             	<option value="">Día</option>
                             	<option value="01">1</option>
