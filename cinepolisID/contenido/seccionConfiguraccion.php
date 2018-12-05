@@ -363,7 +363,7 @@
             <h3>Tarjeta Club Cinépolis<sup>®</sup></h3>
             <div class="row">
                 <div class="id-col8">
-                    <input name="ctl00$ctl00$ContentPlaceHolder1$sitio$txtTCC" value="<?php echo $tarjetaclub ?>" type="text" maxlength="16" id="ContentPlaceHolder1_sitio_txtTCC">
+                    <input name="txtTCC" value="<?php echo $tarjetaclub ?>" type="text" maxlength="16" id="ContentPlaceHolder1_sitio_txtTCC">
                     <span id="ContentPlaceHolder1_sitio_rfvTCC" class="validacion" style="display:none;"></span>
                     <span id="ContentPlaceHolder1_sitio_revTCC" class="validacion" style="display:none;"></span>
                     
