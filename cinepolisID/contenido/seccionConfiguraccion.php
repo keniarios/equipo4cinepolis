@@ -120,6 +120,7 @@
                 <figure>
                     <img id="imgAvatar" src="https://static.cinepolis.com/marcas/id/mx/avatar/perfil-generico.jpg">
                 </figure>
+                <!--
                 <nav>
                     <div style="position: relative;">
                         <input class="btn-id" id="btn-upload" type="submit" value="Selecciona otra foto" disabled>
@@ -129,7 +130,7 @@
                 <nav class="row">
                     <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$sitio$btnActualizarAvatar" value="Guardar" id="btnActualizarAvatar" class="btn-id" disabled>
                 </nav>
-                
+                -->
                 <div class="loader-avatar" style="display:none;">
                     <div class="loading-wrapper">
                         <div id="loader" class="loading"></div>
@@ -345,15 +346,15 @@
                         </div>
                     </div>
                 </div>
+                <!--
                 <nav class="row">
                     <div class="btn-input float-right">
                         <input type="submit" value="Guardar" class="btn-id">
-                        <div id="ContentPlaceHolder1_sitio_vsConfiguracion" style="display:none;">
-
-</div>
+                        <div id="ContentPlaceHolder1_sitio_vsConfiguracion" style="display:none;"></div>
                         <span class="id-icon-flecha-der"></span>
                     </div>
                 </nav>
+            -->
             </div>
         </section>
 
