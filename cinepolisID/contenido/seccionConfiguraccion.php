@@ -142,7 +142,6 @@
                     <label for="">Nombre(s)</label>
                     <input name="txtNombre" type="text" value="<?php echo $nombre ?>" maxlength="50" id="ContentPlaceHolder1_sitio_txtNombre">
                     <span id="ContentPlaceHolder1_sitio_rfvNombre" class="validacion" style="display:none;"></span>
-                    <span id="ContentPlaceHolder1_sitio_revNombre" class="validacion" style="display:none;"></span>
                 </div>
                 <div class="row">
                     <div class="id-col6">
