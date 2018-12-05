@@ -122,12 +122,12 @@
                 </figure>
                 <nav>
                     <div style="position: relative;">
-                        <input class="btn-id" id="btn-upload" type="submit" value="Selecciona otra foto">
+                        <input class="btn-id" id="btn-upload" type="submit" value="Selecciona otra foto" disabled>
                     </div>
                     
                 </nav>
                 <nav class="row">
-                    <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$sitio$btnActualizarAvatar" value="Guardar" id="btnActualizarAvatar" class="btn-id">
+                    <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$sitio$btnActualizarAvatar" value="Guardar" id="btnActualizarAvatar" class="btn-id" disabled>
                 </nav>
                 
                 <div class="loader-avatar" style="display:none;">
