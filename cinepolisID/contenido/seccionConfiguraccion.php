@@ -193,7 +193,7 @@
                         <div class="id-col4">
                             <div class="" id="uniform-ddlDia" style="width: 87px;">
                             <select name="ddlDia" id="ddlDia" class="ddl-id">
-                            	<option value="">Día</option>
+                            	<option value=""><?php echo $dianacimiento ?></option>
                             	<option value="01">1</option>
                             	<option value="02">2</option>
                             	<option value="03">3</option>
@@ -232,7 +232,7 @@
                         <div class="id-col4">
                             <div class="" id="uniform-ddlMes" style="width: 138px;">
                             <select name="ddlMes" id="ddlMes" class="ddl-id">
-                        	<option value="">Mes</option>
+                        	<option value=""><?php echo $mesnacimiento; ?></option>
                         	<option value="01">Enero</option>
                         	<option value="02">Febrero</option>
                         	<option value="03">Marzo</option>
@@ -251,7 +251,7 @@
                         </div>
                         <div class="id-col4">
                             <div  style="width: 97px;"><select name="ddlAnio" id="ddlAnio"  class="ddl-id" value="<?php echo $anionacimiento ?>">
-	<option value="0">Año</option>
+	<option value="0"><?php echo $anonacimiento; ?></option>
 	<option value="2003">2003</option>
 	<option value="2002">2002</option>
 	<option value="2001">2001</option>
