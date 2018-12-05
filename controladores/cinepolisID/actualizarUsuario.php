@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once ('../../bd/conexion.php'); $conexion = conectarBD();
+include ('../../bd/conexion.php'); $conexion = conectarBD();
 		
 	$id = $_POST['id'];
 	$id_cinepolisid = $_SESSION['id_cinepolisid'];
