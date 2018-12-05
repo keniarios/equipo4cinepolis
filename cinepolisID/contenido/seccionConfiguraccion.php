@@ -369,10 +369,8 @@
                 </div>
                 <nav class="id-col4 clearfix">
                     <div class="btn-input float-right">
-                        <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$sitio$btnGuardarTCC" value="Guardar" id="ContentPlaceHolder1_sitio_btnGuardarTCC" class="btn-id">
-                        <div id="ContentPlaceHolder1_sitio_vsTCC" style="display:none;">
-
-</div>
+                        <input type="submit" name="btnGuardarTCC" value="Guardar" id="ContentPlaceHolder1_sitio_btnGuardarTCC" class="btn-id">
+                        <div id="ContentPlaceHolder1_sitio_vsTCC" style="display:none;"></div>
                         <span class="id-icon-flecha-der"></span>
                     </div>
                 </nav>

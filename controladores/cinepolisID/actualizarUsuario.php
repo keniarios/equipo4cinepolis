@@ -17,7 +17,18 @@ include ('../../bd/conexion.php'); $conexion = conectarBD();
 
 	$query = "UPDATE registrocinepolisid SET nombre = '$nombre', apellidopaterno = '$appaterno', apellidomaterno = '$apmaterno', dianacimiento = '$ddlDia', mesnacimiento = '$ddlMes', anonacimiento = '$ddlAnio', lada = '$txtLada', telefono = '$txtTelefono', tarjetaclub='$txtTCC' WHERE id_cinepolisid = '$id_cinepolisid'";
 
-	$result = pg_query($query); 
+	$result = pg_query($query);
+
+	$_SESSION['nombre'] = $nombre;
+	$_SESSION['apellidopaterno'] = $appaterno;
+	$_SESSION['apellidomaterno'] = $apmaterno;
+	$_SESSION['tarjetaclub'] = $nombre;
+	$_SESSION['dianacimiento'] = $ddlDia;
+	$_SESSION['mesnacimiento'] = $ddlMes;
+	$_SESSION['anonacimiento'] = $ddlAnio;
+	$_SESSION['lada'] = $txtLada;
+	$_SESSION['telefono'] = $txtTelefono;
+	$_SESSION['tarjetaclub'] = $txtTCC;
 ?>
 	<script languaje="javascript">
 	    alert('Se actualizo correctamente la información.');
