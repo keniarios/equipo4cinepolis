@@ -204,16 +204,16 @@
                                 <div class="id-col4">
                                     <div class="" id="uniform-ddlMes" style="width: 315px;">
                                     	<select name="ddlMes" id="ddlMes" style="width: 270px; height: 30px; font-family:'Roboto',Helvetica,Arial,sans-serif;background-color:#e1e3e6;border:1px solid rgba(0,0,0,0);height:33px;margin-top:2px;margin-bottom:15px;-webkit-transition:0.3s all;-moz-transition:0.3s all;-o-transition:0.3s all;-ms-transition:0.3s all;transition:0.3s all; margin-bottom:15px;" required><!--class="selector"-->
-										<option value="0">Mes</option>
-										<option value="1">Enero</option>
-										<option value="2">Febrero</option>
-										<option value="3">Marzo</option>
-										<option value="4">Abril</option>
-										<option value="5">Mayo</option>
-										<option value="6">Junio</option>
-										<option value="7">Julio</option>
-										<option value="8">Agosto</option>
-										<option value="9">Septiembre</option>
+										<option value="">Mes</option>
+										<option value="01">Enero</option>
+										<option value="02">Febrero</option>
+										<option value="03">Marzo</option>
+										<option value="04">Abril</option>
+										<option value="05">Mayo</option>
+										<option value="06">Junio</option>
+										<option value="07">Julio</option>
+										<option value="08">Agosto</option>
+										<option value="09">Septiembre</option>
 										<option value="10">Octubre</option>
 										<option value="11">Noviembre</option>
 										<option value="12">Diciembre</option>
@@ -224,7 +224,7 @@
                                 <div class="id-col4">
                                     <div class="" id="uniform-ddlAnio" style="width: 315px;">
                                     	<select name="ddlAnio" id="ddlAnio" style="width: 270px; height: 30px; font-family:'Roboto',Helvetica,Arial,sans-serif;background-color:#e1e3e6;border:1px solid rgba(0,0,0,0);height:33px;margin-top:2px;margin-bottom:15px;-webkit-transition:0.3s all;-moz-transition:0.3s all;-o-transition:0.3s all;-ms-transition:0.3s all;transition:0.3s all; margin-bottom:15px;" required><!--class="selector"-->
-										<option value="0">Año</option>
+										<option value="">Año</option>
 										<option value="2003">2003</option>
 										<option value="2002">2002</option>
 										<option value="2001">2001</option>

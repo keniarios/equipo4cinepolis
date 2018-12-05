@@ -18,6 +18,47 @@ if(!isset($_SESSION['id_cinepolisid']))
 	$tarjetaclub = $_SESSION['tarjetaclub'];
 	$preguntaseguridad = $_SESSION['preguntaseguridad'];
 	$respuestapreguntaseguridad = $_SESSION['respuestapreguntaseguridad'];
+	
+	
+	switch ($_SESSION['mesnacimiento']) {
+		case '01':
+			$_SESSION['mesnacimiento'] = "Enero";
+			break;
+		case '02':
+			$_SESSION['mesnacimiento'] = "Febrero";
+			break;
+		case '03':
+			$_SESSION['mesnacimiento'] = "Marzo";
+			break;
+		case '04':
+			$_SESSION['mesnacimiento'] = "Abril";
+			break;
+		case '05':
+			$_SESSION['mesnacimiento'] = "Mayo";
+			break;
+		case '06':
+			$_SESSION['mesnacimiento'] = "Junio";
+			break;
+		case '07':
+			$_SESSION['mesnacimiento'] = "Julio";
+			break;
+		case '08':
+			$_SESSION['mesnacimiento'] = "Agosto";
+			break;
+		case '09':
+			$_SESSION['mesnacimiento'] = "Septiembre";
+			break;
+		case '10':
+			$_SESSION['mesnacimiento'] = "Octubre";
+			break;
+		case '11':
+			$_SESSION['mesnacimiento'] = "Noviembre";
+			break;
+		
+		default:
+			$_SESSION['mesnacimiento'] = "Diciembre";
+			break;
+	}
 	$dianacimiento = $_SESSION['dianacimiento'];
 	$mesnacimiento = $_SESSION['mesnacimiento'];
 	$anonacimiento = $_SESSION['anonacimiento'];
