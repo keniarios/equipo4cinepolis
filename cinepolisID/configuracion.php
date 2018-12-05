@@ -191,7 +191,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!--<FORM method="post" action="../controladores/cinepolisID/actualizaUsuario.php" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">-->
-<FORM method="post" action="../controladores/cinepolisID/actualizaUsuario.php" id="form1">
+<FORM method="post" action="../controladores/cinepolisID/actualizarUsuario.php" id="form1">
 	<?php include('../extras/aspNetHidden.php'); ?>
 
 	<script type="text/javascript">//<![CDATA[
