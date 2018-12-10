@@ -4,6 +4,9 @@ if(!isset($_SESSION['id_cinepolisid']))
 {
   header('Location: ../index.php');
 }
+	$_SESSION['id_horario'] = 0; $_SESSION['edad3era'] = 0;	$_SESSION['adulto'] = 0;$_SESSION['ninos'] = 0;	$_SESSION['precioTotal3raEdad'] = 0;$_SESSION['precioTotalAdulto'] = 0;	$_SESSION['precioTotalNino'] = 0;$_SESSION['id_tarjeta'] = 0;$_SESSION['total'] = 0;$_SESSION['ciudad'] = "";$id_horario = 0;$Cedad3era = 0;$Cadulto = 0;$Cninos = 0;$precioTotal3raEdad = 0;$precioTotalAdulto = 0;$precioTotalNino = 0;$id_tarjeta = 0;
+	$PrecioTotal = 0;$nombreciudadHeader = "";$nombresucursalHeader = "";
+
 	include ('../bd/conexion.php'); $conexion = conectarBD(); 
 
 	$id_cinepolisid = $_SESSION['id_cinepolisid'];
@@ -15,6 +18,47 @@ if(!isset($_SESSION['id_cinepolisid']))
 	$tarjetaclub = $_SESSION['tarjetaclub'];
 	$preguntaseguridad = $_SESSION['preguntaseguridad'];
 	$respuestapreguntaseguridad = $_SESSION['respuestapreguntaseguridad'];
+	
+	
+	switch ($_SESSION['mesnacimiento']) {
+		case '01':
+			$_SESSION['mesnacimiento'] = "Enero";
+			break;
+		case '02':
+			$_SESSION['mesnacimiento'] = "Febrero";
+			break;
+		case '03':
+			$_SESSION['mesnacimiento'] = "Marzo";
+			break;
+		case '04':
+			$_SESSION['mesnacimiento'] = "Abril";
+			break;
+		case '05':
+			$_SESSION['mesnacimiento'] = "Mayo";
+			break;
+		case '06':
+			$_SESSION['mesnacimiento'] = "Junio";
+			break;
+		case '07':
+			$_SESSION['mesnacimiento'] = "Julio";
+			break;
+		case '08':
+			$_SESSION['mesnacimiento'] = "Agosto";
+			break;
+		case '09':
+			$_SESSION['mesnacimiento'] = "Septiembre";
+			break;
+		case '10':
+			$_SESSION['mesnacimiento'] = "Octubre";
+			break;
+		case '11':
+			$_SESSION['mesnacimiento'] = "Noviembre";
+			break;
+		
+		default:
+			$_SESSION['mesnacimiento'] = "Diciembre";
+			break;
+	}
 	$dianacimiento = $_SESSION['dianacimiento'];
 	$mesnacimiento = $_SESSION['mesnacimiento'];
 	$anonacimiento = $_SESSION['anonacimiento'];

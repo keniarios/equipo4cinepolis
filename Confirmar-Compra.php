@@ -124,7 +124,7 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 ?>
 
     <!--FORMULARIO-->
-    <form name="frmPayment" method="post" action="https://inetvis.cineticket.com.mx/compra/visPayment.aspx?tk=2" id="frmPayment">
+    <form name="frmPayment" method="post" action="controladores/finalizar-Compra.php" id="frmPayment">
 			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
 			<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
 			<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
@@ -684,8 +684,7 @@ include ('bd/conexion.php'); $conexion = conectarBD();
                             <tbody>
                             	<tr>
 	                                <td style=" text-align:left">
-	                                    <script>document.getElementById('ibtnPayNow').style.display='none'  </script>
-	                                    <input type="image" name="ibtnPayNow2" id="ibtnPayNow2" tabindex="2" class="ImagePayNow" src="archivosCompraBoletos/paynow.gif" border="0" language="javascript" style="width: 115%;">
+	                                    <input type="image" name="ibtnPayNow2" id="ibtnPayNow2" tabindex="2" class="ImagePayNow" src="archivosCompraBoletos/paynow.gif" border="0" style="width: 115%;">
 	                                </td>
 	                            </tr>
 	                        </tbody>

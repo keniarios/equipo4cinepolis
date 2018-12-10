@@ -87,7 +87,7 @@
 		                <span id="ContentPlaceHolder1_sitio_SeccionCinecash_revtarjetaclubcinepolis" style="display:none;"></span>
 		            </div>
 		            <nav>
-		                <button onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate('ConsultarCineCash'); __doPostBack('ctl00$ctl00$ctl00$ContentPlaceHolder1$sitio$SeccionCinecash$btnConsultar','')" id="ContentPlaceHolder1_sitio_SeccionCinecash_btnConsultar" validationgroup="ConsultarCineCash" class="btn-id consultar" style="background-color:#13a9ce;border-color:#13a9ce; -webkit-border-radius:4px;border-radius:4px;border-style:solid;border-width:1px 0 0;	color:#fff;	line-height:18px;max-width:150px;padding:.4em 0;position:relative;text-align:center;-webkit-transition:0.3s all;-moz-transition:0.3s all;-o-transition:0.3s all;-ms-transition:0.3s all;transition:0.3s all;width:100%;">
+		                <button onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate('ConsultarCineCash'); __doPostBack('ctl00$ctl00$ctl00$ContentPlaceHolder1$sitio$SeccionCinecash$btnConsultar','')" id="ContentPlaceHolder1_sitio_SeccionCinecash_btnConsultar" validationgroup="ConsultarCineCash" class="btn-id consultar" style="background-color:#13a9ce;border-color:#13a9ce; -webkit-border-radius:4px;border-radius:4px;border-style:solid;border-width:1px 0 0;	color:#fff;	line-height:18px;max-width:150px;padding:.4em 0;position:relative;text-align:center;-webkit-transition:0.3s all;-moz-transition:0.3s all;-o-transition:0.3s all;-ms-transition:0.3s all;transition:0.3s all;width:100%;" disabled>
 		                    Consultar
 		                    <span class="id-icon-flecha-der"></span>
 		                </button>

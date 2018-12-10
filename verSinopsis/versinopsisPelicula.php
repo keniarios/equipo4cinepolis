@@ -228,7 +228,11 @@
 											while ($bandera) {
 												$contadorBandera++;
 												$Dia = $Dia + 1;
- 												$Dia = "0".$Dia;
+												$Parte = substr($Dia, 1);
+												if ($Parte == 0) {
+													$Dia = "0".$Dia;
+												}
+ 												//$Dia = "0".$Dia;
 
  												if ($contadorBandera==1) {
  													echo "

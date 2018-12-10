@@ -1,9 +1,12 @@
-<?php 
+<?php
 session_start();
 if(!isset($_SESSION['id_cinepolisid'])) 
 {
   header('Location: ../index.php');
 }
+$_SESSION['id_horario'] = 0; $_SESSION['edad3era'] = 0;	$_SESSION['adulto'] = 0;$_SESSION['ninos'] = 0;	$_SESSION['precioTotal3raEdad'] = 0;$_SESSION['precioTotalAdulto'] = 0;	$_SESSION['precioTotalNino'] = 0;$_SESSION['id_tarjeta'] = 0;$_SESSION['total'] = 0;$_SESSION['ciudad'] = "";$id_horario = 0;$Cedad3era = 0;$Cadulto = 0;$Cninos = 0;$precioTotal3raEdad = 0;$precioTotalAdulto = 0;$precioTotalNino = 0;$id_tarjeta = 0;
+	$PrecioTotal = 0;$nombreciudadHeader = "";$nombresucursalHeader = "";
+
 	include ('../bd/conexion.php'); $conexion = conectarBD(); 
 
 	$id_cinepolisid = $_SESSION['id_cinepolisid'];
@@ -187,7 +190,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<FORM method="post" action="../controladores/cinepolisID/actualizaUsuario.php" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<!--<FORM method="post" action="../controladores/cinepolisID/actualizaUsuario.php" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">-->
+<FORM method="post" action="../controladores/cinepolisID/actualizarUsuario.php" id="form1">
 	<?php include('../extras/aspNetHidden.php'); ?>
 
 	<script type="text/javascript">//<![CDATA[

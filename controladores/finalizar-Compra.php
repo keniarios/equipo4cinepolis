@@ -1,4 +1,7 @@
 <?php
+	include ("../bd/conexion.php"); $conexion = conectarBD();
+	date_default_timezone_set("America/Mazatlan");
+
 	session_start();
 	if(!isset($_SESSION['id_horario'])) 
 	{
@@ -22,12 +25,17 @@
 	$precioTotalNino = $_SESSION['precioTotalNino'];
 	$id_tarjeta = $_SESSION['id_tarjeta'];
 	$PrecioTotal = $_SESSION['total'];
+	$fechaActual = date("Y-m-d");
+ 	$horaActual = date("H:i");
+
+	$asientos_seleccionados = "b01,b02,b03,b04,b05";
 
 
-	$query = "INSERT INTO ventas (id_horario, id_tarjeta, id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, pagototal) VALUES ('$id_horario', '$id_tarjeta', '$id_cinepolisid', 'ASIENTOSVACIO', '$Cedad3era', '$Cadulto', '$Cninos', '$precioTotal3raEdad', '$precioTotalAdulto', '$precioTotalNino', '$PrecioTotal')";
+
+	$query = "INSERT INTO ventas (id_horario, id_tarjeta , id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, horacompra, fechacompra, pagototal) 
+	VALUES ('$id_horario', '$id_tarjeta', '$id_cinepolisid', '$asientos_seleccionados', '$Cedad3era', '$Cadulto', '$Cninos', '$precioTotal3raEdad', '$precioTotalAdulto', '$precioTotalNino', '$horaActual', '$fechaActual', '$PrecioTotal')";
 	pg_query($query);
 
-	
 	$_SESSION['id_horario'] = 0;
 	$_SESSION['edad3era'] = 0;
 	$_SESSION['adulto'] = 0;
@@ -52,5 +60,11 @@
 	$nombreciudadHeader = "";
 	$nombresucursalHeader = "";
 
-	header("Location: ../Index.php");
+
+	echo "
+		<script languaje='javascript'>
+			alert('Venta registrada con Exito.');
+			location.href = '../index.php';
+		</script>
+		";
 ?>

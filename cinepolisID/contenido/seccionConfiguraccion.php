@@ -120,28 +120,28 @@
                 <figure>
                     <img id="imgAvatar" src="https://static.cinepolis.com/marcas/id/mx/avatar/perfil-generico.jpg">
                 </figure>
+                <!--
                 <nav>
                     <div style="position: relative;">
-                        <input class="btn-id" id="btn-upload" type="submit" value="Selecciona otra foto">
+                        <input class="btn-id" id="btn-upload" type="submit" value="Selecciona otra foto" disabled>
                     </div>
                     
                 </nav>
                 <nav class="row">
-                    <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$sitio$btnActualizarAvatar" value="Guardar" id="btnActualizarAvatar" class="btn-id">
+                    <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$sitio$btnActualizarAvatar" value="Guardar" id="btnActualizarAvatar" class="btn-id" disabled>
                 </nav>
-                
+                -->
                 <div class="loader-avatar" style="display:none;">
                     <div class="loading-wrapper">
                         <div id="loader" class="loading"></div>
                     </div>
                 </div>
             </div>
-            <div class="id-col8" style="width: 46%!important">
+            <div class="id-col8" style="width: 46%!important; margin-top: 25px;">
                 <div>
                     <label for="">Nombre(s)</label>
                     <input name="txtNombre" type="text" value="<?php echo $nombre ?>" maxlength="50" id="ContentPlaceHolder1_sitio_txtNombre">
                     <span id="ContentPlaceHolder1_sitio_rfvNombre" class="validacion" style="display:none;"></span>
-                    <span id="ContentPlaceHolder1_sitio_revNombre" class="validacion" style="display:none;"></span>
                 </div>
                 <div class="row">
                     <div class="id-col6">
@@ -163,17 +163,27 @@
                     <span id="ContentPlaceHolder1_sitio_revCinepolisID" class="validacion" style="display:none;"></span>
                 </div>
                 <div>
+                    <!--<label for=""></label>
+                    <div class="row">
+                        <div class="id-col6" style="margin-left: -30%; width: 40%!important">
+                            <label for="">Lada</label>
+                            <input name="txtLada" type="text" value="<?php echo '('.$lada.')' ?>" id="ContentPlaceHolder1_sitio_txtLada" style="width: 120px;">
+                            <span id="ContentPlaceHolder1_sitio_revLada" class="validacion" style="display:none;"></span>
+                        </div>
+                    </div>-->
+
                     <label for=""></label>
                     <div class="row">
                         <div class="id-col6" style="margin-left: -30%; width: 40%!important">
-                            <label for="">Celular</label>
-                            <input name="txtCelular" type="text" value="<?php echo $lada ?>" maxlength="10" id="ContentPlaceHolder1_sitio_txtCelular" style="width: 120px;">
-                            <span id="ContentPlaceHolder1_sitio_revCelular" class="validacion" style="display:none;"></span>
+                            <label for="" style="margin-left: -30%;width: 40%!important;">Lada</label><br>
+                            <input name="txtLada" type="text" value="<?php echo $lada ?>" id="ContentPlaceHolder1_sitio_txtLada" style="width: 100%; margin-left: -30%;width: 40%!important;">
+                            <span id="ContentPlaceHolder1_sitio_revLada" class="validacion" style="display:none;"></span>
                         </div>
-                        <div class="id-col6" style="width: 40%!important">
-                            <label for="">Teléfono</label>
-                            <input name="txtTelefono" type="text" maxlength="10" value="<?php echo $telefono ?>" id="ContentPlaceHolder1_sitio_txtTelefono" style="width: 120px;">
-                            <span id="ContentPlaceHolder1_sitio_revTelefono" class="validacion" style="display:none;"></span>
+
+                        <div class="id-col6" >
+                            <label for="" style="margin-left: -30%;">Teléfono</label><br>
+                            <input name="txtCelular" type="text" value="<?php echo $telefono ?>" id="ContentPlaceHolder1_sitio_txtCelular" style="margin-left: -30%;width: 50%!important;">
+                            <span id="ContentPlaceHolder1_sitio_revCelular" class="validacion" style="display:none;"></span>
                         </div>
                     </div>
                 </div>
@@ -182,56 +192,56 @@
                     <div class="row">
                         <div class="id-col4">
                             <div class="" id="uniform-ddlDia" style="width: 87px;">
-                            <select name="ddlDia" id="ddlDia" class="ddl-id" value="<?php echo $dianacimiento ?>">
-	<option value="0">Día</option>
-	<option value="1">1</option>
-	<option value="2">2</option>
-	<option value="3">3</option>
-	<option value="4">4</option>
-	<option value="5">5</option>
-	<option value="6">6</option>
-	<option value="7">7</option>
-	<option value="8">8</option>
-	<option value="9">9</option>
-	<option value="10">10</option>
-	<option value="11">11</option>
-	<option value="12">12</option>
-	<option value="13">13</option>
-	<option value="14">14</option>
-	<option value="15">15</option>
-	<option value="16">16</option>
-	<option value="17">17</option>
-	<option value="18">18</option>
-	<option value="19">19</option>
-	<option value="20">20</option>
-	<option value="21">21</option>
-	<option value="22">22</option>
-	<option value="23">23</option>
-	<option value="24">24</option>
-	<option value="25">25</option>
-	<option value="26">26</option>
-	<option value="27">27</option>
-	<option value="28">28</option>
-	<option value="29">29</option>
-	<option value="30">30</option>
-	<option value="31">31</option>
+                            <select name="ddlDia" id="ddlDia" class="ddl-id">
+                            	<option value="<?php echo $dianacimiento; ?>"><?php echo $dianacimiento ?></option>
+                            	<option value="01">01</option>
+                            	<option value="02">02</option>
+                            	<option value="03">03</option>
+                            	<option value="04">04</option>
+                            	<option value="05">05</option>
+                            	<option value="06">06</option>
+                            	<option value="07">07</option>
+                            	<option value="08">08</option>
+                            	<option value="09">09</option>
+                            	<option value="10">10</option>
+                            	<option value="11">11</option>
+                            	<option value="12">12</option>
+                            	<option value="13">13</option>
+                            	<option value="14">14</option>
+                            	<option value="15">15</option>
+                            	<option value="16">16</option>
+                            	<option value="17">17</option>
+                            	<option value="18">18</option>
+                            	<option value="19">19</option>
+                            	<option value="20">20</option>
+                            	<option value="21">21</option>
+                            	<option value="22">22</option>
+                            	<option value="23">23</option>
+                            	<option value="24">24</option>
+                            	<option value="25">25</option>
+                            	<option value="26">26</option>
+                            	<option value="27">27</option>
+                            	<option value="28">28</option>
+                            	<option value="29">29</option>
+                            	<option value="30">30</option>
+                            	<option value="31">31</option>
 
-</select></div>
+                            </select></div>
                             <span id="ContentPlaceHolder1_sitio_rfvDia" class="validacion" style="display:none;"></span>
                         </div>
                         <div class="id-col4">
                             <div class="" id="uniform-ddlMes" style="width: 138px;">
-                            <select name="ddlMes" id="ddlMes" class="ddl-id" value="<?php echo $mesnacimiento ?>">
-                        	<option value="0">Mes</option>
-                        	<option value="1">Enero</option>
-                        	<option value="2">Febrero</option>
-                        	<option value="3">Marzo</option>
-                        	<option value="4">Abril</option>
-                        	<option value="5">Mayo</option>
-                        	<option value="6">Junio</option>
-                        	<option value="7">Julio</option>
-                        	<option value="8">Agosto</option>
-                        	<option value="9">Septiembre</option>
+                            <select name="ddlMes" id="ddlMes" class="ddl-id">
+                        	<option value="<?php echo $mesnacimiento; ?>"><?php echo $mesnacimiento; ?></option>
+                        	<option value="01">Enero</option>
+                        	<option value="02">Febrero</option>
+                        	<option value="03">Marzo</option>
+                        	<option value="04">Abril</option>
+                        	<option value="05">Mayo</option>
+                        	<option value="06">Junio</option>
+                        	<option value="07">Julio</option>
+                        	<option value="08">Agosto</option>
+                        	<option value="09">Septiembre</option>
                         	<option value="10">Octubre</option>
                         	<option value="11">Noviembre</option>
                         	<option value="12">Diciembre</option>
@@ -241,7 +251,7 @@
                         </div>
                         <div class="id-col4">
                             <div  style="width: 97px;"><select name="ddlAnio" id="ddlAnio"  class="ddl-id" value="<?php echo $anionacimiento ?>">
-	<option value="0">Año</option>
+	<option value="<?php echo $anonacimiento; ?>"><?php echo $anonacimiento; ?></option>
 	<option value="2003">2003</option>
 	<option value="2002">2002</option>
 	<option value="2001">2001</option>
@@ -335,15 +345,15 @@
                         </div>
                     </div>
                 </div>
+                <!--
                 <nav class="row">
                     <div class="btn-input float-right">
                         <input type="submit" value="Guardar" class="btn-id">
-                        <div id="ContentPlaceHolder1_sitio_vsConfiguracion" style="display:none;">
-
-</div>
+                        <div id="ContentPlaceHolder1_sitio_vsConfiguracion" style="display:none;"></div>
                         <span class="id-icon-flecha-der"></span>
                     </div>
                 </nav>
+            -->
             </div>
         </section>
 
@@ -352,26 +362,26 @@
             <h3>Tarjeta Club Cinépolis<sup>®</sup></h3>
             <div class="row">
                 <div class="id-col8">
-                    <input name="ctl00$ctl00$ContentPlaceHolder1$sitio$txtTCC" type="text" maxlength="16" id="ContentPlaceHolder1_sitio_txtTCC">
+                    <input name="txtTCC" value="<?php echo $tarjetaclub ?>" type="text" maxlength="16" id="ContentPlaceHolder1_sitio_txtTCC">
                     <span id="ContentPlaceHolder1_sitio_rfvTCC" class="validacion" style="display:none;"></span>
                     <span id="ContentPlaceHolder1_sitio_revTCC" class="validacion" style="display:none;"></span>
                     
                 </div>
                 <nav class="id-col4 clearfix">
                     <div class="btn-input float-right">
-                        <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$sitio$btnGuardarTCC" value="Guardar" id="ContentPlaceHolder1_sitio_btnGuardarTCC" class="btn-id">
-                        <div id="ContentPlaceHolder1_sitio_vsTCC" style="display:none;">
-
-</div>
+                        <input type="submit" name="btnGuardarTCC" value="Guardar" id="ContentPlaceHolder1_sitio_btnGuardarTCC" class="btn-id">
+                        <div id="ContentPlaceHolder1_sitio_vsTCC" style="display:none;"></div>
                         <span class="id-icon-flecha-der"></span>
                     </div>
                 </nav>
+                <!--
                 <nav class="id-col4 clearfix">
                     <div class="btn-input float-right">
                         <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$sitio$btnDesvincular" value="Desvincular" id="btnDesvincular" class="btn-id">
                         <span class="id-icon-flecha-der"></span>
                     </div>
                 </nav>
+            -->
             </div>
         </section>
 
