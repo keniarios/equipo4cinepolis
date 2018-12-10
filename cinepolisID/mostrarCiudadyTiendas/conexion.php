@@ -2,9 +2,9 @@
 
 function conectarBDCIDCS()
 {
-	$host = "host=equipo4.postgres.database.azure.com";
+	$host = "host=cinepolisteam.postgres.database.azure.com";
 	$dbname = "dbname=cinepolis";
-	$user = "user=equipo4@equipo4";
+	$user = "user=equipo4@cinepolisteam";
 	$password = "password=Judith123";
 
 	$bd = pg_connect("$host $dbname $user $password");
