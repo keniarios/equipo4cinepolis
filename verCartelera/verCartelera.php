@@ -37,6 +37,8 @@
 									<h2 ng-bind-html='getLocation(cinema.Name, cinema.Status) | to_trusted' class='ng-binding'><i class='icon-info-sign'></i>$nombre<span class='nueva-ap'><b style='vertical-align: sub; font-size: 12px;'>Nueva apertura</b></span></h2>
 								</a>
 								";
+
+								//DATOS DE LAS PELICULA
 								$result = pg_query("SELECT DISTINCT ON (S.id_pelicula) H.id_sucursal, S.id_pelicula, imagen, titulo, clasificacion, duracion, genero, actores, directores, idiomaespanol, idiomaingles, subtituloespanol, subtituloingles, pelicula3d, idiomaespanol3d, idiomaingles3d, subtituloespanol3d, subtituloingles3d, estatus, rutavideo, sinopsis, H.ciudad FROM peliculas S INNER JOIN horarios H ON S.id_pelicula = H.id_pelicula WHERE estatus='1' and fecha='$fechaActual' and hora>='$horaActual' and H.ciudad='$Pciudad' and id_sucursal='$IDTienda' ORDER BY S.id_pelicula, hora");
 
 								while ($datos=pg_fetch_array($result)) {
