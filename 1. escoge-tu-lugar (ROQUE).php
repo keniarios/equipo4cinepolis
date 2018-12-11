@@ -27,10 +27,8 @@
 
 	//ASIENTOS
 	$asientos = $Cedad3era + $Cadulto + $Cninos;
-	// ---------------------------- MODIFICACIÓN ADRIÁN ----------------------------
-	$ocupados = pg_query("SELECT asientos_seleccionados FROM ventas WHERE id_horario=$id_horario;");
-	//$ocupados = "b01,b02,b03,b04,b05";
-	// **************************** MODIFICACIÓN ADRIÁN ****************************
+	$ocupados = "b01,b02,b03,b04,b05";
+
 	//SELECCIONAR DATOS DE LA PELICULA
 	$Timagen = pg_query("SELECT horarios.id_pelicula, horarios.hora, horarios.fecha, peliculas.imagen, peliculas.nombreoriginal, altasucursal.nombre FROM horarios INNER JOIN peliculas ON horarios.id_pelicula = peliculas.id_pelicula INNER JOIN altasucursal ON horarios.id_sucursal = altasucursal.id_sucursal  WHERE horarios.id_horario=$id_horario;");
 
@@ -104,7 +102,6 @@ $(document).ready(function(){
 	}
 })
 
-
 var limite = <?php echo $asientos; ?>;
 var last = [];
 var seleccionados = 0;
@@ -149,36 +146,9 @@ function validacion(objeto)
 				
 			}
 			$("#asientosSeleccionados").val(asientos);
-
 		}
 	}
 	
-}
-
-var Cedad3era =  <?php echo $Cedad3era; ?>;
-var Cadulto =  <?php echo $Cadulto; ?>;
-var Cninos =  <?php echo $Cninos; ?>;
-
-
-function asignarasientostipo(asientos){
-	var arrayAsignados = asientos.split(",");
-	var asientosEdad3ra = "";
-	var asientosAdulto = "";
-	var asientosNinos = "";
-	for (var i = 0; i < arrayAsignados.length; i++) {
-		if (i < Cedad3era) {
-			asientosEdad3ra += arrayAsignados[i]
-		}
-		else if (i < Cedad3era + Cadulto) {
-			asientosAdulto += arrayAsignados[i]
-		}
-		else if (i < Cedad3era + Cadulto + Cninos) {
-			asientosNinos += arrayAsignados[i]
-		}
-	}
-	$("#asientosAdultos").val(asientosEdad3ra);
-	$("#asientosNinos").val(asientosAdulto);
-	$("#Cadulto").val(asientosNinos);
 }
 </script> 
 
@@ -345,10 +315,6 @@ function asignarasientostipo(asientos){
 	}
 ?>
 			<input type="hidden" name="asientosSeleccionados" id="asientosSeleccionados">
-
-			<input type="hidden" name="asientosAdultos" id="asientosAdultos">
-			<input type="hidden" name="asientosNinos" id="asientosNinos">
-			<input type="hidden" name="asientos3raedad" id="Cadulto">
 			<div class="container">
 			<section>
 				<article>
