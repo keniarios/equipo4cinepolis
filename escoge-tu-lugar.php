@@ -27,7 +27,7 @@
 
 	//ASIENTOS
 	$asientos = $Cedad3era + $Cadulto + $Cninos;
-	$ocupados = "b01,b02,b03,b04,b05";
+	//$ocupados = "b01,b02,b03,b04,b05";
 
 	//SELECCIONAR DATOS DE LA PELICULA
 	$Timagen = pg_query("SELECT horarios.id_pelicula, horarios.hora, horarios.fecha, peliculas.imagen, peliculas.nombreoriginal, altasucursal.nombre FROM horarios INNER JOIN peliculas ON horarios.id_pelicula = peliculas.id_pelicula INNER JOIN altasucursal ON horarios.id_sucursal = altasucursal.id_sucursal  WHERE horarios.id_horario=$id_horario;");
