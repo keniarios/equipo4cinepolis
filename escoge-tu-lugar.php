@@ -335,16 +335,16 @@ function asignarasientostipo(asientos){
 	
 	<!-- Fin de proceso de compra -->
 
-
-<?php //echo "<form id='frm' action='inicia-sesion.php?id_horario=$id_horario&edad3era=$Cedad3era&precioTotal3raEdad=$precioTotal3raEdad&adulto=$Cadulto&precioTotalAdulto=$precioTotalAdulto&ninos=$Cninos&precioTotalNino=$precioTotalNino' method='POST'>";?>
 <?php 
-	if(!isset($_SESSION['id_cinepolisid'])) 
+	/*if(!isset($_SESSION['id_cinepolisid'])) 
 	{
 		echo "<form id='frm' action='inicia-sesion.php' method='POST'>";
 	}
 	else{
 		echo "<form id='frm' action='haztupago.php' method='POST'>";
 	}
+	*/
+	echo "<form id='frm' action='valores_inicia-sesion.php' method='POST'>";
 ?>
 			<input type="hidden" name="asientosSeleccionados" id="asientosSeleccionados">
 

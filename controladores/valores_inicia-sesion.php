@@ -17,5 +17,11 @@
 
     echo $asientos.' '.$asientosseleccionadosadultos.' '.$asientosseleccionadosniños.' '.$asientosseleccionados3raedad;
 
-	//header("Location: ../inicia-sesion.php");
+	/*if(!isset($_SESSION['id_cinepolisid'])) 
+	{
+		header("Location: ../inicia-sesion.php");
+	}
+	else{
+		header("Location: ../haztupago.php");
+	}*/
 ?>
