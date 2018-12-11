@@ -10,5 +10,12 @@
 	$_SESSION['asientosNinos'] = $_POST["asientosNinos"];
     $_SESSION['asientos3raedad'] = $_POST["asientos3raedad"];
 
-	header("Location: ../inicia-sesion.php");
+    $asientos = $_SESSION['asientos'];
+	$asientosseleccionadosadultos = $_SESSION['asientosAdultos'];
+	$asientosseleccionadosniños = $_SESSION['asientosNinos'];
+	$asientosseleccionados3raedad = $_SESSION['asientos3raedad'];
+
+    echo $asientos.' '.$asientosseleccionadosadultos.' '.$asientosseleccionadosniños.' '.$asientosseleccionados3raedad;
+
+	//header("Location: ../inicia-sesion.php");
 ?>
