@@ -227,7 +227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div id="wrapper" class="wrapper" style="left: 0%;">
 
 		<!--HASTA AQUI BORRAR Y EL SLIDE QUE ESTA DEBAJO DEL encabezado.php-->
-		<?php include('header/encabezado.php'); ?>
+		<?php //include('header/encabezado.php'); ?>
 
 		<!-- SLIDE -->
 		<?php include('slide/slide.php'); ?>
