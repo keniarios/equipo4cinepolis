@@ -22,6 +22,10 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 	$precioTotalNino = $_SESSION['precioTotalNino'];
 	$PrecioTotal = $precioTotal3raEdad + $precioTotalAdulto + $precioTotalNino;
 
+	$as1 = $_SESSION['asientos'];
+	$asadultos = $_SESSION['asientosAdultos'];
+	$asniños = $_SESSION['asientosNinos'];
+    $as3ra = $_SESSION['asientos3raedad'];
 
 
 	$CiudadSucursalHeader = pg_query("SELECT nombre, ALS.ciudad FROM altasucursal ALS INNER JOIN HORARIOS H ON ALS.id_sucursal=H.id_sucursal and id_horario='$id_horario'");
@@ -392,8 +396,7 @@ echo"
 		                                } 
 		                                $m = genMonth_Text($m); 
 
-		                                $diames = "$d de $m";                                              
-		                            
+		                                $diames = "$d de $m";
 		                                echo "
 		                                    <p><span id='visOrderTracker_lblCinema' class='DetailsSubHeader'>Cine</span> 
 		                                    <em><span id='visOrderTracker_txtCinemaDetails' class='DetailsText'>$nombresucursal</span></em></p>
@@ -405,6 +408,10 @@ echo"
 		                                    <em><span id='visOrderTracker_txtSessionTimeDetails' class='DetailsText'>$hora</span></em></p>
 		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader' style='display: none;'>Sala</span></span>
 		                                    <em><span id='visOrderTracker_txtScreenDetails' class='DetailsText' style='display: none;'>$nombreSala</span></em></p>
+		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$as1</span></span>
+		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$asadultos</span></span>
+		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$asniños</span></span>
+		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$as3ra</span></span>
 		                                ";
 		                            }
 		                        ?>
