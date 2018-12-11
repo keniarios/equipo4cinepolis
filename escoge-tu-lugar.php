@@ -28,7 +28,7 @@
 	//ASIENTOS
 	$asientos = $Cedad3era + $Cadulto + $Cninos;
 	// ---------------------------- MODIFICACIÓN ADRIÁN ----------------------------
-	$ocupados = pg_query("SELECT asientos_seleccionados FROM ventas WHERE id_horario=$id_horario;");
+	$ocupados = pg_query("SELECT asientos_seleccionados FROM ventas WHERE id_horario='$id_horario'");
 	//$ocupados = "b01,b02,b03,b04,b05";
 	// **************************** MODIFICACIÓN ADRIÁN ****************************
 	//SELECCIONAR DATOS DE LA PELICULA
