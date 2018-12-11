@@ -405,13 +405,14 @@ echo"
 		                                    <p><span id='visOrderTracker_lblSessionDate' class='DetailsSubHeader'>Fecha</span>
 		                                    <em><span id='visOrderTracker_txtSessionDateDetails' class='DetailsText'>$dialetra $diames</span></em></p>
 		                                    <p><span id='visOrderTracker_lblSessionTime' class='DetailsSubHeader'>Función</span>
+		                                    <span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$as1</span></span>
+		                                    <span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$asadultos</span></span>
+		                                    <span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$asniños</span></span>
+		                                    <span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$as3ra</span></span>
 		                                    <em><span id='visOrderTracker_txtSessionTimeDetails' class='DetailsText'>$hora</span></em></p>
 		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader' style='display: none;'>Sala</span></span>
 		                                    <em><span id='visOrderTracker_txtScreenDetails' class='DetailsText' style='display: none;'>$nombreSala</span></em></p>
-		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$as1</span></span>
-		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$asadultos</span></span>
-		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$asniños</span></span>
-		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader'>$as3ra</span></span>
+		                                    
 		                                ";
 		                            }
 		                        ?>
