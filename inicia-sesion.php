@@ -22,12 +22,6 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 	$precioTotalNino = $_SESSION['precioTotalNino'];
 	$PrecioTotal = $precioTotal3raEdad + $precioTotalAdulto + $precioTotalNino;
 
-	$as1 = $_SESSION['asientos'];
-	$asadultos = $_SESSION['asientosAdultos'];
-	$asniños = $_SESSION['asientosNinos'];
-    $as3ra = $_SESSION['asientos3raedad'];
-
-
 	$CiudadSucursalHeader = pg_query("SELECT nombre, ALS.ciudad FROM altasucursal ALS INNER JOIN HORARIOS H ON ALS.id_sucursal=H.id_sucursal and id_horario='$id_horario'");
 	$DatosSucursalHeader = pg_fetch_array($CiudadSucursalHeader);
 	//Almacenamos el nombre de usuario en una variable de sesión usuario
@@ -396,7 +390,8 @@ echo"
 		                                } 
 		                                $m = genMonth_Text($m); 
 
-		                                $diames = "$d de $m";
+		                                $diames = "$d de $m";                                              
+		                            
 		                                echo "
 		                                    <p><span id='visOrderTracker_lblCinema' class='DetailsSubHeader'>Cine</span> 
 		                                    <em><span id='visOrderTracker_txtCinemaDetails' class='DetailsText'>$nombresucursal</span></em></p>
@@ -405,14 +400,9 @@ echo"
 		                                    <p><span id='visOrderTracker_lblSessionDate' class='DetailsSubHeader'>Fecha</span>
 		                                    <em><span id='visOrderTracker_txtSessionDateDetails' class='DetailsText'>$dialetra $diames</span></em></p>
 		                                    <p><span id='visOrderTracker_lblSessionTime' class='DetailsSubHeader'>Función</span>
-		                                    <span><span id='visOrderTracker_lblSessionTime' class='DetailsSubHeader'>$as1</span></span>
-		                                    <span><span id='visOrderTracker_lblSessionTime' class='DetailsSubHeader'>$asadultos</span></span>
-		                                    <span><span id='visOrderTracker_lblSessionTime' class='DetailsSubHeader'>$asniños</span></span>
-		                                    <span><span id='visOrderTracker_lblSessionTime' class='DetailsSubHeader'>$as3ra</span></span>
 		                                    <em><span id='visOrderTracker_txtSessionTimeDetails' class='DetailsText'>$hora</span></em></p>
 		                                    <p><span><span id='visOrderTracker_lblScreen' class='DetailsSubHeader' style='display: none;'>Sala</span></span>
 		                                    <em><span id='visOrderTracker_txtScreenDetails' class='DetailsText' style='display: none;'>$nombreSala</span></em></p>
-		                                    
 		                                ";
 		                            }
 		                        ?>
