@@ -15,13 +15,6 @@ include ('../bd/conexion.php'); $conexion = conectarBD();
 	$precioTotalAdulto = $_SESSION['precioTotalAdulto'];
 	$precioTotalNino = $_SESSION['precioTotalNino'];
 
-	/*$id_horario = $_GET['id_horario'];
-	$Cedad3era = $_GET['edad3era'];
-	$Cadulto = $_GET['adulto'];
-	$Cninos = $_GET['ninos'];
-	$precioTotal3raEdad = $_GET['precioTotal3raEdad'];
-	$precioTotalAdulto = $_GET['precioTotalAdulto'];
-	$precioTotalNino = $_GET['precioTotalNino'];*/
 
 	$Total = $precioTotal3raEdad + $precioTotalAdulto + $precioTotalNino;
 

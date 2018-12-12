@@ -9,6 +9,12 @@
 	$_SESSION['total'] = 0;
 	$id_tarjeta = 0;
 	$PrecioTotal = 0;
+	$_SESSION['asientos3raedad'] = "";
+	$_SESSION['asientosAdultos'] = "";
+	$_SESSION['asientosNinos'] = "";
+	$asientosseleccionados3raedad = "";
+	$asientosseleccionadosadultos = "";
+	$asientosseleccionadosniños = "";
 	if(!isset($_SESSION['id_horario'])) 
 	{
 	  header('Location: index.php');

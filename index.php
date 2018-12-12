@@ -34,6 +34,9 @@
 	$PrecioTotal = 0;
 	$nombreciudadHeader = "";
 	$nombresucursalHeader = "";
+	$asientosseleccionados3raedad = "";
+	$asientosseleccionadosadultos = "";
+	$asientosseleccionadosniños = "";
 ?>
 <!DOCTYPE html>
 <html>
