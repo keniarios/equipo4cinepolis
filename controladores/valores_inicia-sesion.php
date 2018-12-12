@@ -16,7 +16,7 @@
 	$asientosseleccionados3raedad = $_SESSION['asientos3raedad'];
 
     //echo 'ASIENTOS: '.$asientos;
-    echo 'ASIENTOS: '.$asientos.'<br>';
+    //echo 'ASIENTOS: '.$asientos.'<br>';
 
     echo 'A.3raedad: '.$asientosseleccionados3raedad.'<br>';
 
