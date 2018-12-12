@@ -393,7 +393,7 @@
 			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemPoints' class='DetailsText'></span>
 			                                    </td>
 			                                    <td class='OrderMisc'>
-			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText'>$asientosseleccionadosniños</span>
+			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText' style='text-transform: uppercase;'>$asientosseleccionadosniños</span>
 			                                    </td>
 			                                </tr>
 		                        			";
