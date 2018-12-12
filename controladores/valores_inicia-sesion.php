@@ -18,9 +18,9 @@
     //echo 'ASIENTOS: '.$asientos;
     echo 'A.Adultos: '.$asientosseleccionadosadultos.'<br>';
 
-    echo 'A.Niños: '.$asientosseleccionadosniños;
+    echo 'A.Niños: '.$asientosseleccionadosniños.'<br>';
 
-    echo 'A. 3raedad: '.$asientosseleccionados3raedad;
+    echo 'A. 3raedad: '.$asientosseleccionados3raedad.'<br>';
 
 	/*if(!isset($_SESSION['id_cinepolisid'])) 
 	{
