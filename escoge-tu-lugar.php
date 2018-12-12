@@ -190,7 +190,7 @@ function asignarasientostipo(asientos){
 	var asientosNinos = "";
 	for (var i = 0; i < arrayAsignados.length; i++) {
 		if (i< Cedad3era) {
-			asientosEdad3ra += arrayAsignados[i]
+			asientosEdad3ra += arrayAsignados[i] + ',';
 		}
 		else if (i >= Cedad3era && i < Cedad3era + Cadulto) {
 			asientosAdulto += arrayAsignados[i]
