@@ -344,7 +344,7 @@ function asignarasientostipo(asientos){
 		echo "<form id='frm' action='haztupago.php' method='POST'>";
 	}
 	*/
-	echo "<form id='frm' action='valores_inicia-sesion.php' method='POST'>";
+	echo "<form id='frm' action='controladores/valores_inicia-sesion.php' method='POST'>";
 ?>
 			<input type="hidden" name="asientosSeleccionados" id="asientosSeleccionados">
 
