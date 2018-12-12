@@ -183,7 +183,7 @@ var Cninos =  <?php echo $Cninos; ?>;
 	$("#asientosNinos").val(asientosAdulto);
 	$("#Cadulto").val(asientosNinos);
 }*/
-function asignarasientostipo(asientos){
+/*function asignarasientostipo(asientos){
 	var arrayAsignados = asientos.split(",");
 	var asientosEdad3ra = "";
 	var asientosAdulto = "";
@@ -197,6 +197,27 @@ function asignarasientostipo(asientos){
 		}
 		else if (i >= Cedad3era + Cadulto && i < Cedad3era + Cadulto + Cninos) {
 			asientosNinos += arrayAsignados[i]
+		}
+	}
+	$("#asientos3raedad").val(asientosEdad3ra);
+	$("#asientosAdultos").val(asientosAdulto);
+	$("#asientosNinos").val(asientosNinos);
+}*/
+
+function asignarasientostipo(asientos){
+	var arrayAsignados = asientos.split(",");
+	var asientosEdad3ra = "";
+	var asientosAdulto = "";
+	var asientosNinos = "";
+	for (var i = 0; i < arrayAsignados.length; i++) {
+		if (i< Cedad3era) {
+			asientosEdad3ra += arrayAsignados[i] + ",";
+		}
+		else if (i >= Cedad3era && i < Cedad3era + Cadulto) {
+			asientosAdulto += arrayAsignados[i] + ",";
+		}
+		else if (i >= Cedad3era + Cadulto && i < Cedad3era + Cadulto + Cninos) {
+			asientosNinos += arrayAsignados[i] + ",";
 		}
 	}
 	$("#asientos3raedad").val(asientosEdad3ra);
