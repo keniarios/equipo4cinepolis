@@ -12,7 +12,7 @@
 	$asientosseleccionadosniños = $_POST["asientosNinos"];
     
 
-	$asientosseleccionados3raedad = substr($asientosseleccionados3raedad, 0, -1);}
+	$asientosseleccionados3raedad = substr($asientosseleccionados3raedad, 0, -1);
 	$asientosseleccionadosadultos = substr($asientosseleccionadosadultos, 0, -1);
 	$asientosseleccionadosniños = substr($asientosseleccionadosniños, 0, -1);
 
