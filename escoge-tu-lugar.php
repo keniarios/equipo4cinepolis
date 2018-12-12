@@ -150,6 +150,7 @@ function validacion(objeto)
 				}
 				
 			}
+			asignarasientostipo(asientos);
 			$("#asientosSeleccionados").val(asientos);
 
 		}
