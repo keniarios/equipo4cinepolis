@@ -20,6 +20,11 @@
 	$precioTotalAdulto = $_SESSION['precioTotalAdulto'];
 	$precioTotalNino = $_SESSION['precioTotalNino'];
 
+	//asientos
+	$asientosseleccionados3raedad = $_SESSION['asientos3raedad'];
+	$asientosseleccionadosadultos = $_SESSION['asientosAdultos'];
+	$asientosseleccionadosniños = $_SESSION['asientosNinos'];
+
 
 	$PrecioTotal = $precioTotal3raEdad + $precioTotalAdulto + $precioTotalNino;
 
@@ -349,7 +354,7 @@
 			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemPoints' class='DetailsText'></span>
 			                                    </td>
 			                                    <td class='OrderMisc'>
-			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText'>B1</span>
+			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText'>$asientosseleccionados3raedad</span>
 			                                    </td>
 			                                </tr>
 		                        			";
@@ -369,7 +374,7 @@
 			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemPoints' class='DetailsText'></span>
 			                                    </td>
 			                                    <td class='OrderMisc'>
-			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText'>B2</span>
+			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText'>$asientosseleccionadosadultos</span>
 			                                    </td>
 			                                </tr>
 		                        			";
@@ -388,7 +393,7 @@
 			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemPoints' class='DetailsText'></span>
 			                                    </td>
 			                                    <td class='OrderMisc'>
-			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText'>B3</span>
+			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText'>$asientosseleccionadosniños</span>
 			                                    </td>
 			                                </tr>
 		                        			";
