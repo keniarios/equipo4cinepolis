@@ -4,16 +4,29 @@
 	{
 	  header('Location: ../index.php');
 	}
-	//Almacenamos el nombre de usuario en una variable de sesión usuario
-	$_SESSION['asientos'] = $_POST["asientos"];
-	$_SESSION['asientosAdultos'] = $_POST["asientosAdultos"];
-	$_SESSION['asientosNinos'] = $_POST["asientosNinos"];
-    $_SESSION['asientos3raedad'] = $_POST["asientos3raedad"];
+	
 
-    $asientos = $_SESSION['asientos'];
-	$asientosseleccionadosadultos = $_SESSION['asientosAdultos'];
+	//$_SESSION['asientos'] = $_POST["asientos"];
+	$asientosseleccionados3raedad = $_POST["asientos3raedad"];
+	$asientosseleccionadosadultos = $_POST["asientosAdultos"];
+	$asientosseleccionadosniños = $_POST["asientosNinos"];
+    
+
+	$asientosseleccionados3raedad = substr($asientosseleccionados3raedad, 0, -1);}
+	$asientosseleccionadosadultos = substr($asientosseleccionadosadultos, 0, -1);
+	$asientosseleccionadosniños = substr($asientosseleccionadosniños, 0, -1);
+
+
+	//$_SESSION['asientos'] = $_POST["asientos"];
+	$_SESSION['asientos3raedad'] = $asientosseleccionados3raedad;
+	$_SESSION['asientosAdultos'] = $asientosseleccionadosadultos;
+	$_SESSION['asientosNinos'] = $asientosseleccionadosniños;
+    
+
+    //$asientos = $_SESSION['asientos'];
+	/*$asientosseleccionadosadultos = $_SESSION['asientosAdultos'];
 	$asientosseleccionadosniños = $_SESSION['asientosNinos'];
-	$asientosseleccionados3raedad = $_SESSION['asientos3raedad'];
+	$asientosseleccionados3raedad = $_SESSION['asientos3raedad'];*/
 
     //echo 'ASIENTOS: '.$asientos;
     //echo 'ASIENTOS: '.$asientos.'<br>';

@@ -219,7 +219,6 @@ function asignarasientostipo(asientos){
 		else if (i >= Cedad3era + Cadulto && i < Cedad3era + Cadulto + Cninos) {
 			asientosNinos += arrayAsignados[i] + ",";
 		}
-	}
 	$("#asientos3raedad").val(asientosEdad3ra);
 	$("#asientosAdultos").val(asientosAdulto);
 	$("#asientosNinos").val(asientosNinos);
