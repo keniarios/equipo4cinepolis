@@ -17,6 +17,11 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 	$id_tarjeta = $_SESSION['id_tarjeta'];
 	$PrecioTotal = $_SESSION['total'];
 
+	//asientos
+	$asientosseleccionados3raedad = $_SESSION['asientos3raedad'];
+	$asientosseleccionadosadultos = $_SESSION['asientosAdultos'];
+	$asientosseleccionadosniños = $_SESSION['asientosNinos'];
+
 	$CiudadSucursalHeader = pg_query("SELECT nombre, ALS.ciudad FROM altasucursal ALS INNER JOIN HORARIOS H ON ALS.id_sucursal=H.id_sucursal and id_horario='$id_horario'");
 	$DatosSucursalHeader = pg_fetch_array($CiudadSucursalHeader);
 	//Almacenamos el nombre de usuario en una variable de sesión usuario
@@ -338,7 +343,7 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemPoints' class='DetailsText'></span>
 			                                    </td>
 			                                    <td class='OrderMisc'>
-			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText'>B1</span>
+			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText' style='text-transform: uppercase;'>$asientosseleccionados3raedad</span>
 			                                    </td>
 			                                </tr>
 		                        			";
@@ -358,7 +363,7 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemPoints' class='DetailsText'></span>
 			                                    </td>
 			                                    <td class='OrderMisc'>
-			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText'>B2</span>
+			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText' style='text-transform: uppercase;'>$asientosseleccionadosadultos</span>
 			                                    </td>
 			                                </tr>
 		                        			";
@@ -377,7 +382,7 @@ include ('bd/conexion.php'); $conexion = conectarBD();
 			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemPoints' class='DetailsText'></span>
 			                                    </td>
 			                                    <td class='OrderMisc'>
-			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText'>B3</span>
+			                                    	<span id='visOrderSummary_rptShowtimeList__ctl0_rptItemList__ctl1_txtItemMisc' class='DetailsText' style='text-transform: uppercase;'>$asientosseleccionadosniños</span>
 			                                    </td>
 			                                </tr>
 		                        			";
