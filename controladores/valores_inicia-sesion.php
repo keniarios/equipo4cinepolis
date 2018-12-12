@@ -15,14 +15,7 @@
 	$asientosseleccionadosniños = $_SESSION['asientosNinos'];
 	$asientosseleccionados3raedad = $_SESSION['asientos3raedad'];
 
-    //echo $asientos.' '.$asientosseleccionadosadultos.' '.$asientosseleccionadosniños.' '.$asientosseleccionados3raedad;
-
-
-	echo "
-    <script languaje='javascript'>
-    	alert('$asientos, $asientosseleccionadosadultos, $asientosseleccionadosniños, $asientosseleccionados3raedad');
-    </script>
-    ";
+    echo $asientos.' '.$asientosseleccionadosadultos.' '.$asientosseleccionadosniños.' '.$asientosseleccionados3raedad;
 
 	/*if(!isset($_SESSION['id_cinepolisid'])) 
 	{
