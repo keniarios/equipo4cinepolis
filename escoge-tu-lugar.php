@@ -371,7 +371,7 @@ function asignarasientostipo(asientos){
 
 			<input type="hidden" name="asientosAdultos" id="asientosAdultos">
 			<input type="hidden" name="asientosNinos" id="asientosNinos">
-			<input type="hidden" name="asientos3raedad" id="Cadulto">
+			<input type="hidden" name="asientos3raedad" id="asientos3raedad">
 			<div class="container">
 			<section>
 				<article>
