@@ -377,16 +377,7 @@ function asignarasientostipo(asientos){
 	
 	<!-- Fin de proceso de compra -->
 
-<?php 
-	/*if(!isset($_SESSION['id_cinepolisid'])) 
-	{
-		echo "<form id='frm' action='inicia-sesion.php' method='POST'>";
-	}
-	else{
-		echo "<form id='frm' action='haztupago.php' method='POST'>";
-	}
-	*/
-?>
+
 	<form id='frm' action='controladores/valores_inicia-sesion.php' method='POST'>
 			<input type="hidden" name="asientosSeleccionados" id="asientosSeleccionados">
 

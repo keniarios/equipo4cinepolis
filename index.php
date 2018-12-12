@@ -19,6 +19,9 @@
 	$_SESSION['total'] = 0;
 	$_SESSION['nombre'] = "";
 	$_SESSION['ciudad'] = "";
+	$_SESSION['asientos3raedad'] = "";
+	$_SESSION['asientosAdultos'] = "";
+	$_SESSION['asientosNinos'] = "";
 
 	$id_horario = 0;
 	$Cedad3era = 0;
