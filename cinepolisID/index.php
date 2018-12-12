@@ -4,13 +4,13 @@ if(!isset($_SESSION['id_cinepolisid']))
 {
   header('Location: ../index.php');
 }
-	$_SESSION['id_horario'] = 0; $_SESSION['edad3era'] = 0;	$_SESSION['adulto'] = 0;$_SESSION['ninos'] = 0;	$_SESSION['precioTotal3raEdad'] = 0;$_SESSION['precioTotalAdulto'] = 0;	$_SESSION['precioTotalNino'] = 0;$_SESSION['id_tarjeta'] = 0;$_SESSION['total'] = 0;$_SESSION['ciudad'] = "";$id_horario = 0;$Cedad3era = 0;$Cadulto = 0;$Cninos = 0;$precioTotal3raEdad = 0;$precioTotalAdulto = 0;$precioTotalNino = 0;$id_tarjeta = 0;
+	$_SESSION['id_horario'] = 0; $_SESSION['edad3era'] = 0;	$_SESSION['adulto'] = 0;$_SESSION['ninos'] = 0;	$_SESSION['precioTotal3raEdad'] = 0;$_SESSION['precioTotalAdulto'] = 0;	$_SESSION['precioTotalNino'] = 0;$_SESSION['id_tarjeta'] = 0;$_SESSION['total'] = 0;$_SESSION['ciudad'] = "";$id_horario = 0;$Cedad3era = 0;$Cadulto = 0;$Cninos = 0;$precioTotal3raEdad = 0;$precioTotalAdulto = 0;$precioTotalNino = 0;$id_tarjeta = 0;$_SESSION['nombre'] = "";
 	$PrecioTotal = 0;$nombreciudadHeader = "";$nombresucursalHeader = "";
 
 	include ('../bd/conexion.php'); $conexion = conectarBD(); 
 
 	$id_cinepolisid = $_SESSION['id_cinepolisid'];
-	$nombre = $_SESSION['nombre'];
+	$nombre = $_SESSION['nombreUsuarioLogeado'];
 	$apellidopaterno = $_SESSION['apellidopaterno'];
 	$apellidomaterno = $_SESSION['apellidomaterno'];
 	$correo = $_SESSION['correo'];

@@ -19,7 +19,7 @@ include ('../../bd/conexion.php'); $conexion = conectarBD();
 
 	$result = pg_query($query);
 
-	$_SESSION['nombre'] = $nombre;
+	$_SESSION['nombreUsuarioLogeado'] = $nombre;
 	$_SESSION['apellidopaterno'] = $appaterno;
 	$_SESSION['apellidomaterno'] = $apmaterno;
 	$_SESSION['tarjetaclub'] = $nombre;

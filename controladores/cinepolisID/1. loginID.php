@@ -15,7 +15,7 @@ if($row = pg_fetch_array($result))
         session_start();
         //Almacenamos el nombre de usuario en una variable de sesión usuario
         $_SESSION['id_cinepolisid'] = $row["id_cinepolisid"];
-    		$_SESSION['nombre'] = $row["nombre"];
+    		$_SESSION['nombreUsuarioLogeado'] = $row["nombre"];
     		$_SESSION['apellidopaterno'] = $row["apellidopaterno"];
     		$_SESSION['apellidomaterno'] = $row["apellidomaterno"];
     		$_SESSION['correo'] = $row["correo"];
