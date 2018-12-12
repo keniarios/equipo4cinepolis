@@ -15,7 +15,10 @@
 	$asientosseleccionadosniños = $_SESSION['asientosNinos'];
 	$asientosseleccionados3raedad = $_SESSION['asientos3raedad'];
 
-    echo $asientos.' '.$asientosseleccionadosadultos.' '.$asientosseleccionadosniños.' '.$asientosseleccionados3raedad;
+    echo 'ASIENTOS: '.$asientos;
+    echo 'A.Adultos: '.$asientosseleccionadosadultos;
+    echo 'A.Niños: '.$asientosseleccionadosniños;
+    echo 'A. 3raedad: '.$asientosseleccionados3raedad;
 
 	/*if(!isset($_SESSION['id_cinepolisid'])) 
 	{
