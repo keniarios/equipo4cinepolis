@@ -27,9 +27,9 @@ $telefono = $_SESSION['telefono'];
 	<link rel='stylesheet' href='../css/bootstrap.min.css'>
 	<link rel='stylesheet' type='text/css' href='../css/estilo.css'>
 	
-	<script src="../js/misfunciones.js" type="text/javascript" charset="utf-8" async defer></script>
-	<link rel="stylesheet" href="../css/jquery-ui.css">
-  	<script src="../js/jquery-ui.js"></script>
+	<script src="../../js/misfunciones.js" type="text/javascript" charset="utf-8" async defer></script>
+	<link rel="stylesheet" href="../../css/jquery-ui.css">
+  	<script src="../../js/jquery-ui.js"></script>
 
 </head>
 <body>
