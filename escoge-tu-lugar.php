@@ -31,12 +31,26 @@
 	//DEFINIR EL TOTAL DEL PRECIO
 	$PrecioTotal = $precioTotal3raEdad + $precioTotalAdulto + $precioTotalNino;
 
-	//ASIENTOS
+	//cantidad asientos
 	$asientos = $Cedad3era + $Cadulto + $Cninos;
 	// ---------------------------- MODIFICACIÓN ADRIÁN ----------------------------
 	$Result_ocupados = pg_query("SELECT asientos_seleccionados FROM ventas WHERE id_horario='$id_horario'");
-	$Datos_ocupados = pg_fetch_array($Result_ocupados);
-	$ocupados = $Datos_ocupados['asientos_seleccionados'];
+
+	$ocupados = "";
+	$c=0;
+	while ($Datos_ocupados=pg_fetch_array($Result_ocupados)) {
+		$Unir_ocupados = $Datos_ocupados['asientos_seleccionados'];
+		if ($c==0) {
+			$ocupados = $Unir_ocupados;
+		}else{
+			$ocupados = $ocupados.','.$Unir_ocupados;
+		}
+		$c++;
+		$Unir_ocupados = "";
+	}
+
+	//$Datos_ocupados = pg_fetch_array($Result_ocupados);
+	//$ocupados = $Datos_ocupados['asientos_seleccionados'];
 	//$ocupados = "b01,b02,b03,b04,b05";
 	// **************************** MODIFICACIÓN ADRIÁN ****************************
 	//SELECCIONAR DATOS DE LA PELICULA
