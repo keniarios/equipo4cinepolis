@@ -60,8 +60,17 @@
 	}
 	//$asientos_seleccionados = "b01,b02,b03,b04,b05";
 
+	//obtenemos el saldo actual de la tarjeta
+	$result = pg_query("SELECT dinerodisponible FROM tarjetasbanco WHERE id_tarjeta='$id_tarjeta'");
+	$result_dinerodisponible = pg_fetch_array($result);
+	$DineroDisponible = $result_dinerodisponible['dinerodisponible'];
+	//realizamos la operacion "descontar saldo"
+	$NuevoSaldo = $DineroDisponible - $PrecioTotal;
+	//actualizamos al nuevo saldo
+	$resultado_actualizar = "UPDATE tarjetasbanco SET dinerodisponible='$NuevoSaldo' WHERE id_tarjeta='$id_tarjeta'";
+	pg_query($resultado_actualizar);
 
-
+	//registramos la venta
 	$query = "INSERT INTO ventas (id_horario, id_tarjeta , id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, horacompra, fechacompra, pagototal) 
 	VALUES ('$id_horario', '$id_tarjeta', '$id_cinepolisid', '$asientos_seleccionados', '$Cedad3era', '$Cadulto', '$Cninos', '$precioTotal3raEdad', '$precioTotalAdulto', '$precioTotalNino', '$horaActual', '$fechaActual', '$PrecioTotal')";
 	pg_query($query);
