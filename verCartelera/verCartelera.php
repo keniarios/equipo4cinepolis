@@ -91,7 +91,7 @@
 											";
 
 											//funciones
-											$ValidacionResult = pg_query("SELECT idioma FROM horarios WHERE fecha='$fechaActual' and id_pelicula='$ID' and hora>='$horaActual' GROUP BY 1");
+											$ValidacionResult = pg_query("SELECT idioma FROM horarios WHERE fecha='$fechaActual' and id_pelicula='$ID' and hora>='$horaActual' and id_sucursal='$IDTienda' GROUP BY 1");
 
 											while ($ResultIdioma=pg_fetch_array($ValidacionResult)) {
 														$Idioma = $ResultIdioma['idioma'];
