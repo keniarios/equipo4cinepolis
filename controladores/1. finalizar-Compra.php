@@ -32,32 +32,7 @@
  	$asientosseleccionados3raedad = $_SESSION['asientos3raedad'];
 	$asientosseleccionadosadultos = $_SESSION['asientosAdultos'];
 	$asientosseleccionadosniños = $_SESSION['asientosNinos'];
-
-	if ($asientosseleccionados3raedad == "") {
-		if ($asientosseleccionadosadultos == "") {
-			$asientos_seleccionados = $asientosseleccionadosniños;
-		}
-		elseif ($asientosseleccionadosniños == "") {
-			$asientos_seleccionados = $asientosseleccionadosadultos;
-		}
-		else{
-			$asientos_seleccionados = $asientosseleccionadosadultos.','.$asientosseleccionadosniños;
-		}
-	}//validacion con adultos
-	elseif ($asientosseleccionadosadultos == "") {
-		if ($asientosseleccionadosniños == "") {
-			$asientos_seleccionados = $asientosseleccionados3raedad;
-		}
-		else{
-			$asientos_seleccionados = $asientosseleccionados3raedad.','.$asientosseleccionadosniños;
-		}
-	}//validacion con niños
-	elseif ($asientosseleccionadosniños == "") {
-		$asientos_seleccionados = $asientosseleccionados3raedad.','.$asientosseleccionadosadultos;
-	}
-	else{
-		$asientos_seleccionados = $asientosseleccionados3raedad.','.$asientosseleccionadosadultos.','.$asientosseleccionadosniños;
-	}
+	$asientos_seleccionados = $asientosseleccionados3raedad.','.$asientosseleccionadosadultos.','.$asientosseleccionadosniños;
 	//$asientos_seleccionados = "b01,b02,b03,b04,b05";
 
 
