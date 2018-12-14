@@ -23,6 +23,7 @@
 						      <th scope="col">Duración</th>
 						      <th scope="col">Genero</th>
 						      <th scope="col">Actores</th>
+						      <th scope="col">Estatus</th>
 						    </tr>
 						  </thead>
 						  <tbody>
@@ -42,6 +43,16 @@
 										//$NombreCompleto = $nombre_T . " " . $appaterno_T. " " . $apmaternoo_T;
 										$imgPeliculas = $obj->imagen;
 
+										if ($obj->estatus == 1) {
+											$estatusPelicula = "Estreno";
+										}
+										elseif ($obj->estatus == 2) {
+											$estatusPelicula = "Preventa";
+										}
+										else{
+											$estatusPelicula = "Próximo estreno";
+										}
+
 										echo "
 										  		<tr class='lista'>
 										  			<th scope='row'>$Contador</th>
@@ -51,6 +62,7 @@
 										      		<td>$obj->duracion</td>	
 										      		<td>$obj->genero</td>
 										      		<td>$obj->actores</td>
+										      		<td>$obj->$estatusPelicula</td>
 										      		<td><input type='text' name='IDPelicula' value='$obj->id_pelicula' hidden></td>
 										      		<td width='95' height='79'>";
 
