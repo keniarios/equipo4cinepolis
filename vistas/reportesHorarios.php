@@ -35,11 +35,12 @@ $puesto = $_SESSION['puesto'];
 						  <thead>
 						    <tr>
 						      <th scope="col">ID</th>
+						      <th scope="col">Horario</th>
+						      <th scope="col">Nombre Pelicula</th>
+						      <th scope="col">Idioma</th>
 						      <th scope="col">Nombre Sala</th>
-						      <th scope="col">Nombre Sucursal</th>
+						      <th scope="col">Sucursal</th>
 						      <th scope="col">Ciudad</th>
-						      <th scope="col">Estatus</th>
-						      <th scope="col">Tipo Sala</th>
 						    </tr>
 						  </thead>
 						  <tbody>
@@ -47,20 +48,11 @@ $puesto = $_SESSION['puesto'];
 								try{
 							  		require_once ('../bd/conexion.php'); $conexion = conectarBD();
 									
-									$query = "SELECT id_sala, S.nombre, S.id_sucursal, S.ciudad, S.estatus, tiposala FROM salas S INNER JOIN altasucursal ALS ON S.id_sucursal=ALS.id_sucursal ORDER BY 1";
+									$query = "SELECT id_horario, fecha, hora, titulo, idioma, S.nombre, ALS.id_sucursal, H.ciudad FROM horarios H INNER JOIN peliculas PC ON H.id_pelicula=PC.id_pelicula INNER JOIN salas S ON H.sala=S.id_sala INNER JOIN altasucursal ALS ON H.id_sucursal=ALS.id_sucursal ORDER BY 1";
 									$result = pg_query($query);
 
 									while ($obj = pg_fetch_object($result))
 									{
-										if ($obj->estatus == "1") {
-											$EstatusSala = "Disponible";
-										}
-										elseif ($obj->estatus == "2") {
-											$EstatusSala = "Ocupada";
-										}
-										else{
-											$EstatusSala = "Inhabilitada";
-										}
 										
 										$NombreSala = $obj->nombre;
 
@@ -71,12 +63,13 @@ $puesto = $_SESSION['puesto'];
 
 										echo "
 										  		<tr class='lista'>
-										  			<th>$obj->id_sala</th>
-										  			<td>$NombreSala</td>
+										  			<th>$obj->id_horario</th>
+										  			<td>$obj->titulo</td>
+										  			<td>$obj->idioma</td>
+										  			<td>$obj->fecha  |  $obj->hora</td>
+										  			<td>$obj->nombre</td>
 										      		<td>$V_nombreSucursal</td>
 										      		<td>$obj->ciudad</td>
-										      		<td>$EstatusSala</td>	
-										      		<td>$obj->tiposala</td>
 										    	</tr>
 											";
 										$EstatusSala="";
