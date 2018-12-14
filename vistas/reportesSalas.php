@@ -79,7 +79,7 @@ $puesto = $_SESSION['puesto'];
 										      		<td>$obj->tiposala</td>
 										    	</tr>
 											";
-										$Contador++;
+										$EstatusSala="";
 									}
 								}
 								catch(Exception $e){
