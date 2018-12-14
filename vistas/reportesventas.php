@@ -63,7 +63,7 @@ $puesto = $_SESSION['puesto'];
 											$NombreCompletoCliente = "No Registrado";
 										}
 										else{
-											$query2 = "SELECT nombre, apellidopaterno, apellidomaterno FROM registrocinepolisid WHERE ";
+											$query2 = "SELECT nombre, apellidopaterno, apellidomaterno FROM registrocinepolisid WHERE id_cinepolisid='$obj->id_usuario'";
 											$result2 = pg_query($query2);
 											$dato_result2 = pg_fetch_array($result2);
 
