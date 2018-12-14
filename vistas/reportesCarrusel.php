@@ -48,7 +48,7 @@ $puesto = $_SESSION['puesto'];
 									$result = pg_query("SELECT id_slider, titulo, rutaimagenbanner, rutaimagenmovil, rutaimagenmini, posicion FROM slider ORDER BY 1");
 									//$row = pg_fetch_array($result);
 
-									while ($obj = pg_fetch_object($row))
+									while ($obj = pg_fetch_object($result))
 									{
 										$imgPeliculas = $row['rutaimagenmovil'];
 
