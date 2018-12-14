@@ -46,12 +46,11 @@ $puesto = $_SESSION['puesto'];
 							  		require_once ('../bd/conexion.php'); $conexion = conectarBD();
 									
 									$result = pg_query("SELECT id_slider, titulo, rutaimagenbanner, rutaimagenmovil, rutaimagenmini, posicion FROM slider ORDER BY 1");
-									$row = pg_fetch_array($result);
-
-									$imgPeliculas = $row['rutaimagenmovil'];
+									//$row = pg_fetch_array($result);
 
 									while ($obj = pg_fetch_object($row))
 									{
+										$imgPeliculas = $row['rutaimagenmovil'];
 
 										if ($obj->estatus == 1) {
 											$Estatus = "Activa";
