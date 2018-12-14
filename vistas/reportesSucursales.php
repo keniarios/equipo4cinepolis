@@ -51,12 +51,19 @@ $puesto = $_SESSION['puesto'];
 									while ($obj = pg_fetch_object($result))
 									{
 
+										if ($obj->estatus == 1) {
+											$Estatus = "Activa";
+										}
+										else{
+											$Estatus = "Inactiva";
+										}
+
 										echo "
 										  		<tr class='lista'>
 										  			<th>$obj->id_sucursal</th>
 										  			<td>$obj->nombre</td>
 										  			<td>$obj->ciudad</td>
-										  			<td>$obj->estatus</td>
+										  			<td>$Estatus</td>
 										    	</tr>
 											";
 										$EstatusSala="";
