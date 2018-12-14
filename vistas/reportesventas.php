@@ -31,7 +31,7 @@ $puesto = $_SESSION['puesto'];
 		</div>
 			<div class="col-md-12">
 				<form id="formEditarUsuarios" action="editarUsuario.php" method="post" accept-charset="utf-8">
-					<table class="table" style="font-size: 9pt;">
+					<table class="table" style="font-size: 9pt; text-align: center;">
 						  <thead>
 						    <tr>
 						      <!--id_venta, id_horario, id_tarjeta, id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, horacompra, fechacompra, pagototal-->
