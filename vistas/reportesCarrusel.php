@@ -50,7 +50,7 @@ $puesto = $_SESSION['puesto'];
 
 									while ($obj = pg_fetch_object($result))
 									{
-										$imgPeliculas = $row['rutaimagenmovil'];
+										$imgPeliculas = $obj['rutaimagenmovil'];
 
 										if ($obj->estatus == 1) {
 											$Estatus = "Activa";
