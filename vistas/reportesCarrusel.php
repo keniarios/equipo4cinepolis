@@ -45,7 +45,7 @@ $puesto = $_SESSION['puesto'];
 								try{
 							  		require_once ('../bd/conexion.php'); $conexion = conectarBD();
 									
-									$result = pg_query("SELECT id_slider, titulo, rutaimagenbanner, rutaimagenmovil, rutaimagenmini, posicion FROM slider ORDER BY 1");
+									$result = pg_query("SELECT id_slider, titulo, rutaimagenmovil, posicion FROM slider ORDER BY 1, posicion");
 									//$row = pg_fetch_array($result);
 
 									while ($obj = pg_fetch_object($result))
