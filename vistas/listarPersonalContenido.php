@@ -68,7 +68,7 @@
 
 										      		if ($obj->estatus == 1) {
 										      			echo "
-											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Preventa' style='display:none'>
+											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Preventa' style='display:none'><br/>
 
 											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-primary btn-sm' value='Próximo estreno' style='display:none'>
 										      	
@@ -76,14 +76,14 @@
 										      		}
 										      		elseif ($obj->estatus == 2) {
 										      			echo "
-										      				<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' value='Estreno' style='display:none'></a>
+										      				<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' value='Estreno' style='display:none'></a><br/>
 
 										      				<input type='submit' id='$obj->id_pelicula' class='btn btn-primary btn-sm' value='Próximo estreno' style='display:none'>
 										      				";
 										      		}
 										      		else{
 										      			echo "
-											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' value='Estreno' style='display:none'></a>
+											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' value='Estreno' style='display:none'></a><br/>
 
 											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Preventa' style='display:none'>
 										      				";
