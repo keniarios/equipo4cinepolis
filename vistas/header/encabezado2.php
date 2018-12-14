@@ -162,6 +162,7 @@ $telefono = $_SESSION['telefono'];
 									<a class="dropdown-item" href="reportesHorarios.php" style="color:#feca30;">Horarios</a>
 									<a class="dropdown-item" href="reportesSucursales.php" style="color:#feca30;">Sucursales</a>
 									<a class="dropdown-item" href="reportesPrecios.php" style="color:#feca30;">Precios</a>
+									<a class="dropdown-item" href="reportesCarrusel.php" style="color:#feca30;">Carrusel</a>
 								</div>
 							</div>
 						</ul>
