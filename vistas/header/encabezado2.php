@@ -146,7 +146,7 @@ $telefono = $_SESSION['telefono'];
 									Reportes
 								</li>
 								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black;">
-									<a class="dropdown-item" href="" style="color:#feca30;">Ventas</a>
+									<a class="dropdown-item" href="reportesventas.php" style="color:#feca30;">Ventas</a>
 									<a class="dropdown-item" href="listarPeliculas.php" style="color:#feca30;">Peliculas</a>
 									<a class="dropdown-item" href="listarUsuarios.php" style="color:#feca30;">Usuarios</a>
 									<a class="dropdown-item" href="listarPersonal.php" style="color:#feca30;">Personal</a>
