@@ -47,16 +47,15 @@ $puesto = $_SESSION['puesto'];
 								try{
 							  		require_once ('../bd/conexion.php'); $conexion = conectarBD();
 									
-									$query = "SELECT id_sala, S.nombre, S.id_sucursal, S.ciudad, S.estatus as ES, tiposala FROM salas S INNER JOIN altasucursal ALS ON S.id_sucursal=ALS.id_sucursal ORDER BY 1";
+									$query = "SELECT id_sala, S.nombre, S.id_sucursal, S.ciudad, S.estatus, tiposala FROM salas S INNER JOIN altasucursal ALS ON S.id_sucursal=ALS.id_sucursal ORDER BY 1";
 									$result = pg_query($query);
 
 									while ($obj = pg_fetch_object($result))
 									{
-
-										if ($obj->ES == "1") {
+										if ($obj->estatus == "1") {
 											$EstatusSala = "Disponible";
 										}
-										elseif ($obj->ES == "2") {
+										elseif ($obj->estatus == "2") {
 											$EstatusSala = "Ocupada";
 										}
 										else{
@@ -64,6 +63,7 @@ $puesto = $_SESSION['puesto'];
 										}
 										
 										$NombreSala = $obj->nombre;
+
 										$query2 = "SELECT nombre FROM altasucursal WHERE id_sucursal='$obj->id_sucursal'";
 										$result2 = pg_query($query2);
 										$dato_result2 = pg_fetch_array($result2);
