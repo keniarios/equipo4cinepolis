@@ -50,14 +50,8 @@ $puesto = $_SESSION['puesto'];
 
 									while ($obj = pg_fetch_object($result))
 									{
-										$imgPeliculas = $obj['rutaimagenmovil'];
+										$imgPeliculas = $obj->rutaimagenmovil;
 
-										if ($obj->estatus == 1) {
-											$Estatus = "Activa";
-										}
-										else{
-											$Estatus = "Inactiva";
-										}
 
 										echo "
 										  		<tr class='lista'>
