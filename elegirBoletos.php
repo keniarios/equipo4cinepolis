@@ -43,7 +43,7 @@
 	$Tdatos = pg_query("select horarios.id_horario, horarios.id_pelicula, horarios.hora, horarios.fecha, peliculas.imagen, peliculas.nombreoriginal, altasucursal.nombre, clasificacion, idioma from horarios INNER JOIN peliculas ON horarios.id_pelicula = peliculas.id_pelicula INNER JOIN altasucursal on horarios.id_sucursal = altasucursal.id_sucursal  WHERE horarios.id_horario=$idhorario;");
 
 	//OBTENER PRECIOS
-	$resultHorario = pg_query("SELECT DISTINCT ON (id_precio) id_precio, PB.id_sucursal, tiposala, adultoprimerrango, terceraedadprimerrango, ninosprimerrango, adultosegundorango, terceraedadsegundorango, ninossegundorango FROM precioboletos PB INNER JOIN horarios H ON PB.id_sucursal=H.id_sucursal AND id_horario='$idhorario'");
+	$resultHorario = pg_query("SELECT DISTINCT ON (id_precio) id_precio, PB.id_sucursal, tiposala, adultoprimerrango, terceraedadprimerrango, ninosprimerrango, adultosegundorango, terceraedadsegundorango, ninossegundorango,hora FROM precioboletos PB INNER JOIN horarios H ON PB.id_sucursal=H.id_sucursal AND id_horario='$idhorario'");
 	$datos=pg_fetch_array($resultHorario);
 	$ID_precio = $datos['id_precio'];
 	$ID_sucursal = $datos['id_sucursal'];
@@ -54,9 +54,9 @@
 	$adultosegundorango = $datos['adultosegundorango'];
 	$terceraedadsegundorango = $datos['terceraedadsegundorango'];
 	$ninossegundorango = $datos['ninossegundorango'];
+	$horadePelicula = $datos['hora'];
 
-
-	if ($horaActual >='07:00' AND $horaActual <= "15:00") {
+	if ($horadePelicula >='11:00' AND $horadePelicula <= "15:00") {
 		$Precio3raEdad = $terceraedadprimerrango;
 		$PrecioAdulto = $adultoprimerrango;
 		$PrecioNiños = $ninosprimerrango;

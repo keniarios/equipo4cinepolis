@@ -43,7 +43,7 @@ if (isset($_POST['opcionCiudad']))
 
 			
 
-			$linktrailer = "Vacio";
+			//$linktrailer = "Vacio";
 
 			$query = "INSERT INTO precioboletos (id_sucursal, tiposala, adultoprimerrango, terceraedadprimerrango, ninosprimerrango, adultosegundorango, terceraedadsegundorango, ninossegundorango, nombreciudad) VALUES ('$id_cine', '$tiposala', '$adultoprimerrango', '$terceraedadprimerrango', '$ninosprimerrango', '$adultosegundorango', '$terceraedadsegundorango', '$ninossegundorango','$ciudad')";
 				pg_query($query);

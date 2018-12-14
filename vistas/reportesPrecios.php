@@ -35,9 +35,15 @@ $puesto = $_SESSION['puesto'];
 						  <thead>
 						    <tr>
 						      <th scope="col">ID</th>
-						      <th scope="col">Nombre</th>
+						      <th scope="col">Nombre Sucursal</th>
+						      <th scope="col">Tipo Sala</th>
+						      <th scope="col">Precio 3era Edad (11:00am - 15:00pm)</th>
+						      <th scope="col">Precio Adultos (11:00am - 15:00pm)</th>
+						      <th scope="col">Precio Niños (11:00am - 15:00pm)</th>
+						      <th scope="col">Precio 3era Edad (Despues de las 15:00pm)</th>
+						      <th scope="col">Precio Adultos (Despues de las 15:00pm)</th>
+						      <th scope="col">Precio Niños (Despues de las 15:00pm)</th>
 						      <th scope="col">Ciudad</th>
-						      <th scope="col">Estatus</th>
 						    </tr>
 						  </thead>
 						  <tbody>
@@ -45,7 +51,7 @@ $puesto = $_SESSION['puesto'];
 								try{
 							  		require_once ('../bd/conexion.php'); $conexion = conectarBD();
 									
-									$query = "SELECT id_sucursal, nombre, ciudad, estatus FROM altasucursal ORDER BY 1";
+									$query = "SELECT id_precio, nombre, tiposala, terceraedadprimerrango, adultoprimerrango, ninosprimerrango,terceraedadsegundorango, adultosegundorango, ninossegundorango, nombreciudad FROM precioboletos PB INNER JOIN altasucursal ALS ON PB.id_sucursal = ALS.id_sucursal ORDER BY 1";
 									$result = pg_query($query);
 
 									while ($obj = pg_fetch_object($result))
@@ -60,10 +66,16 @@ $puesto = $_SESSION['puesto'];
 
 										echo "
 										  		<tr class='lista'>
-										  			<th>$obj->id_sucursal</th>
+										  			<th>$obj->id_precio</th>
 										  			<td>$obj->nombre</td>
-										  			<td>$obj->ciudad</td>
-										  			<td>$Estatus</td>
+										  			<td>$obj->tiposala</td>
+										  			<td>$obj->terceraedadprimerrango</td>
+										  			<td>$obj->adultoprimerrango</td>
+										  			<td>$obj->ninosprimerrango</td>
+										  			<td>$obj->terceraedadsegundorango</td>
+										  			<td>$obj->adultosegundorango</td>
+										  			<td>$obj->ninossegundorango</td>
+										  			<td>$obj->nombreciudad</td>
 										    	</tr>
 											";
 									}
