@@ -53,7 +53,7 @@ $puesto = $_SESSION['puesto'];
 								try{
 							  		require_once ('../bd/conexion.php'); $conexion = conectarBD();
 									
-									$query = "SELECT V.id_usuario, fecha, hora, titulo, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, horacompra, fechacompra FROM ventas V INNER JOIN horarios H ON H.id_horario=V.id_horario INNER JOIN peliculas PC ON H.id_pelicula=PC.id_pelicula ORDER BY id_venta";
+									$query = "SELECT V.id_usuario, fecha, hora, titulo, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, horacompra, fechacompra, pagototal FROM ventas V INNER JOIN horarios H ON H.id_horario=V.id_horario INNER JOIN peliculas PC ON H.id_pelicula=PC.id_pelicula ORDER BY id_venta";
 									$result = pg_query($query);
 
 									while ($obj = pg_fetch_object($result))
@@ -76,7 +76,7 @@ $puesto = $_SESSION['puesto'];
 										echo "
 										  		<tr class='lista'>
 										  			<th>$obj->id_venta</th>
-										  			<td>$obj->fecha | $obj->hora</td>
+										  			<td>$obj->fecha  |  $obj->hora</td>
 										      		<td>$obj->titulo</td>
 										      		<td>$NombreCompletoCliente</td>
 										      		<td>$obj->asientos_seleccionados</td>	
@@ -85,6 +85,7 @@ $puesto = $_SESSION['puesto'];
 										      		<td>$obj->cantidadboletosninos</td>
 										      		<td>$obj->horacompra</td>
 										      		<td>$obj->fechacompra</td>
+										      		<td>$ $obj->pagototal</td>
 										    	</tr>
 											";
 										$Contador++;
