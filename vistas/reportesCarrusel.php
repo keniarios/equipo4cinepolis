@@ -50,7 +50,7 @@ $puesto = $_SESSION['puesto'];
 
 									while ($obj = pg_fetch_object($result))
 									{
-										$imgPeliculas = $obj->rutaimagenmovil;
+										$imgPeliculas = $obj->rutaimagenmini;
 
 
 										echo "
