@@ -35,8 +35,8 @@ $puesto = $_SESSION['puesto'];
 						  <thead>
 						    <tr>
 						      <th scope="col">ID</th>
-						      <th scope="col">Nombre</th>
 						      <th scope="col">Imagen</th>
+						      <th scope="col">Nombre</th>
 						      <th scope="col">Posición</th>
 						    </tr>
 						  </thead>
@@ -56,8 +56,8 @@ $puesto = $_SESSION['puesto'];
 										echo "
 										  		<tr class='lista'>
 										  			<th>$obj->id_slider</th>
+										  			<td><img src='../$imgPeliculas'  width='90%' height='203'></td>
 										  			<td>$obj->titulo</td>
-										  			<td><img src='../$imgPeliculas'  width='100%' height='203'></td>
 										  			<td>$obj->posicion</td>
 										    	</tr>
 											";
