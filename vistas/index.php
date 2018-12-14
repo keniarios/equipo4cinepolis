@@ -23,7 +23,9 @@ $puesto = $_SESSION['puesto'];
 
 </head>
 <body style="background-color: #EBECEF;">
-	<?php INCLUDE ('listarPersonalContenido.php'); ?>
+	<?php 
+		INCLUDE ('listarPersonalContenido.php'); 
+	?>
 </body>
 <?php include('footer/footer.php'); ?>
 </html>

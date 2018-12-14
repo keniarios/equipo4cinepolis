@@ -34,7 +34,6 @@ $puesto = $_SESSION['puesto'];
 					<table class="table" style="font-size: 9pt; text-align: center;">
 						  <thead>
 						    <tr>
-						      <!--id_venta, id_horario, id_tarjeta, id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, horacompra, fechacompra, pagototal-->
 						      <th scope="col">ID</th>
 						      <th scope="col">Horario</th>
 						      <th scope="col">Pelicula</th>
@@ -45,7 +44,7 @@ $puesto = $_SESSION['puesto'];
 						      <th scope="col">C/Niños</th>
 						      <th scope="col">Hora</th>
 						      <th scope="col">Fecha</th>
-						      <th scope="col">Pagó</th>
+						      <th scope="col">Precio Final</th>
 						    </tr>
 						  </thead>
 						  <tbody>
