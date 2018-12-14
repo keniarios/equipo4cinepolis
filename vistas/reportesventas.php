@@ -67,9 +67,9 @@ $puesto = $_SESSION['puesto'];
 											$result2 = pg_query($query2);
 											$dato_result2 = pg_fetch_array($result2);
 
-											$V_nombre = $dato_result2('nombre');
-											$V_apellidopaterno = $dato_result2('apellidopaterno');
-											$V_apellidomaterno = $dato_result2('apellidomaterno');
+											$V_nombre = $dato_result2['nombre'];
+											$V_apellidopaterno = $dato_result2['apellidopaterno'];
+											$V_apellidomaterno = $dato_result2['apellidomaterno'];
 											$NombreCompletoCliente = $V_nombre.' '.$V_apellidopaterno.' '.$V_apellidomaterno;
 										}
 
