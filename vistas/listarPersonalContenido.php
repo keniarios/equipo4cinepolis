@@ -89,7 +89,9 @@
 										      				";
 										      		}
 										      		echo "</td>";
-										      		echo "<td width='95' height='79'><input type='button' id='$obj->id_pelicula'  class='btn btn-danger btn-sm' onclick='alertaEliminar(id)' value='Eliminar' style='display: block;'></td>";
+										      		echo "<td width='95' height='79'>
+										      				<a href='eliminarPelicula.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-danger btn-sm' style='display: block;'>Eliminar</a>
+										      			</td>";
 										    	echo "</tr>";
 									}
 								}
