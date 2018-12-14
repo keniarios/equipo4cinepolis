@@ -53,10 +53,10 @@ $puesto = $_SESSION['puesto'];
 									while ($obj = pg_fetch_object($result))
 									{
 
-										if ($obj->id_sala == "1") {
+										if ($obj->tiposala == "1") {
 											$EstatusSala = "Disponible";
 										}
-										elseif ($obj->id_sala == "2") {
+										elseif ($obj->tiposala == "2") {
 											$EstatusSala = "Ocupada";
 										}
 										else{
