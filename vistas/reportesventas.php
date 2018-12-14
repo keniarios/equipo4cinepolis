@@ -45,6 +45,7 @@ $puesto = $_SESSION['puesto'];
 						      <th scope="col">Hora</th>
 						      <th scope="col">Fecha</th>
 						      <th scope="col">Pagó</th>
+						      <th scope="col">hola</th>
 						    </tr>
 						  </thead>
 						  <tbody>
