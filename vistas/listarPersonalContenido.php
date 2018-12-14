@@ -68,29 +68,29 @@
 
 										      		if ($obj->estatus == 1) {
 										      			echo "
-											      			<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-info btn-sm' style='display: block;'>Preventa</a><br/><br/>
+											      			<a href='../controladores/editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-info btn-sm' style='display: block;'>Preventa</a><br/><br/>
 
-											      			<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-primary btn-sm' style='display: block;'>Próximo estreno</a>
+											      			<a href='../controladores/editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-primary btn-sm' style='display: block;'>Próximo estreno</a>
 										      	
 										      			";
 										      		}
 										      		elseif ($obj->estatus == 2) {
 										      			echo "
-										      				<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/><br/>
+										      				<a href='../controladores/editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/><br/>
 
-										      				<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-primary btn-sm' style='display: block;'>Próximo estreno</a>
+										      				<a href='../controladores/editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-primary btn-sm' style='display: block;'>Próximo estreno</a>
 										      				";
 										      		}
 										      		else{
 										      			echo "
-											      			<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/><br/>
+											      			<a href='../controladores/editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/><br/>
 
-											      			<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-info btn-sm' style='display: block;'>Preventa</a>
+											      			<a href='../controladores/editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-info btn-sm' style='display: block;'>Preventa</a>
 										      				";
 										      		}
 										      		echo "</td>";
 										      		echo "<td width='95' height='79'>
-										      				<a href='eliminarPelicula.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-danger btn-sm' style='display: block;'>Eliminar</a>
+										      				<a href='../controladores/eliminarPelicula.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-danger btn-sm' style='display: block;'>Eliminar</a>
 										      			</td>";
 										    	echo "</tr>";
 									}
