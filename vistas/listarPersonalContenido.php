@@ -68,31 +68,29 @@
 
 										      		if ($obj->estatus == 1) {
 										      			echo "
-											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Preventa'><br/>
+											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Preventa' style='display: block;'><br/>
 
-											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-primary btn-sm' value='Próximo estreno'>
+											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-primary btn-sm' value='Próximo estreno' style='display: block;'>
 										      	
 										      			";
 										      		}
 										      		elseif ($obj->estatus == 2) {
 										      			echo "
-										      				<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm'>Estreno</a><br/>
+										      				<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/>
 
-										      				<input type='submit' id='$obj->id_pelicula' class='btn btn-primary btn-sm' value='Próximo estreno'>
+										      				<input type='submit' id='$obj->id_pelicula' class='btn btn-primary btn-sm' value='Próximo estreno' style='display: block;'>
 										      				";
 										      		}
 										      		else{
 										      			echo "
-											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm'>Estreno</a><br/><br/>
+											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/><br/>
 
-											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Preventa'>
+											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Preventa' style='display: block;'>
 										      				";
 										      		}
 										      		echo "</td>";
-										      		echo "<td width='95' height='79'><input type='button' id='$obj->id_pelicula'  class='btn btn-danger btn-sm' onclick='alertaEliminar(id)' value='Eliminar'></td>";
+										      		echo "<td width='95' height='79'><input type='button' id='$obj->id_pelicula'  class='btn btn-danger btn-sm' onclick='alertaEliminar(id)' value='Eliminar' style='display: block;'></td>";
 										    	echo "</tr>";
-											
-										$Contador++;
 									}
 								}
 								catch(Exception $e){
