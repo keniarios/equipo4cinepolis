@@ -1,11 +1,29 @@
 <?php
-  $title = "Listado de Personal";
-  include("header/encabezado2.php");
+
+session_start();
+if(!isset($_SESSION['id_registropersonal'])) 
+{
+  header('Location: frm_admin_login.php');
+}
+
+$idusuariosesion = $_SESSION['id_registropersonal'];
+$correo = $_SESSION['correo'];
+$nombre = $_SESSION['nombre'];
+$appaterno = $_SESSION['appaterno'];
+$puesto = $_SESSION['puesto'];
+
 ?>
-<script>
-	
-</script>
-	<div id="cargando">
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<?php include("header/encabezado2.php"); ?>
+
+<div id="cargando">
 		
 	</div>
 		<div id="alertaEliminar">
@@ -16,7 +34,7 @@
 					<table class="table" style="font-size: 9pt;">
 						  <thead>
 						    <tr>
-						    	<!--id_venta, id_horario, id_tarjeta, id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, horacompra, fechacompra, pagototal-->
+						      <!--id_venta, id_horario, id_tarjeta, id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, horacompra, fechacompra, pagototal-->
 						      <th scope="col">ID</th>
 						      <th scope="col">Horario</th>
 						      <th scope="col">Usuario</th>
@@ -69,6 +87,6 @@
 					</table>
 				</form>		
 			</div>
-<?php
-  include "footer/footer.php";
-?>
+</body>
+<?php include "footer/footer.php" ;?>
+</html>
