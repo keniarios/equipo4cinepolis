@@ -9,8 +9,8 @@
 	}
 
 	$id_pelicula = $_GET['id_pelicula'];
-echo $id_pelicula;
-	/*$query = "DELETE FROM peliculas WHERE id_pelicula='$id_pelicula'";
+
+	$query = "DELETE FROM peliculas WHERE id_pelicula='$id_pelicula'";
 	pg_query($query);
 
 
@@ -19,5 +19,5 @@ echo $id_pelicula;
 			alert('Pelicula Eliminada con Exito.');
 			location.href = '../vistas/index.php';
 		</script>
-		";*/
+		";
 ?>
