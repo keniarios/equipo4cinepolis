@@ -71,8 +71,6 @@ $puesto = $_SESSION['puesto'];
 										      		<td>$obj->actores</td>
 										      		<td><input type='text' name='IDPelicula' value='$obj->id_pelicula' hidden></td>
 										      		<td width='95' height='79'>
-										      		<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Editar' style='display:none'></td>
-										      		<td width='95' height='79'><input type='button' id='$obj->id_pelicula'  class='btn btn-danger btn-sm' onclick='alertaEliminar(id)' value='Eliminar' style='display:none'></td>
 										    	</tr>
 											";
 										$Contador++;
