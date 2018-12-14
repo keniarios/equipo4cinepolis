@@ -62,7 +62,7 @@
 										      		<td>$obj->duracion</td>	
 										      		<td>$obj->genero</td>
 										      		<td>$obj->actores</td>
-										      		<td>$obj->$estatusPelicula</td>
+										      		<td>$estatusPelicula</td>
 										      		<td><input type='text' name='IDPelicula' value='$obj->id_pelicula' hidden></td>
 										      		<td width='95' height='79'>";
 
