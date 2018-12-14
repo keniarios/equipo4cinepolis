@@ -47,16 +47,16 @@ $puesto = $_SESSION['puesto'];
 								try{
 							  		require_once ('../bd/conexion.php'); $conexion = conectarBD();
 									
-									$query = "SELECT id_sala, S.nombre, S.id_sucursal, S.ciudad, S.estatus, tiposala FROM salas S INNER JOIN altasucursal ALS ON S.id_sucursal=ALS.id_sucursal ORDER BY 1";
+									$query = "SELECT id_sala, S.nombre, S.id_sucursal, S.ciudad, S.estatus as ES, tiposala FROM salas S INNER JOIN altasucursal ALS ON S.id_sucursal=ALS.id_sucursal ORDER BY 1";
 									$result = pg_query($query);
 
 									while ($obj = pg_fetch_object($result))
 									{
 
-										if ($obj->tiposala == "1") {
+										if ($obj->ES == "1") {
 											$EstatusSala = "Disponible";
 										}
-										elseif ($obj->tiposala == "2") {
+										elseif ($obj->ES == "2") {
 											$EstatusSala = "Ocupada";
 										}
 										else{
