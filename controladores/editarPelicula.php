@@ -10,9 +10,8 @@
 
 	$id_pelicula = $_GET['id_pelicula'];
 	$estatus = $_GET['id_estatus'];
-echo $id_pelicula.'<br>';
-echo $estatus;
-	/*$query = "UPDATE peliculas SET estatus='$estatus' WHERE id_pelicula='$id_pelicula'";
+
+	$query = "UPDATE peliculas SET estatus='$estatus' WHERE id_pelicula='$id_pelicula'";
 	pg_query($query);
 
 
@@ -21,5 +20,5 @@ echo $estatus;
 			alert('Estatus de la Pelicula Actualizada.');
 			location.href = '../vistas/index.php';
 		</script>
-		";*/
+		";
 ?>

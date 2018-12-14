@@ -152,6 +152,18 @@ $telefono = $_SESSION['telefono'];
 									<a class="dropdown-item" href="listarPersonal.php" style="color:#feca30;">Personal</a>
 								</div>
 							</div>
+
+							<div class="nav-link dropdown" style="color:#feca30; cursor: pointer;">
+								<li class="nav-item dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Reportes de Altas
+								</li>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black;">
+									<a class="dropdown-item" href="reportesSalas.php" style="color:#feca30;">Salas</a>
+									<a class="dropdown-item" href="reportesHorarios.php" style="color:#feca30;">Horarios</a>
+									<a class="dropdown-item" href="reportesSucursales.php" style="color:#feca30;">Sucursales</a>
+									<a class="dropdown-item" href="reportesPrecios.php" style="color:#feca30;">Precios</a>
+								</div>
+							</div>
 						</ul>
 					</div>
 				</nav>
