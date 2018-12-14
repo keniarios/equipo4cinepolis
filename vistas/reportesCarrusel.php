@@ -57,7 +57,7 @@ $puesto = $_SESSION['puesto'];
 										  		<tr class='lista'>
 										  			<th>$obj->id_slider</th>
 										  			<td>$obj->titulo</td>
-										  			<td><img src='../$imgPeliculas'  width='139' height='203'></td>
+										  			<td><img src='../$imgPeliculas'  width='100%' height='203'></td>
 										  			<td>$obj->posicion</td>
 										    	</tr>
 											";
