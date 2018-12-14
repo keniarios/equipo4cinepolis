@@ -37,6 +37,7 @@ $puesto = $_SESSION['puesto'];
 						      <!--id_venta, id_horario, id_tarjeta, id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, horacompra, fechacompra, pagototal-->
 						      <th scope="col">ID</th>
 						      <th scope="col">Horario</th>
+						      <th scope="col">Pelicula</th>
 						      <th scope="col">Usuario</th>
 						      <th scope="col">Asientos</th>
 						      <th scope="col">C/3era Edad</th>
@@ -45,7 +46,6 @@ $puesto = $_SESSION['puesto'];
 						      <th scope="col">Hora</th>
 						      <th scope="col">Fecha</th>
 						      <th scope="col">Pagó</th>
-						      <th scope="col">hola</th>
 						    </tr>
 						  </thead>
 						  <tbody>
@@ -53,28 +53,38 @@ $puesto = $_SESSION['puesto'];
 								try{
 							  		require_once ('../bd/conexion.php'); $conexion = conectarBD();
 									
-									$query = "SELECT * FROM registropersonal";
+									$query = "SELECT V.id_usuario, fecha, hora, titulo, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, horacompra, fechacompra FROM ventas V INNER JOIN horarios H ON H.id_horario=V.id_horario INNER JOIN peliculas PC ON H.id_pelicula=PC.id_pelicula ORDER BY id_venta";
+									$result = pg_query($query);
 
-									$result = pg_query($query); 
-
-									//$comando->pg_fetch_object($id_registropersonal_T,$numeroempleado_T, $nombre_T, $appaterno_T, $apmaternoo_T, $correo_T, $telefono_T, $puesto_T);
-
-									$Contador=1;
 									while ($obj = pg_fetch_object($result))
 									{
-										//$NombreCompleto = $nombre_T . " " . $appaterno_T. " " . $apmaternoo_T;
+
+										if ($obj->id_usuario == "-1") {
+											$NombreCompletoCliente = "No Registrado";
+										}
+										else{
+											$query2 = "SELECT nombre, apellidopaterno, apellidomaterno FROM registrocinepolisid WHERE ";
+											$result2 = pg_query($query2);
+											$dato_result2 = pg_fetch_array($result2);
+
+											$V_nombre = $dato_result2('nombre');
+											$V_apellidopaterno = $dato_result2('apellidopaterno');
+											$V_apellidomaterno = $dato_result2('apellidomaterno');
+											$NombreCompletoCliente = $V_nombre.' '.$V_apellidopaterno.' '.$V_apellidomaterno;
+										}
+
 										echo "
 										  		<tr class='lista'>
-										  			<th scope='row'>$Contador</th>
-										  			<td>$obj->numeroempleado</td>
-										      		<td>$obj->nombre</td>
-										      		<td>$obj->correo</td>
-										      		<td>$obj->telefono</td>	
-										      		<td>$obj->puesto</td>
-										      		<td><input type='text' name='IDUsuario' value='$obj->id_registropersonal' hidden></td>
-										      		<td width='95' height='79'>
-										      		<input type='submit' id='$obj->id_registropersonal' class='btn btn-info btn-sm' value='Editar' style='display:none'></td>
-										      		<td width='95' height='79'><input type='button' id='$obj->id_registropersonal'  class='btn btn-danger btn-sm' onclick='alertaEliminar(id)' value='Eliminar' style='display:none'></td>
+										  			<th>$obj->id_venta</th>
+										  			<td>$obj->fecha | $obj->hora</td>
+										      		<td>$obj->titulo</td>
+										      		<td>$NombreCompletoCliente</td>
+										      		<td>$obj->asientos_seleccionados</td>	
+										      		<td>$obj->cantidadboletos3raedad</td>
+										      		<td>$obj->cantidadboletosadultos</td>
+										      		<td>$obj->cantidadboletosninos</td>
+										      		<td>$obj->horacompra</td>
+										      		<td>$obj->fechacompra</td>
 										    	</tr>
 											";
 										$Contador++;
