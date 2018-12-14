@@ -47,7 +47,7 @@ $puesto = $_SESSION['puesto'];
 								try{
 							  		require_once ('../bd/conexion.php'); $conexion = conectarBD();
 									
-									$query = "SELECT id_sala, S.nombre, S.id_sucursal, S.ciudad AS nombreCiudad, S.estatus, tiposala FROM salas S INNER JOIN altasucursal ALS ON S.id_sucursal=ALS.id_sucursal ORDER BY 1";
+									$query = "SELECT id_sala, S.nombre, S.id_sucursal, S.ciudad, S.estatus, tiposala FROM salas S INNER JOIN altasucursal ALS ON S.id_sucursal=ALS.id_sucursal ORDER BY 1";
 									$result = pg_query($query);
 
 									while ($obj = pg_fetch_object($result))
@@ -74,7 +74,7 @@ $puesto = $_SESSION['puesto'];
 										  			<th>$obj->id_sala</th>
 										  			<td>$NombreSala</td>
 										      		<td>$V_nombreSucursal</td>
-										      		<td>$obj->nombreCiudad</td>
+										      		<td>$obj->ciudad</td>
 										      		<td>$EstatusSala</td>	
 										      		<td>$obj->tiposala</td>
 										    	</tr>
