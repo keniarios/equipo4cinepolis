@@ -12,7 +12,7 @@
 			
 		</div>
 			<div class="col-md-12">
-				<form id="formEditarUsuarios" action="editarUsuario.php" method="post" accept-charset="utf-8">
+				<!--<form id="formEditarUsuarios" action="editarUsuario.php" method="post" accept-charset="utf-8">-->
 					<table class="table" style="font-size: 9pt;">
 						  <thead>
 						    <tr>
@@ -52,11 +52,34 @@
 										      		<td>$obj->genero</td>
 										      		<td>$obj->actores</td>
 										      		<td><input type='text' name='IDPelicula' value='$obj->id_pelicula' hidden></td>
-										      		<td width='95' height='79'>
-										      		<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Editar' style='display:none'></td>
-										      		<td width='95' height='79'><input type='button' id='$obj->id_pelicula'  class='btn btn-danger btn-sm' onclick='alertaEliminar(id)' value='Eliminar' style='display:none'></td>
-										    	</tr>
-											";
+										      		<td width='95' height='79'>";
+
+										      		if ($obj->estatus == 1) {
+										      			echo "
+											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Preventa' style='display:none'>
+
+											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-primary btn-sm' value='Próximo estreno' style='display:none'>
+										      	
+										      			";
+										      		}
+										      		elseif ($obj->estatus == 2) {
+										      			echo "
+										      				<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' value='Estreno' style='display:none'>
+
+										      				<input type='submit' id='$obj->id_pelicula' class='btn btn-primary btn-sm' value='Próximo estreno' style='display:none'>
+										      				";
+										      		}
+										      		else{
+										      			echo "
+											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' value='Estreno' style='display:none'>
+
+											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Preventa' style='display:none'>
+										      				";
+										      		}
+										      		echo "</td>";
+										      		echo "<td width='95' height='79'><input type='button' id='$obj->id_pelicula'  class='btn btn-danger btn-sm' onclick='alertaEliminar(id)' value='Eliminar' style='display:none'></td>";
+										    	echo "</tr>";
+											
 										$Contador++;
 									}
 								}
@@ -66,7 +89,7 @@
 							?>
 						  </tbody>
 					</table>
-				</form>
+				<!--</form>-->
 			</div>
 <?php
   //include "footer/footer.php";
