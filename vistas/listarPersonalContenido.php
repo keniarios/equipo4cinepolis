@@ -12,8 +12,8 @@
 			
 		</div>
 			<div class="col-md-12">
-				<!--<form id="formEditarUsuarios" action="editarUsuario.php" method="post" accept-charset="utf-8">-->
-					<table class="table" style="font-size: 9pt;">
+				<!--<form id="formEditarPeliculas" action="editarPelicula.php" method="post" accept-charset="utf-8">-->
+					<table class="table" style="font-size: 9pt; text-align: center;">
 						  <thead>
 						    <tr>
 						      <th scope="col">#</th>
@@ -59,7 +59,7 @@
 										  			<td><img src='../$imgPeliculas'  width='139' height='203'></td>
 										      		<td>$obj->titulo</td>
 										      		<td>$obj->clasificacion</td>
-										      		<td>$obj->duracion</td>	
+										      		<td>$obj->duracion min</td>	
 										      		<td>$obj->genero</td>
 										      		<td>$obj->actores</td>
 										      		<td>$estatusPelicula</td>
@@ -68,24 +68,24 @@
 
 										      		if ($obj->estatus == 1) {
 										      			echo "
-											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-info btn-sm' style='display: block;'>Preventa</a><br/><br/>
+											      			<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-info btn-sm' style='display: block;'>Preventa</a><br/><br/>
 
-											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-primary btn-sm' style='display: block;'>Próximo estreno</a>
+											      			<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-primary btn-sm' style='display: block;'>Próximo estreno</a>
 										      	
 										      			";
 										      		}
 										      		elseif ($obj->estatus == 2) {
 										      			echo "
-										      				<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/><br/>
+										      				<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/><br/>
 
-										      				<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-primary btn-sm' style='display: block;'>Próximo estreno</a>
+										      				<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-primary btn-sm' style='display: block;'>Próximo estreno</a>
 										      				";
 										      		}
 										      		else{
 										      			echo "
-											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/><br/>
+											      			<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/><br/>
 
-											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-info btn-sm' style='display: block;'>Preventa</a>
+											      			<a href='editarPelicula.php?id_pelicula=$obj->id_pelicula&id_estatus=$obj->estatus' id='$obj->id_pelicula' class='btn btn-info btn-sm' style='display: block;'>Preventa</a>
 										      				";
 										      		}
 										      		echo "</td>";
