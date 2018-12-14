@@ -1,6 +1,6 @@
 <?php
   $title = "Listado de Personal";
-  //include("header/encabezado2.php");
+  include("header/encabezado2.php");
 ?>
 <script>
 	
@@ -16,7 +16,7 @@
 					<table class="table" style="font-size: 9pt;">
 						  <thead>
 						    <tr>
-						    	id_venta, id_horario, id_tarjeta, id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, horacompra, fechacompra, pagototal
+						    	<!--id_venta, id_horario, id_tarjeta, id_usuario, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, precioboletos3raedad, precioboletosadultos, precioboletosninos, horacompra, fechacompra, pagototal-->
 						      <th scope="col">ID</th>
 						      <th scope="col">Horario</th>
 						      <th scope="col">Usuario</th>
@@ -70,5 +70,5 @@
 				</form>		
 			</div>
 <?php
-  //include "footer/footer.php";
+  include "footer/footer.php";
 ?>
