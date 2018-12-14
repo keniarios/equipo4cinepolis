@@ -68,24 +68,24 @@
 
 										      		if ($obj->estatus == 1) {
 										      			echo "
-											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Preventa' style='display: block;'><br/>
+											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-info btn-sm' style='display: block;'>Preventa</a><br/><br/>
 
-											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-primary btn-sm' value='Próximo estreno' style='display: block;'>
+											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-primary btn-sm' style='display: block;'>Próximo estreno</a>
 										      	
 										      			";
 										      		}
 										      		elseif ($obj->estatus == 2) {
 										      			echo "
-										      				<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/>
+										      				<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/><br/>
 
-										      				<input type='submit' id='$obj->id_pelicula' class='btn btn-primary btn-sm' value='Próximo estreno' style='display: block;'>
+										      				<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-primary btn-sm' style='display: block;'>Próximo estreno</a>
 										      				";
 										      		}
 										      		else{
 										      			echo "
 											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-success btn-sm' style='display: block;'>Estreno</a><br/><br/>
 
-											      			<input type='submit' id='$obj->id_pelicula' class='btn btn-info btn-sm' value='Preventa' style='display: block;'>
+											      			<a href='editarUsuario.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-info btn-sm' style='display: block;'>Preventa</a>
 										      				";
 										      		}
 										      		echo "</td>";
