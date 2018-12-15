@@ -34,11 +34,8 @@ else {
 	pg_query($query);*/
 
 	
-	?>
-		<script languaje="javascript">
-		    alert('Se registro la Sala Correctamente!');
-		</script>
-	<?php
+
+	echo "Se registro la Sala Correctamente.";
 	
 }
 
