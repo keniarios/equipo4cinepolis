@@ -22,8 +22,8 @@
 				    <input type="password" placeholder="Contraseña" name="contrasena" required/>
   				</p>
 				  <p>
-				    <input type="checkbox" name="recordar" id="recordar">
-				    <label for="recordar">Recordar sesión</label>
+				    <!--<input type="checkbox" name="recordar" id="recordar">
+				    <label for="recordar">Recordar sesión</label>-->
 				  	<br>
 				    <br>
 				    <section class="boton">
@@ -36,7 +36,7 @@
 				  <p class="p-container">
 				  	<ul class="lista">
 				  		<li>
-				  			<span><a href="#"><b style="color: #feca30;">-</b> Olvide Contraseña</a></span>
+				  			<!--<span><a href="#"><b style="color: #feca30;">-</b> Olvide Contraseña</a></span>-->
 				  		</li>
 				  	</ul>
 				  </p>
