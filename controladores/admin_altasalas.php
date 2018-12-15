@@ -28,10 +28,10 @@ else if ($asientosSeleccionados == "") {
 	echo "Seleccione asientos para continuar";
 }
 else {
-	$query = "INSERT INTO salas(
+	/*$query = "INSERT INTO salas(
 	nombre, id_sucursal, ciudad, estatus, tiposala, asientos_seleccionados)
 	VALUES ('$nombre', '$sucursal', '$ciudad', '$estatus', '$tipo', '$asientosSeleccionados')";
-	pg_query($query);
+	pg_query($query);*/
 
 	
 	?>
