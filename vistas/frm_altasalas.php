@@ -1667,9 +1667,9 @@ $puesto = $_SESSION['puesto'];
 				var tipo = $("#tipo").val();
 				var listaAsientos = [];
 		        var collection = $(":checkbox:checked");
-		        /*for (var i = 0; i < collection.length; i++) {
+		        for (var i = 0; i < collection.length; i++) {
 		            listaAsientos.push(collection[i]["id"]);
-		        }*/
+		        }
 		        $("#asientosSeleccionados").val(listaAsientos);
 		        var asientosSeleccionados = $("#asientosSeleccionados").val()
 		        //alert($("#asientosSeleccionados").val());
