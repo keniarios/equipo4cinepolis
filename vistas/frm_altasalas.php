@@ -1692,7 +1692,8 @@ $puesto = $_SESSION['puesto'];
 			}
 
 			$("#marcarTodo").click(function () {
-			    if ($(marcados).val() == "0") {
+				$("input[type=checkbox]").prop('checked', true);
+			    /*if ($(marcados).val() == "0") {
 			        //$("input[type=checkbox]").prop('checked', true); //todos los check
 			        $("input[type=checkbox]").prop('checked', true); //solo los del objeto #diasHabilitados
 			        $(marcados).val("1");
@@ -1700,7 +1701,7 @@ $puesto = $_SESSION['puesto'];
 			        //$("input[type=checkbox]").prop('checked', false);//todos los check
 			        $("input[type=checkbox]").prop('checked', false);//solo los del objeto #diasHabilitados
 			        $(marcados).val("0");
-			    }
+			    }*/
 			});
 		</script>
 
