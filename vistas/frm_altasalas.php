@@ -30,8 +30,6 @@ $puesto = $_SESSION['puesto'];
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<script type="text/javascript">
-		$("input[type=checkbox]").prop('checked', true);
-		
     function showContent() {
     	elementoetiqueta = document.getElementById("etiqueta3d");
         elementoidioma = document.getElementById("informacionidioma3d");
@@ -1693,8 +1691,9 @@ $puesto = $_SESSION['puesto'];
 		        
 			}
 
+			$("input[type=checkbox]").prop('checked', true);
 			$("#marcarTodo").click(function () {
-				$("input[type=checkbox]").prop('checked', true);
+
 			    /*if ($(marcados).val() == "0") {
 			        //$("input[type=checkbox]").prop('checked', true); //todos los check
 			        $("input[type=checkbox]").prop('checked', true); //solo los del objeto #diasHabilitados
