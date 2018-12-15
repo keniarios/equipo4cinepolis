@@ -37,7 +37,6 @@ else {
 	?>
 		<script languaje="javascript">
 		    alert('Se registro la Sala Correctamente!');
-		    location.href = "../vistas/frm_altasalas.php";
 		</script>
 	<?php
 	
