@@ -93,6 +93,7 @@
 										      				<a href='../controladores/eliminarPelicula.php?id_pelicula=$obj->id_pelicula' id='$obj->id_pelicula' class='btn btn-danger btn-sm' style='display: block;'>Eliminar</a>
 										      			</td>";
 										    	echo "</tr>";
+										    	$Contador++;
 									}
 								}
 								catch(Exception $e){
