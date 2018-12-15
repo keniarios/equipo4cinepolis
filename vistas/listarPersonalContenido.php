@@ -31,7 +31,7 @@
 								try{
 							  		require_once ('../bd/conexion.php'); $conexion = conectarBD();
 									
-									$query = "SELECT * FROM peliculas";
+									$query = "SELECT * FROM peliculas ORDER BY 1 DESC";
 
 									$result = pg_query($query); 
 
