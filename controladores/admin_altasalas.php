@@ -34,7 +34,12 @@ else {
 	pg_query($query);
 
 	
-	echo "Se registro la Sala Correctamente.";
+	?>
+		<script languaje="javascript">
+		    alert('Se registro la Sala Correctamente!');
+		    location.href = "../vistas/frm_altasalas.php";
+		</script>
+	<?php
 	
 }
 
