@@ -131,14 +131,14 @@ $puesto = $_SESSION['puesto'];
 			    					</div>
 			    				</div>
 			    			</div>
-			    			<div class="row">
+			    			<!--<div class="row">
 			   					
 			   					<div class="col-md-12">
 			   					<input type="button" css="btn btn-success" id="marcarTodo" value="Marcar todos">
 			   					<input type="hidden" id="marcados" value="0">
 			    				</div>
 			    				
-			    			</div>
+			    			</div>-->
 
 			    			<div class="row">
 			    				<div class="col-md-12">
@@ -1687,14 +1687,12 @@ $puesto = $_SESSION['puesto'];
 	                }
 	            });
 	            window.location="frm_altasalas.php?";
-		        
-		        
 			}
 
 			$("input[type=checkbox]").prop('checked', true);
-			$("#marcarTodo").click(function () {
-
-			    /*if ($(marcados).val() == "0") {
+			/*$("#marcarTodo").click(function () {
+				$("input[type=checkbox]").prop('checked', true);
+			    if ($(marcados).val() == "0") {
 			        //$("input[type=checkbox]").prop('checked', true); //todos los check
 			        $("input[type=checkbox]").prop('checked', true); //solo los del objeto #diasHabilitados
 			        $(marcados).val("1");
@@ -1702,8 +1700,8 @@ $puesto = $_SESSION['puesto'];
 			        //$("input[type=checkbox]").prop('checked', false);//todos los check
 			        $("input[type=checkbox]").prop('checked', false);//solo los del objeto #diasHabilitados
 			        $(marcados).val("0");
-			    }*/
-			});
+			    }
+			});*/
 		</script>
 
 </body>
