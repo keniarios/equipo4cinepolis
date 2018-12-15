@@ -64,9 +64,9 @@ $puesto = $_SESSION['puesto'];
 										echo "
 										  		<tr class='lista'>
 										  			<th>$obj->id_horario</th>
+										  			<td>$obj->fecha  |  $obj->hora</td>
 										  			<td>$obj->titulo</td>
 										  			<td>$obj->idioma</td>
-										  			<td>$obj->fecha  |  $obj->hora</td>
 										  			<td>$obj->nombre</td>
 										      		<td>$V_nombreSucursal</td>
 										      		<td>$obj->ciudad</td>
