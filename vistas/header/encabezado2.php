@@ -100,9 +100,9 @@ $telefono = $_SESSION['telefono'];
 				<div id="perfil" onmouseover="zoomIn()" onmouseout="zoomOut()"  style="cursor:default;display:none;position:absolute;margin-left: -90px;margin-top: -40px;width: 9rem;background-color:#fff;border-radius:5px;box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important;font-size: 10pt;z-index: 1;text-align: left;">
 					<label for="" style="padding: 5px;font-size: 13pt;color: black;"><?php echo $nombre . ' ' . $appaterno ?></label><hr>
 					<ul style="padding:5px;LIST-STYLE: NONE;margin: 0px;">
-						<li id="contra" onmouseover="focoMenuPerfil(this.id)" onmouseout="sinfocoMenuPerfil(this.id)" >
+						<!--<li id="contra" onmouseover="focoMenuPerfil(this.id)" onmouseout="sinfocoMenuPerfil(this.id)" >
 							<a style="color:black;text-decoration: none;" href="">Cambiar contraseña</a><br>
-						</li>
+						</li>-->
 						<li id="ver" onmouseover="focoMenuPerfil(this.id)" onmouseout="sinfocoMenuPerfil(this.id)">
 							<a style="color:black;text-decoration: none;" >Ver perfil</a><br>
 						</li>
