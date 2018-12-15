@@ -30,6 +30,8 @@ $puesto = $_SESSION['puesto'];
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<script type="text/javascript">
+		$("input[type=checkbox]").prop('checked', true);
+		
     function showContent() {
     	elementoetiqueta = document.getElementById("etiqueta3d");
         elementoidioma = document.getElementById("informacionidioma3d");
