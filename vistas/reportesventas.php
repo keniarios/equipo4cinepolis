@@ -53,7 +53,7 @@ $puesto = $_SESSION['puesto'];
 								try{
 							  		require_once ('../bd/conexion.php'); $conexion = conectarBD();
 									
-									$query = "SELECT id_venta, V.id_usuario, fecha, hora, titulo, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, horacompra, fechacompra, pagototal, numerotarjetafrente FROM ventas V INNER JOIN horarios H ON H.id_horario=V.id_horario INNER JOIN peliculas PC ON H.id_pelicula=PC.id_pelicula ORDER BY id_venta";
+									$query = "SELECT id_venta, V.id_usuario, fecha, hora, titulo, asientos_seleccionados, cantidadboletos3raedad, cantidadboletosadultos, cantidadboletosninos, horacompra, fechacompra, pagototal, numerotarjetafrente FROM ventas V INNER JOIN horarios H ON H.id_horario=V.id_horario INNER JOIN peliculas PC ON H.id_pelicula=PC.id_pelicula INNER JOIN tarjetasbanco TB ON V.id_tarjeta=TB.id_tarjeta ORDER BY id_venta";
 									$result = pg_query($query);
 
 									while ($obj = pg_fetch_object($result))
