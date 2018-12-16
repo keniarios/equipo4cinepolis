@@ -79,7 +79,7 @@ $puesto = $_SESSION['puesto'];
 										  			<td>$obj->fecha  |  $obj->hora</td>
 										      		<td>$obj->titulo</td>
 										      		<td>$NombreCompletoCliente</td>
-										      		<td>$ $obj->numerotarjetafrente</td>
+										      		<td>$obj->numerotarjetafrente</td>
 										      		<td style='text-transform: uppercase;'>$obj->asientos_seleccionados</td>	
 										      		<td>$obj->cantidadboletos3raedad</td>
 										      		<td>$obj->cantidadboletosadultos</td>
