@@ -141,10 +141,6 @@
 			    			<div class="row" style="padding-top: 20px;width: auto; padding-left:30%; padding-right:30%; padding-bottom:10px;">
 			    					<input type="submit" value="Registrar" class="btn btn-info btn-block">
 			    			</div>
-
-			    			<div class="row" style="padding-top: 20px;width: auto; padding-left:30%; padding-right:30%; padding-bottom:10px;">
-			    				<a href="../haztupago.php">Regresar</a>
-			    			</div>
 			    		</form>
 				  </div>
 				</div>

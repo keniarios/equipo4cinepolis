@@ -32,7 +32,7 @@ if (isset($_POST['tipotarjeta'])) {
 ?>
 		<script languaje="javascript">
 		    alert('Tarjeta registradada correctamente');
-		    location.href = "../haztupago.php";
+		    location.href = "../vistas/frm_altatarjeta.php";
 		</script>
 
 	<?php
