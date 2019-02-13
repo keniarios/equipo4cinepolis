@@ -34,7 +34,7 @@
 	$id_tarjeta = 0;
 	$PrecioTotal = 0;
 	$nombreciudadHeader = "";
-	$nombresucursalHeader = "";
+	//$nombresucursalHeader = "";
 ?>
 
 <!DOCTYPE html>
