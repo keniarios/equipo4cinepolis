@@ -1,6 +1,6 @@
 <?php 
-//link prueba
-//include ('bd/conexion.php'); $conexion = conectarBD();
+
+include ('bd/conexion.php'); $conexion = conectarBD();
 
 	//Creamos sesión
     session_start();
