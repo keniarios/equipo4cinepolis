@@ -33,7 +33,7 @@
 	$precioTotalNino = 0;
 	$id_tarjeta = 0;
 	$PrecioTotal = 0;
-	$nombreciudadHeader = "";
+	//$nombreciudadHeader = "";
 	$nombresucursalHeader = "";
 ?>
 
